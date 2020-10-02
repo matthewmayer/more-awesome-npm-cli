@@ -1,12 +1,12 @@
 ---
 section: cli-commands 
 title: npm-init
-description: create a package.json file
+description: create a package: An Amazing Project.json file
 ---
 
 # npm-init(1)
 
-## create a package.json file
+## create a package: An Amazing Project.json file
 
 ### Synopsis
 ```bash
@@ -28,7 +28,7 @@ $ mkdir my-esm-lib && cd my-esm-lib
 $ npm init esm --yes
 ```
 
-Generate a plain old package.json using legacy init:
+Generate a plain old package: An Amazing Project.json using legacy init:
 ```bash
 $ mkdir my-npm-pkg && cd my-npm-pkg
 $ git init
@@ -46,7 +46,7 @@ $ npm init -y
 
 `initializer` in this case is an npm package named `create-<initializer>`, which
 will be installed by [`npx`](https://npm.im/npx), and then have its main bin
-executed -- presumably creating or updating `package.json` and running any other
+executed -- presumably creating or updating `package: An Amazing Project.json` and running any other
 initialization-related operations.
 
 The init command is transformed to a corresponding `npx` operation as follows:
@@ -60,7 +60,7 @@ Any additional options will be passed directly to the command, so `npm init foo
 
 If the initializer is omitted (by just calling `npm init`), init will fall back
 to legacy init behavior. It will ask you a bunch of questions, and then write a
-package.json for you. It will attempt to make reasonable guesses based on
+package: An Amazing Project.json for you. It will attempt to make reasonable guesses based on
 existing fields, dependencies, and options selected. It is strictly additive, so
 it will keep any fields and values that were already set. You can also use
 `-y`/`--yes` to skip the questionnaire altogether. If you pass `--scope`, it
@@ -69,6 +69,6 @@ will create a scoped package.
 ### See Also
 
 * <https://github.com/isaacs/init-package-json>
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm version](/cli-commands/npm-version)
 * [npm scope](/using-npm/scope)

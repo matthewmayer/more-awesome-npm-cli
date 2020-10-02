@@ -30,7 +30,7 @@ var fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     example: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         dependencies: {
           tagdep: 'latest',
           gitdep: 'npm/example-gitdep'
@@ -42,7 +42,7 @@ var fixture = new Tacks(Dir({
     node_modules: Dir({
       example: Symlink('../example'),
       gitdep: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _from: 'npm/example-gitdep',
           _id: 'gitdep@1.0.0',
           _resolved: 'github:npm/example-gitdep#da39a3ee5e6b4b0d3255bfef95601890afd80709',
@@ -51,7 +51,7 @@ var fixture = new Tacks(Dir({
         })
       }),
       tagdep: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _from: 'tagdep@latest',
           _id: 'tagdep@1.0.0',
           _integrity: 'sha1-0EJSKmsdk39848LlrRg/hZQo2B8=',
@@ -84,7 +84,7 @@ var fixture = new Tacks(Dir({
         }
       }
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'tagged-version-matching',
       version: '1.0.0',
       dependencies: {

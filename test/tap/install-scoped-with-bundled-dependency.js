@@ -33,13 +33,13 @@ var fixture = new Tacks(Dir({
     package: Dir({
       node_modules: Dir({
         'bundled-dep': Dir({
-          'package.json': File({
+          'package: An Amazing Project.json': File({
             name: 'bundled-dep',
             version: '0.0.0'
           })
         })
       }),
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: '@scope/package',
         version: '0.0.0',
         dependencies: {

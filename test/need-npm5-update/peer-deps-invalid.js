@@ -40,7 +40,7 @@ var fileOK = function () {
 * { "name": "npm-test-peer-deps-file"
 * , "main": "index.js"
 * , "version": "1.2.3"
-* , "description":"No package.json in sight!"
+* , "description":"No package: An Amazing Project.json in sight!"
 * , "peerDependencies": { "underscore": "1.3.1" }
 * , "dependencies": { "mkdirp": "0.3.5" }
 * }
@@ -52,7 +52,7 @@ test('setup', function (t) {
   cleanup()
   mkdirp.sync(cache)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(path.join(pkg, 'file-ok.js'), fileOK)

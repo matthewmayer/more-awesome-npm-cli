@@ -7,7 +7,7 @@ var test = require('tap').test
 
 var common = require('../common-tap')
 
-// ignore-scripts/package.json has scripts that always exit with non-zero error
+// ignore-scripts/package: An Amazing Project.json has scripts that always exit with non-zero error
 // codes.
 var pkg = common.pkg
 
@@ -114,7 +114,7 @@ function setup () {
   mkdirp.sync(pkg)
   fs.writeFileSync(path.join(pkg, 'binding.gyp'), gypfile)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
 }

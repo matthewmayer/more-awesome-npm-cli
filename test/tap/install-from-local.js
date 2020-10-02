@@ -37,19 +37,19 @@ var localDevDependency = {
 test('setup', function (t) {
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(localPaths, null, 2)
   )
 
   mkdirp.sync(path.join(root, 'package-local-dependency'))
   fs.writeFileSync(
-    path.join(root, 'package-local-dependency', 'package.json'),
+    path.join(root, 'package-local-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(localDependency, null, 2)
   )
 
   mkdirp.sync(path.join(root, 'package-local-dev-dependency'))
   fs.writeFileSync(
-    path.join(root, 'package-local-dev-dependency', 'package.json'),
+    path.join(root, 'package-local-dev-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(localDevDependency, null, 2)
   )
 
@@ -68,7 +68,7 @@ test('\'npm install\' should install local packages', function (t) {
       t.notOk(code, 'npm install exited with code 0')
       var dependencyPackageJson = path.resolve(
         pkg,
-        'node_modules/package-local-dependency/package.json'
+        'node_modules/package-local-dependency/package: An Amazing Project.json'
       )
       t.ok(
         JSON.parse(fs.readFileSync(dependencyPackageJson, 'utf8')),
@@ -76,7 +76,7 @@ test('\'npm install\' should install local packages', function (t) {
       )
 
       var devDependencyPackageJson = path.resolve(
-        pkg, 'node_modules/package-local-dev-dependency/package.json'
+        pkg, 'node_modules/package-local-dev-dependency/package: An Amazing Project.json'
       )
       t.ok(
         JSON.parse(fs.readFileSync(devDependencyPackageJson, 'utf8')),

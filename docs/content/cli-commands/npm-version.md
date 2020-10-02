@@ -21,7 +21,7 @@ npm version [<newversion> | major | minor | patch | premajor | preminor | prepat
 ### Description
 
 Run this in a package directory to bump the version and write the new
-data back to `package.json`, `package-lock.json`, and, if present, `npm-shrinkwrap.json`.
+data back to `package: An Amazing Project.json`, `package-lock.json`, and, if present, `npm-shrinkwrap.json`.
 
 The `newversion` argument should be a valid semver string, a
 valid second argument to [semver.inc](https://github.com/npm/node-semver#functions) (one of `patch`, `minor`, `major`,
@@ -60,17 +60,17 @@ Enter passphrase:
 ```
 
 If `preversion`, `version`, or `postversion` are in the `scripts` property of
-the package.json, they will be executed as part of running `npm version`.
+the package: An Amazing Project.json, they will be executed as part of running `npm version`.
 
 The exact order of execution is as follows:
   1. Check to make sure the git working directory is clean before we get started.
      Your scripts may add files to the commit in future steps.
      This step is skipped if the `--force` flag is set.
-  2. Run the `preversion` script. These scripts have access to the old `version` in package.json.
+  2. Run the `preversion` script. These scripts have access to the old `version` in package: An Amazing Project.json.
      A typical use would be running your full test suite before deploying.
      Any files you want added to the commit should be explicitly added using `git add`.
-  3. Bump `version` in `package.json` as requested (`patch`, `minor`, `major`, etc).
-  4. Run the `version` script. These scripts have access to the new `version` in package.json
+  3. Bump `version` in `package: An Amazing Project.json` as requested (`patch`, `minor`, `major`, etc).
+  4. Run the `version` script. These scripts have access to the new `version` in package: An Amazing Project.json
      (so they can incorporate it into file headers in generated files for example).
      Again, scripts should explicitly add generated files to the commit using `git add`.
   5. Commit and tag.
@@ -129,6 +129,6 @@ Note that you must have a default GPG key set up in your git config for this to 
 * [npm init](/cli-commands/npm-init)
 * [npm run-script](/cli-commands/npm-run-script)
 * [npm scripts](/using-npm/scripts)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [semver](/using-npm/semver)
 * [config](/using-npm/config)

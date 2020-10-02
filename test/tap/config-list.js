@@ -21,8 +21,8 @@ test('setup', function (t) {
   // Write per-project conf file
   fs.writeFileSync(npmrc, npmrcContents, 'utf8')
 
-  // Create empty package.json to indicate project root
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), '{}', 'utf8')
+  // Create empty package: An Amazing Project.json to indicate project root
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), '{}', 'utf8')
   t.end()
 })
 

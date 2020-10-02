@@ -14,7 +14,7 @@ var packed = path.join(testdir, 'packed')
 
 var fixture = new Tacks(
   Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'bundled-transitive-deps',
       version: '1.0.0',
       dependencies: {
@@ -28,7 +28,7 @@ var fixture = new Tacks(
     }),
     node_modules: Dir({
       'a': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'a',
           version: '1.0.0',
           dependencies: {
@@ -37,19 +37,19 @@ var fixture = new Tacks(
         })
       }),
       'b': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'b',
           version: '1.0.0'
         })
       }),
       '@c/d': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: '@c/d',
           version: '1.0.0'
         }),
         'node_modules': Dir({
           'e': Dir({
-            'package.json': File({
+            'package: An Amazing Project.json': File({
               name: 'e',
               version: '1.0.0'
             })

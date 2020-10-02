@@ -32,7 +32,7 @@ const fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     broken: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'broken',
         version: '1.0.0'
       })
@@ -55,7 +55,7 @@ const fixture = new Tacks(Dir({
           }
         }
       }),
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'main',
         version: '1.0.0',
         dependencies: {
@@ -65,7 +65,7 @@ const fixture = new Tacks(Dir({
       })
     }),
     unbroken: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'unbroken',
         version: '1.0.0'
       })

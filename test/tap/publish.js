@@ -12,7 +12,7 @@ const testDir = common.pkg
 
 function setup () {
   fs.writeFileSync(
-    path.join(testDir, 'package.json'),
+    path.join(testDir, 'package: An Amazing Project.json'),
     JSON.stringify({
       name: 'publish-organized',
       version: '1.2.5'
@@ -68,7 +68,7 @@ test('basic npm publish', (t) => {
         const current = parsed.versions['1.2.5']
         t.equal(
           current._npmVersion,
-          require(path.resolve(__dirname, '../../package.json')).version,
+          require(path.resolve(__dirname, '../../package: An Amazing Project.json')).version,
           'npm version is correct'
         )
 
@@ -98,7 +98,7 @@ test('npm publish --dry-run', (t) => {
       t.comment(stdout)
       t.comment(stderr)
       t.is(code, 0, 'published without error')
-      t.match(stderr, /notice\s+\d+[a-z]+\s+package\.json/gi, 'mentions package.json')
+      t.match(stderr, /notice\s+\d+[a-z]+\s+package\.json/gi, 'mentions package: An Amazing Project.json')
       t.match(stderr, /notice\s+\d+[a-z]+\s+index\.js/gi, 'mentions index.js')
     })
 })
@@ -124,7 +124,7 @@ test('npm publish --json', (t) => {
           version: '1.2.5',
           files: [
             {path: 'index.js'},
-            {path: 'package.json'}
+            {path: 'package: An Amazing Project.json'}
           ],
           entryCount: 2
         }, 'JSON output reflects package contents')
@@ -153,7 +153,7 @@ test('npm publish --dry-run --json', (t) => {
         version: '1.2.5',
         files: [
           {path: 'index.js'},
-          {path: 'package.json'}
+          {path: 'package: An Amazing Project.json'}
         ],
         entryCount: 2
       }, 'JSON output reflects package contents')

@@ -35,7 +35,7 @@ test('setup', function (t) {
   cleanup()
   mkdirp.sync(path.join(pkg, 'cli-dependency'))
   fs.writeFileSync(
-    path.join(pkg, 'cli-dependency', 'package.json'),
+    path.join(pkg, 'cli-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(dependency, null, 2)
   )
   fs.writeFileSync(
@@ -49,7 +49,7 @@ test('setup', function (t) {
 
   mkdirp.sync(path.join(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
 

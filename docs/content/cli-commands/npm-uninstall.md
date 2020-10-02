@@ -31,7 +31,7 @@ In global mode (ie, with `-g` or `--global` appended to the command),
 it uninstalls the current package context as a global package.
 
 `npm uninstall` takes 3 exclusive, optional flags which save or update
-the package version in your main package.json:
+the package version in your main package: An Amazing Project.json:
 
 * `-S, --save`: Package will be removed from your `dependencies`.
 
@@ -39,7 +39,7 @@ the package version in your main package.json:
 
 * `-O, --save-optional`: Package will be removed from your `optionalDependencies`.
 
-* `--no-save`: Package will not be removed from your `package.json` file.
+* `--no-save`: Package will not be removed from your `package: An Amazing Project.json` file.
 
 Further, if you have an `npm-shrinkwrap.json` then it will be updated as
 well.

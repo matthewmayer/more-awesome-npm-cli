@@ -76,28 +76,28 @@ build-doc-tools := node_modules/.bin/marked \
                    node_modules/.bin/marked-man
 
 # use `npm install marked-man` for this to work.
-man/man1/npm-README.1: README.md scripts/docs-build.js package.json $(build-doc-tools)
+man/man1/npm-README.1: README.md scripts/docs-build.js package: An Amazing Project.json $(build-doc-tools)
 	@[ -d man/man1 ] || mkdir -p man/man1
 	node scripts/docs-build.js $< $@
 
-man/man1/%.1: docs/content/cli-commands/%.md scripts/docs-build.js package.json $(build-doc-tools)
+man/man1/%.1: docs/content/cli-commands/%.md scripts/docs-build.js package: An Amazing Project.json $(build-doc-tools)
 	@[ -d man/man1 ] || mkdir -p man/man1
 	node scripts/docs-build.js $< $@
 
 man/man1/npx.1: node_modules/libnpx/libnpx.1
 	cat $< | sed s/libnpx/npx/ > $@
 
-man/man5/npm-json.5: man/man5/package.json.5
+man/man5/npm-json.5: man/man5/package: An Amazing Project.json.5
 	cp $< $@
 
 man/man5/npm-global.5: man/man5/folders.5
 	cp $< $@
 
-man/man5/%.5: docs/content/configuring-npm/%.md scripts/docs-build.js package.json $(build-doc-tools)
+man/man5/%.5: docs/content/configuring-npm/%.md scripts/docs-build.js package: An Amazing Project.json $(build-doc-tools)
 	@[ -d man/man5 ] || mkdir -p man/man5
 	node scripts/docs-build.js $< $@
 
-man/man7/%.7: docs/content/using-npm/%.md scripts/docs-build.js package.json $(build-doc-tools)
+man/man7/%.7: docs/content/using-npm/%.md scripts/docs-build.js package: An Amazing Project.json $(build-doc-tools)
 	@[ -d man/man7 ] || mkdir -p man/man7
 	node scripts/docs-build.js $< $@
 

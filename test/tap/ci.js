@@ -49,7 +49,7 @@ function scrubFrom (tree) {
 
 test('setup', () => {
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG)
+    'package: An Amazing Project.json': File(PKG)
   }))
   return Promise.all([rimraf(cacheDir), rimraf(testDir)]).then(() => {
     fixture.create(testDir)
@@ -77,7 +77,7 @@ test('setup', () => {
 
 test('basic installation', (t) => {
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG),
+    'package: An Amazing Project.json': File(PKG),
     'package-lock.json': File(RAW_LOCKFILE)
   }))
   return rimraf(testDir)
@@ -107,7 +107,7 @@ test('basic installation', (t) => {
       ], 'packages installed')
       return BB.all(modules.map((mod) => {
         return fs.readFileAsync(
-          path.join(testDir, 'node_modules', mod, 'package.json')
+          path.join(testDir, 'node_modules', mod, 'package: An Amazing Project.json')
         )
           .then((f) => JSON.parse(f))
           .then((pkgjson) => {
@@ -145,7 +145,7 @@ test('basic installation', (t) => {
 
 test('supports npm-shrinkwrap.json as well', (t) => {
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG),
+    'package: An Amazing Project.json': File(PKG),
     'npm-shrinkwrap.json': File(RAW_LOCKFILE)
   }))
   return rimraf(testDir)
@@ -191,7 +191,7 @@ test('supports npm-shrinkwrap.json as well', (t) => {
 
 test('removes existing node_modules/ before installing', (t) => {
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG),
+    'package: An Amazing Project.json': File(PKG),
     'package-lock.json': File(RAW_LOCKFILE),
     'node_modules': Dir({
       foo: Dir({
@@ -236,7 +236,7 @@ test('installs all package types correctly')
 
 test('errors if package-lock.json missing', (t) => {
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG)
+    'package: An Amazing Project.json': File(PKG)
   }))
   return rimraf(testDir)
     .then(() => fixture.create(testDir))
@@ -272,7 +272,7 @@ test('errors if package-lock.json invalid', (t) => {
   const badJson = JSON.parse(RAW_LOCKFILE)
   delete badJson.dependencies.optimist
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG),
+    'package: An Amazing Project.json': File(PKG),
     'package-lock.json': File(badJson)
   }))
   return rimraf(testDir)
@@ -291,7 +291,7 @@ test('errors if package-lock.json invalid', (t) => {
       t.equal(stdout.trim(), '', 'no output on stdout')
       t.match(
         stderr.trim(),
-        /can only install packages when your package.json/i,
+        /can only install packages when your package: An Amazing Project.json/i,
         'user informed about the issue'
       )
       return fs.readdirAsync(path.join(testDir))
@@ -312,7 +312,7 @@ test('errors if package-lock.json invalid', (t) => {
 
 test('correct cache location when using cache config', (t) => {
   const fixture = new Tacks(Dir({
-    'package.json': File(PKG),
+    'package: An Amazing Project.json': File(PKG),
     'package-lock.json': File(RAW_LOCKFILE)
   }))
   return Promise.all([rimraf(cacheDir), rimraf(testDir)])

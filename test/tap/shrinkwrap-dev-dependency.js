@@ -46,7 +46,7 @@ var json = {
 test("shrinkwrap doesn't strip out the dependency", function (t) {
   t.plan(3)
 
-  fs.writeFileSync(path.join(pkg, 'package.json'), JSON.stringify(json, null, 2))
+  fs.writeFileSync(path.join(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2))
   process.chdir(pkg)
 
   mr({port: common.port}, function (er, s) {

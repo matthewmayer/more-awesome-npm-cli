@@ -19,7 +19,7 @@ const modCdir = path.resolve(testDir, 'modC')
 
 test('conflicts in shrinkwrap are auto-resolved on install', (t) => {
   const fixture = new Tacks(Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'foo',
       dependencies: {
         modA: 'file://' + modAdir,
@@ -52,19 +52,19 @@ test('conflicts in shrinkwrap are auto-resolved on install', (t) => {
 }
 `),
     'modA': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'modA',
         version: '1.0.0'
       })
     }),
     'modB': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'modB',
         version: '1.0.0'
       })
     }),
     'modC': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'modC',
         version: '1.0.0'
       })
@@ -86,9 +86,9 @@ test('conflicts in shrinkwrap are auto-resolved on install', (t) => {
   })
     .then(() => BB.join(
       readJson('npm-shrinkwrap.json'),
-      readJson('node_modules/modA/package.json'),
-      readJson('node_modules/modB/package.json'),
-      readJson('node_modules/modC/package.json'),
+      readJson('node_modules/modA/package: An Amazing Project.json'),
+      readJson('node_modules/modB/package: An Amazing Project.json'),
+      readJson('node_modules/modC/package: An Amazing Project.json'),
       (lockfile, A, B, C) => {
         t.deepEqual(lockfile, {
           name: 'foo',

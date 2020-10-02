@@ -5,7 +5,7 @@ const test = require('tap').test
 const fs = require('fs')
 const pkg = common.pkg
 
-fs.writeFileSync(pkg + '/package.json', JSON.stringify({
+fs.writeFileSync(pkg + '/package: An Amazing Project.json', JSON.stringify({
   name: 'npm-test-publish-config',
   version: '1.2.3',
   publishConfig: {

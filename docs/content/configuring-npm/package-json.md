@@ -1,16 +1,16 @@
 ---
 section: configuring-npm
-title: package.json
-description: Specifics of npm's package.json handling
+title: package: An Amazing Project.json
+description: Specifics of npm's package: An Amazing Project.json handling
 ---
 
-# package.json(5)
+# package: An Amazing Project.json(5)
 
-## Specifics of npm's package.json handling
+## Specifics of npm's package: An Amazing Project.json handling
 
 ### Description
 
-This document is all you need to know about what's required in your package.json
+This document is all you need to know about what's required in your package: An Amazing Project.json
 file.  It must be actual JSON, not just a JavaScript object literal.
 
 A lot of the behavior described in this document is affected by the config
@@ -19,7 +19,7 @@ settings described in [`config`](/using-npm/config).
 ### name
 
 If you plan to publish your package, the *most* important things in your
-package.json are the name and version fields as they will be required. The name
+package: An Amazing Project.json are the name and version fields as they will be required. The name
 and version together form an identifier that is assumed to be completely unique.
 Changes to the package should come along with changes to the version. If you don't
 plan to publish your package, the name and version fields are optional.
@@ -39,7 +39,7 @@ Some tips:
 
 * Don't use the same name as a core Node module.
 * Don't put "js" or "node" in the name.  It's assumed that it's js, since you're
-  writing a package.json file, and you can specify the engine using the "engines"
+  writing a package: An Amazing Project.json file, and you can specify the engine using the "engines"
   field.  (See below.)
 * The name will probably be passed as an argument to require(), so it should
   be something short, but also reasonably descriptive.
@@ -52,7 +52,7 @@ A name can be optionally prefixed by a scope, e.g. `@myorg/mypackage`. See
 ### version
 
 If you plan to publish your package, the *most* important things in your
-package.json are the name and version fields as they will be required. The name
+package: An Amazing Project.json are the name and version fields as they will be required. The name
 and version together form an identifier that is assumed to be completely unique.
 Changes to the package should come along with changes to the version. If you don't
 plan to publish your package, the name and version fields are optional.
@@ -250,12 +250,12 @@ subdirectories it will. The `.npmignore` file works just like a
 `.gitignore`. If there is a `.gitignore` file, and `.npmignore` is
 missing, `.gitignore`'s contents will be used instead.
 
-Files included with the "package.json#files" field _cannot_ be excluded
+Files included with the "package: An Amazing Project.json#files" field _cannot_ be excluded
 through `.npmignore` or `.gitignore`.
 
 Certain files are always included, regardless of settings:
 
-* `package.json`
+* `package: An Amazing Project.json`
 * `README`
 * `CHANGES` / `CHANGELOG` / `HISTORY`
 * `LICENSE` / `LICENCE`
@@ -303,7 +303,7 @@ A lot of packages have one or more executable files that they'd like to
 install into the PATH. npm makes this pretty easy (in fact, it uses this
 feature to install the "npm" executable.)
 
-To use this, supply a `bin` field in your package.json which is a map of
+To use this, supply a `bin` field in your package: An Amazing Project.json which is a map of
 command name to local file name. On install, npm will symlink that file into
 `prefix/bin` for global installs, or `./node_modules/.bin/` for local
 installs.
@@ -389,7 +389,7 @@ will create entries for `man foo` and `man 2 foo`
 
 The CommonJS [Packages](http://wiki.commonjs.org/wiki/Packages/1.0) spec details a
 few ways that you can indicate the structure of your package using a `directories`
-object. If you look at [npm's package.json](https://registry.npmjs.org/npm/latest),
+object. If you look at [npm's package: An Amazing Project.json](https://registry.npmjs.org/npm/latest),
 you'll see that it has directories for doc, lib, and man.
 
 In the future, this information may be used in other creative ways.
@@ -467,7 +467,7 @@ shortcut syntax you use for `npm install`:
 "repository": "gitlab:user/repo"
 ```
 
-If the `package.json` for your package is not in the root directory (for example
+If the `package: An Amazing Project.json` for your package is not in the root directory (for example
 if it is part of a monorepo), you can specify the directory in which it lives:
 
 ```json
@@ -620,7 +620,7 @@ package. Local paths can be saved using `npm install -S` or
 ```
 
 in which case they will be normalized to a relative path and added to your
-`package.json`. For example:
+`package: An Amazing Project.json`. For example:
 
 ```json
 {
@@ -730,7 +730,7 @@ array and executing `npm pack`.
 
 For example:
 
-If we define a package.json like this:
+If we define a package: An Amazing Project.json like this:
 
 ```json
 {
@@ -764,7 +764,7 @@ dependency.  For example, something like this:
 ```js
 try {
   var foo = require('foo')
-  var fooVersion = require('foo/package.json').version
+  var fooVersion = require('foo/package: An Amazing Project.json').version
 } catch (er) {
   foo = null
 }
@@ -862,7 +862,7 @@ any binaries as local devDependencies wherever possible.
 
 ### private
 
-If you set `"private": true` in your package.json, then npm will refuse
+If you set `"private": true` in your package: An Amazing Project.json, then npm will refuse
 to publish it.
 
 This is a way to prevent accidental publication of private repositories.  If

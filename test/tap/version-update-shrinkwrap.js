@@ -32,7 +32,7 @@ test('npm version <semver> updates git works with no shrinkwrap', function (t) {
 
   common.makeGitRepo({
     path: pkg,
-    added: ['package.json']
+    added: ['package: An Amazing Project.json']
   }, version)
 
   function version (er, stdout, stderr) {
@@ -58,7 +58,7 @@ test('npm version <semver> updates git works with no shrinkwrap', function (t) {
         t.notOk(stderr, 'no error output')
 
         var lines = stdout.split('\n')
-        t.notEqual(lines.indexOf('package.json'), -1, 'package.json commited')
+        t.notEqual(lines.indexOf('package: An Amazing Project.json'), -1, 'package: An Amazing Project.json commited')
         t.equal(lines.indexOf('npm-shrinkwrap.json'), -1, 'npm-shrinkwrap.json not present')
 
         t.end()
@@ -75,7 +75,7 @@ test('npm version <semver> updates shrinkwrap and updates git', function (t) {
 
   common.makeGitRepo({
     path: pkg,
-    added: ['package.json', 'npm-shrinkwrap.json']
+    added: ['package: An Amazing Project.json', 'npm-shrinkwrap.json']
   }, version)
 
   function version (er, stdout, stderr) {
@@ -101,7 +101,7 @@ test('npm version <semver> updates shrinkwrap and updates git', function (t) {
         t.notOk(stderr, 'no error output')
 
         var lines = stdout.split('\n')
-        t.notEqual(lines.indexOf('package.json'), -1, 'package.json commited')
+        t.notEqual(lines.indexOf('package: An Amazing Project.json'), -1, 'package: An Amazing Project.json commited')
         t.notEqual(lines.indexOf('npm-shrinkwrap.json'), -1, 'npm-shrinkwrap.json commited')
 
         t.end()
@@ -121,7 +121,7 @@ function setup () {
     description: 'Test for version with shrinkwrap update'
   }
 
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify(contents), 'utf8')
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify(contents), 'utf8')
   fs.writeFileSync(path.resolve(pkg, 'npm-shrinkwrap.json'), JSON.stringify(contents), 'utf8')
   process.chdir(pkg)
 }

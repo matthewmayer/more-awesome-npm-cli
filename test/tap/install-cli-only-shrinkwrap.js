@@ -56,19 +56,19 @@ var devDependency = {
 test('setup', function (t) {
   mkdirp.sync(path.join(pkg, 'dependency'))
   fs.writeFileSync(
-    path.join(pkg, 'dependency', 'package.json'),
+    path.join(pkg, 'dependency', 'package: An Amazing Project.json'),
     JSON.stringify(dependency, null, 2)
   )
 
   mkdirp.sync(path.join(pkg, 'dev-dependency'))
   fs.writeFileSync(
-    path.join(pkg, 'dev-dependency', 'package.json'),
+    path.join(pkg, 'dev-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(devDependency, null, 2)
   )
 
   mkdirp.sync(path.join(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(
@@ -86,12 +86,12 @@ test('\'npm install --only=development\' should only install devDependencies', f
     t.is(code, 0, 'npm install did not raise error code')
     t.ok(
       existsSync(
-        path.resolve(pkg, 'node_modules/dev-dependency/package.json')
+        path.resolve(pkg, 'node_modules/dev-dependency/package: An Amazing Project.json')
       ),
       'devDependency was installed'
     )
     t.notOk(
-      existsSync(path.resolve(pkg, 'node_modules/dependency/package.json')),
+      existsSync(path.resolve(pkg, 'node_modules/dependency/package: An Amazing Project.json')),
       'dependency was NOT installed'
     )
     rimraf(path.join(pkg, 'node_modules'), t.end)
@@ -106,12 +106,12 @@ test('\'npm install --only=production\' should only install dependencies', funct
     t.is(code, 0, 'npm install did not raise error code')
     t.ok(
       existsSync(
-        path.resolve(pkg, 'node_modules/dependency/package.json')
+        path.resolve(pkg, 'node_modules/dependency/package: An Amazing Project.json')
       ),
       'dependency was installed'
     )
     t.notOk(
-      existsSync(path.resolve(pkg, 'node_modules/dev-dependency/package.json')),
+      existsSync(path.resolve(pkg, 'node_modules/dev-dependency/package: An Amazing Project.json')),
       'devDependency was NOT installed'
     )
     rimraf(path.join(pkg, 'node_modules'), t.end)

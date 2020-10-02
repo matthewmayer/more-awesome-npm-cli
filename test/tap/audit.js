@@ -89,7 +89,7 @@ const quickAuditResult = {
 
 test('exits with zero exit code for vulnerabilities below the `audit-level` flag', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -166,7 +166,7 @@ test('exits with zero exit code for vulnerabilities below the `audit-level` flag
 
 test('shows quick audit results summary for human', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -222,7 +222,7 @@ test('shows quick audit results summary for human', t => {
 
 test('exits with non-zero exit code for vulnerabilities at the `audit-level` flag', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -297,7 +297,7 @@ test('exits with non-zero exit code for vulnerabilities at the `audit-level` fla
 
 test('exits with non-zero exit code for vulnerabilities at the `audit-level` flag', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -372,7 +372,7 @@ test('exits with non-zero exit code for vulnerabilities at the `audit-level` fla
 
 test('exits with zero exit code for vulnerabilities in devDependencies when running with production flag', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -470,7 +470,7 @@ test('exits with zero exit code for vulnerabilities in devDependencies when runn
 
 test('exits with non-zero exit code for vulnerabilities in dependencies when running with production flag', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {

@@ -30,7 +30,7 @@ const fixture = new Tacks(Dir({
   prefix: Dir({}),
   deps: Dir({
     parent: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'parent',
         version: '1.2.3',
         dependencies: {
@@ -39,7 +39,7 @@ const fixture = new Tacks(Dir({
       })
     }),
     child: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'child',
         version: '1.0.3',
         main: 'dobuild.js',
@@ -53,7 +53,7 @@ const fixture = new Tacks(Dir({
       })
     }),
     writer: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'writer',
         version: '1.0.0',
         bin: 'writer.js'

@@ -46,7 +46,7 @@ A scoped package is installed by referencing it by name, preceded by an
 npm install @myorg/mypackage
 ```
 
-Or in `package.json`:
+Or in `package: An Amazing Project.json`:
 
 ```json
 "dependencies": {

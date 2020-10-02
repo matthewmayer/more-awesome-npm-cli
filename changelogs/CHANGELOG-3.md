@@ -105,7 +105,7 @@ fixes and a really important shrinkwrap fix.
   ([@timoxley](https://github.com/timoxley))
 * [`952f1e1`](https://github.com/npm/npm/commit/952f1e109a070ab4066179f6104ba9394300e342)
   [#13999](https://github.com/npm/npm/pull/13999)
-  Fix a bug where setting `bin` to `null` in your `package.json` would result
+  Fix a bug where setting `bin` to `null` in your `package: An Amazing Project.json` would result
   in `npm` crashing.
   ([@IonicaBizau](https://github.com/IonicaBizau))
 * [`fcf8b11`](https://github.com/npm/npm/commit/fcf8b11fb7fcf8902f6a887c3d5f0aef2897dde0)
@@ -133,7 +133,7 @@ fixes and a really important shrinkwrap fix.
 
 * [`30772cc`](https://github.com/npm/npm/commit/30772cc5f80923bf21c003fbe53e5fed9d3a5d97)
   [#13904](https://github.com/npm/npm/pull/13904)
-  Update `package.json` example to include GitHub branches.
+  Update `package: An Amazing Project.json` example to include GitHub branches.
   ([@stevokk](https://github.com/stevokk))
 * [`f66876f`](https://github.com/npm/npm/commit/f66876f75c204fb78028cf2ff7979f80355bd06c)
   [#14010](https://github.com/npm/npm/pull/14010)
@@ -219,7 +219,7 @@ interacting with `devDependencies`, `optionalDependencies`, and
   ([@bengl](https://github.com/bengl))
 * [`03efc89`](https://github.com/npm/npm/commit/03efc89522c99ee0fa37d8f4a99bc3b44255ef98)
   [#13692](https://github.com/npm/npm/pull/13692/)
-  We were doing a weird thing where we used a `package.json` field `installable`
+  We were doing a weird thing where we used a `package: An Amazing Project.json` field `installable`
   to check to see if we'd checked for platform compatibility, and if not did
   so. But this was the only place that was ever done so there was no reason to
   implement it in such an obfuscated manner.
@@ -304,7 +304,7 @@ inconsistencies.
 * [`8eb9460`](https://github.com/npm/npm/commit/8eb94601fe895b97cbcf8c6134e6b371c5371a1e)
   [#13717](https://github.com/npm/npm/pull/13717)
   Document that `npm link` will link the files specified in the `bin` field of
-  `package.json` to `{prefix}/bin/{name}`.
+  `package: An Amazing Project.json` to `{prefix}/bin/{name}`.
   ([@legodude17](https://github.com/legodude17))
 * [`a66e5e9`](https://github.com/npm/npm/commit/a66e5e9c388878fe03fb29014c3b95d28bedd3c1)
   [#13682](https://github.com/npm/npm/pull/13682)
@@ -466,8 +466,8 @@ scoped modules found in `bundleDependencies`.
 
 * [`8f8d1b3`](https://github.com/npm/npm/commit/8f8d1b33a78c79aff9de73df362abaa7f05751d2)
   [#11398](https://github.com/npm/npm/issues/11398)
-  Fix bug where `package.json` files that contained a `type` property could
-  cause crashes. `type` is not a `package.json` property that npm makes use
+  Fix bug where `package: An Amazing Project.json` files that contained a `type` property could
+  cause crashes. `type` is not a `package: An Amazing Project.json` property that npm makes use
   of and having it should be (and now is) harmless.
   ([@zkat](https://github.com/zkat))
 * [`e7fa6c6`](https://github.com/npm/npm/commit/e7fa6c6a2c1de2a214479daa8c6901eebb350381)
@@ -718,7 +718,7 @@ the process, too!
   [#13213](https://github.com/npm/npm/pull/13213)
   If you run `npm install modulename` it should, if a `npm-shrinkwrap.json` is
   present, use the version found there.  If not, it'll use the version found in
-  your `package.json`, and failing *that*, use `latest`.
+  your `package: An Amazing Project.json`, and failing *that*, use `latest`.
   This fixes a case where the first check was being bypassed because version
   resolution was being done prior to loading the shrinkwrap, and so checks to
   match the shrinkwrap version couldn't succeed.
@@ -741,7 +741,7 @@ the process, too!
 * [`a11a7b2`](https://github.com/npm/npm/commit/a11a7b2e7df9478ac9101b06eead4a74c41a648d)
   [#13212](https://github.com/npm/npm/pull/13212)
   Resolve local paths passed in through the command line relative to current
-  directory, instead of relative to the `package.json`.
+  directory, instead of relative to the `package: An Amazing Project.json`.
   ([@iarna](https://github.com/iarna))
 
 #### DEPENDENCY UPDATES
@@ -880,7 +880,7 @@ rotating-media-based hard drives.
 
 Under 6.0.0, the behavior was reliable enough to be nearly deterministic, and
 made it very difficult for publishers using `.npmignore` files in combination
-with `"files"` stanzas in `package.json` to get their packages onto the
+with `"files"` stanzas in `package: An Amazing Project.json` to get their packages onto the
 registry without one or more files missing from the packed tarball. The entire
 saga is contained within [the issue](https://github.com/npm/npm/issues/5082),
 but the summary is that an improvement to the performance of
@@ -1040,7 +1040,7 @@ status.
 
 * [`e8c80f2`](https://github.com/npm/npm/commit/e8c80f20bfd5d1618e85dbab41660d6f3e5ce405)
   [#10744](https://github.com/npm/npm/issues/10744)
-  You can now add `preshrinkwrap`, `shrinkwrap` and `postshrinkwrap` to your `package.json`
+  You can now add `preshrinkwrap`, `shrinkwrap` and `postshrinkwrap` to your `package: An Amazing Project.json`
   scripts section. They are run when you run `npm shrinkwrap` or `npm install --save` with
   an `npm-shrinkwrap.json` present in your module directory.
 
@@ -1078,7 +1078,7 @@ issue](https://github.com/npm/npm/issues/new) at our issue tracker.
 Let's start by talking about what goes into the new progress bar:
 
 ```
-⸨░░░░░░░░░░⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠹ loadExtraneous: verb afterAdd /Users/rebecca/.npm/null/0.0.0/package/package.json written
+⸨░░░░░░░░░░⠂⠂⠂⠂⠂⠂⠂⠂⸩ ⠹ loadExtraneous: verb afterAdd /Users/rebecca/.npm/null/0.0.0/package/package: An Amazing Project.json written
  ↑‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  ↑ ‾‾‾‾‾‾‾‾‾↑‾‾‾‾   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾↑‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
  percent complete     spinner    current thing we're doing     most recent log line
 ```
@@ -1265,7 +1265,7 @@ out the PR where I describe what I did in detail: [#12775](https://github.com/np
 * [`f771b49`](https://github.com/npm/npm/commit/f771b49f5d65bbef540c231fbfcca71cacdce4db)
   [#12933](https://github.com/npm/npm/pull/12933)
   Add `config.gypi` to list of files that are always ignored in the
-  `package.json` manpage.
+  `package: An Amazing Project.json` manpage.
   ([@Jokero](https://github.com/Jokero))
 
 #### DEPENDENCY UPDATES
@@ -1391,7 +1391,7 @@ to address questions y'all send us. ✌
   [#12685](https://github.com/npm/npm/pull/12685)
   When using `npm ls <pkg>` without a semver specifier, `npm ls` would skip
   any packages in your tree that matched by name, but had a prerelease version
-  in their `package.json`. This patch fixes it so `npm ls` does a simple name
+  in their `package: An Amazing Project.json`. This patch fixes it so `npm ls` does a simple name
   match unless you use the `npm ls <pkg>@<version>` format.
   ([@zkat](https://github.com/zkat))
 * [`c698ae6`](https://github.com/npm/npm/commit/c698ae666afc92fbc0fcba3c082cfa9b34a4420d)
@@ -1469,7 +1469,7 @@ wait to tell you about that! (It's about symlinks!)
 
 * [`d0c6d19`](https://github.com/npm/npm/commit/d0c6d194471be8ce3e7b41b744b24f63dd1a3f6f)
   [#12476](https://github.com/npm/npm/pull/12476)
-  Protects against a crasher when a bundled dep is missing a package.json.
+  Protects against a crasher when a bundled dep is missing a package: An Amazing Project.json.
   ([@dflupu](https://github.com/dflupu))
 
 #### DOCS IMPROVEMENTS
@@ -1484,7 +1484,7 @@ wait to tell you about that! (It's about symlinks!)
   ([@reconbot](https://github.com/reconbot))
 * [`4c4b4ba`](https://github.com/npm/npm/commit/4c4b4badf09b9b50cdca85314429a0111bb35cb1)
   [#12586](https://github.com/npm/npm/pull/12586)
-  Correct `package.json` documentation as to when `node-gyp rebuild` called.
+  Correct `package: An Amazing Project.json` documentation as to when `node-gyp rebuild` called.
   This now matches https://docs.npmjs.com/misc/scripts#default-values
   ([@reconbot](https://github.com/reconbot))
 
@@ -1570,7 +1570,7 @@ results from [Travis CI](travis-ci.org/npm/npm) runs.
 * [`e928a30`](https://github.com/npm/npm/commit/e928a30947477a09245f54e9381f46b97bee32d5)
   [#11444](https://github.com/npm/npm/pull/11444)
   Make handling of local modules (eg `npm install /path/to/my/module`) more
-  consistent when saved to a `package.json`. There were bugs previously where
+  consistent when saved to a `package: An Amazing Project.json`. There were bugs previously where
   it wouldn't consistently resolve relative paths in the same way.
   ([@iarna](https://github.com/iarna))
 * [`b820ed4`](https://github.com/npm/npm/commit/b820ed4fc04e21577fa66f7c9482b5ab002e7985)
@@ -1695,7 +1695,7 @@ Tuesday to learn more about that.
   (but not MacOS/Linux).
 
   This makes the error code you get on Windows match that from MacOS/Linux
-  if you try to read a `package.json` from a path that includes a file, not
+  if you try to read a `package: An Amazing Project.json` from a path that includes a file, not
   a folder.
   ([@zkat](https://github.com/zkat))
 
@@ -1706,14 +1706,14 @@ Hi all! Long time no see! We've been heads-down working through getting
 Did you know that we have
 [Windows CI](https://ci.appveyor.com/project/npm/npm) now running over at
 Appveyor?  In the meantime, we've got a bunch of dependency updates, some
-nice documentation improvements and error messages when your `package.json`
+nice documentation improvements and error messages when your `package: An Amazing Project.json`
 contains invalid JSON. (Yeah, I thought we did that last one before too!)
 
 #### BAD JSON IS BAD
 
 * [`769e620`](https://github.com/npm/npm/commit/769e6200722d8060b6769e47354032c51cfa85a1)
   [#12406](https://github.com/npm/npm/pull/12406)
-  Failing to parse the top level `package.json` should be an error.
+  Failing to parse the top level `package: An Amazing Project.json` should be an error.
   ([@watilde](https://github.com/watilde))
 
 #### DOCUMENTATION
@@ -1732,7 +1732,7 @@ contains invalid JSON. (Yeah, I thought we did that last one before too!)
   ([@addaleax](https://github.com/addaleax))
 * [`2b57606`](https://github.com/npm/npm/commit/2b57606852a2c2a03e4c4b7dcda85b807619c2cf)
   [#11461](https://github.com/npm/npm/pull/11461)
-  Clarify the documentation for the package.json homepage field.
+  Clarify the documentation for the package: An Amazing Project.json homepage field.
   ([@stevemao](https://github.com/stevemao))
 
 #### TESTS
@@ -1903,7 +1903,7 @@ like documentation are a huge help. And remember -- you get socks for it, too!
   ([@watilde](https://github.com/watilde))
 * [`60051c2`](https://github.com/npm/npm/commit/60051c25e2ab80c667137dfcd04b242eea25980e)
   [#12093](https://github.com/npm/npm/pull/12093)
-  Update `bugs` url in `package.json` to use the `https` URL for Github.
+  Update `bugs` url in `package: An Amazing Project.json` to use the `https` URL for Github.
   ([@watilde](https://github.com/watilde))
 * [`af30c37`](https://github.com/npm/npm/commit/af30c374ef22ed1a1c71b14fced7c4b8350e4e82)
   [#12075](https://github.com/npm/npm/pull/12075)
@@ -2233,7 +2233,7 @@ steam, you can follow along by
   This fixes an issue where `npm install --production <module>` would
   result in npm exiting with an error code. The `--production` flag would
   make `npm ls` filter out `<module>` as it wasn't saved to the
-  `package.json` and thus wasn't a production dependency. The install
+  `package: An Amazing Project.json` and thus wasn't a production dependency. The install
   report is limited to show just the modules installed, so with that
   filtered out nothing is available. With nothing available `npm ls`
   would set `npm` to exit with an error code.
@@ -2320,7 +2320,7 @@ upgrade if you were using it. NO MORE!
   ([@datyayu](https://github.com/datyayu))
 * [`3d26453`](https://github.com/npm/npm/commit/3d264532d6d9df60420e985334aebb53c668d32b)
   [#11644](https://github.com/npm/npm/pull/11644)
-  Add `directories.test` to the `package.json` documentation.
+  Add `directories.test` to the `package: An Amazing Project.json` documentation.
   ([@lewiscowper](https://github.com/lewiscowper))
 * [`b64d124`](https://github.com/npm/npm/commit/b64d12432fdad344199b678d700306340d3607eb)
   [#11441](https://github.com/npm/npm/pull/11441)
@@ -2468,7 +2468,7 @@ bigger than usual.
   ([@iarna](https://github.com/iarna))
 * [`b7e99be`](https://github.com/npm/npm/commit/b7e99be1b1086f2d6098c653c1e20791269c9177)
   [#11292](https://github.com/npm/npm/pull/11292)
-  Test that the `package.json` `files` section and `.npmignore` do what
+  Test that the `package: An Amazing Project.json` `files` section and `.npmignore` do what
   they're supposed to.
   ([@zkat](https://github.com/zkat))
 
@@ -2566,12 +2566,12 @@ things.
 
 Last week we took a patch from [@substack](https://github.com/substack) to
 stop the installer from reordering arrays in an installed module's
-`package.json`...  but somehow I dropped the test when I was rebasing.
+`package: An Amazing Project.json`...  but somehow I dropped the test when I was rebasing.
 
 * [`21b9271`](https://github.com/npm/npm/commit/21b927182514a0ff6d9f34480bfc39f72e3e9f8c)
   [#10063](https://github.com/npm/npm/issues/10063)
   Restore test that verifies that we don't re-order arrays in a module's
-  `package.json` on install.
+  `package: An Amazing Project.json` on install.
   ([@substack](https://github.com/substack))
 
 #### DOCUMENTATION FIXES
@@ -2661,8 +2661,8 @@ any explanation for how that crept in. =D
   performance patch.
   ([@iarna](https://github.com/iarna))
 
-We were also using `lodash`'s `cloneDeep` on `package.json` data which is
-definitely overkill, seeing as `package.json` data has all the restrictions
+We were also using `lodash`'s `cloneDeep` on `package: An Amazing Project.json` data which is
+definitely overkill, seeing as `package: An Amazing Project.json` data has all the restrictions
 of being `json`. The fix for this is just swapping that out for something
 that does a pair of `JSON.stringify`/`JSON.parse`, which is distinctly more
 speedy.
@@ -2716,19 +2716,19 @@ getting rudimentary git submodule support.
   [#11014](https://github.com/npm/npm/issues/11014)
   Fix a bug where running `rimraf node_modules/<package>` followed by `npm
   rm --save <package>` would fail. `npm` now correctly removes the module
-  from your `package.json` even though it doesn't exist on disk.
+  from your `package: An Amazing Project.json` even though it doesn't exist on disk.
   ([@davidvgalbraith](https://github.com/davidvgalbraith))
 * [`a605586`](https://github.com/npm/npm/commit/a605586df134ee97c95f89c4b4bd6bc73f7aa439)
   [#9679](https://github.com/npm/npm/issues/9679)
   Fix a bug where `npm install --save git+https://…` would save a `https://`
-  url to your `package.json` which was a problem because `npm` wouldn't then
+  url to your `package: An Amazing Project.json` which was a problem because `npm` wouldn't then
   know that it was a git repo.
   ([@gagern](https://github.com/gagern))
 * [`bbdc700`](https://github.com/npm/npm/commit/bbdc70024467c365cc4e06b8410947c04b6f145b)
   [#10063](https://github.com/npm/npm/issues/10063)
   Fix a bug where `npm` would change the order of array properties in the
-  `package.json` files of dependencies.  `npm` adds a bunch of stuff to
-  `package.json` files in your `node_modules` folder for debugging and
+  `package: An Amazing Project.json` files of dependencies.  `npm` adds a bunch of stuff to
+  `package: An Amazing Project.json` files in your `node_modules` folder for debugging and
   bookkeeping purposes.  As a part of this process it sorts the object to
   reduce file churn when it does updates.  This fixes a bug where the arrays
   in the object were also getting sorted.  This wasn't a problem for
@@ -2752,7 +2752,7 @@ getting rudimentary git submodule support.
   ([@kemitchell](https://github.com/kemitchell))
 * [`f427934`](https://github.com/npm/npm/commit/f4279346c368da4bca09385f773e8eed1d389e5e)
   [#11196](https://github.com/npm/npm/pull/11196)
-  Correct the `package.json` examples in the `npm update` documentation to actually be
+  Correct the `package: An Amazing Project.json` examples in the `npm update` documentation to actually be
   valid JSON and not just JavaScript object literals.
   ([@s100](https://github.com/s100))
 
@@ -2812,7 +2812,7 @@ from those versions break the install.
   [`8b593d8`](https://github.com/npm/npm/commit/8b593d8d187d6ac85d2a59cbe647afb5516c1b94)
   [#10717](https://github.com/npm/npm/pull/10717)
   `npm version` can now take a `from-git` argument, which instructs `npm` to read the
-  version from git and update your `package.json` to what it finds. This is in contrast
+  version from git and update your `package: An Amazing Project.json` to what it finds. This is in contrast
   to its normal use where `npm` _tells_ git about your new version.
   ([@ekmartin](https://github.com/ekmartin))
 
@@ -2908,7 +2908,7 @@ version of Node.js and now suppress those other warnings.
   ([@Jimbly](https://github.com/Jimbly))
 * [`e982858`](https://github.com/npm/npm/commit/e982858d9bed65cede9cbb12df9216a4bb9e6fc9)
   [#9696](https://github.com/npm/npm/issues/9696)
-  When replacing the `package.json` in the cache you sometimes see `EPERM` errors on
+  When replacing the `package: An Amazing Project.json` in the cache you sometimes see `EPERM` errors on
   Windows that you wouldn't on Unix-like operating systems. This ignores those errors
   and allows Windows to continue. Longer term, we'll be adding something to retry
   these errors, but ultimately fail if there really is an ongoing permissions issue.
@@ -2928,7 +2928,7 @@ version of Node.js and now suppress those other warnings.
   ([@halhenke](https://github.com/halhenke))
 * [`382e71a`](https://github.com/npm/npm/commit/382e71a7ee5d1ca3dba55c1e753d529eb8ae6895)
   [#11128](https://github.com/npm/npm/pull/11128)
-  In the `package.json` docs, make the reference to the "Local Paths" section
+  In the `package: An Amazing Project.json` docs, make the reference to the "Local Paths" section
   a link to it as well.
   ([@orangejulius](https://github.com/orangejulius))
 * [`5277e7f`](https://github.com/npm/npm/commit/5277e7f236e8cb40d7f4a1054506f2d3d159716e)
@@ -2997,7 +2997,7 @@ particularly with Windows, so there's not too much to call out here.
 * [`dee92d1`](https://github.com/npm/npm/commit/dee92d1f78608a10becf57aae86d5d495f2272bd)
   [#11037](https://github.com/npm/npm/pull/11037)
   Clarify the documentation on the max length of the `name` property in
-  `package.json` files.
+  `package: An Amazing Project.json` files.
   ([@scottaddie](https://github.com/scottaddie))
 * [`4b9d7bb`](https://github.com/npm/npm/commit/4b9d7bb1a4fc3f1edcf563379abfd2273af10881)
   [#10787](https://github.com/npm/npm/pull/10787)
@@ -3346,7 +3346,7 @@ Thanksgiving to all our friends in the USA.
   nonexistent `npm-rm(1)` documentation. ([@KenanY](https://github.com/KenanY))
 * [`19b94e1`](https://github.com/npm/npm/commit/19b94e1e6781fe2f98ada0a3f49a1bda25e3e32d)
   [#10474](https://github.com/npm/npm/issues/10474) Clarify that install finds
-  dependencies in `package.json`. ([@sleekweasel](https://github.com/sleekweasel))
+  dependencies in `package: An Amazing Project.json`. ([@sleekweasel](https://github.com/sleekweasel))
 * [`b25efc8`](https://github.com/npm/npm/commit/b25efc88067c843ffdda86ea0f50f95d136a638e)
   [#9948](https://github.com/npm/npm/issues/9948) Encourage users to file an
   issue, rather than emailing authors. ([@trodrigues](https://github.com/trodrigues))
@@ -3378,7 +3378,7 @@ CLI and the web site experiences.
 
 * [`d7fb92d`](https://github.com/npm/npm/commit/d7fb92d1c53ba5196ad6dd2101a06792a4c0412b)
   [#9327](https://github.com/npm/npm/issues/9327) `npm access` no longer has
-  problems when run in a directory that doesn't contain a `package.json`.
+  problems when run in a directory that doesn't contain a `package: An Amazing Project.json`.
   ([@othiym23](https://github.com/othiym23))
 * [`17df3b5`](https://github.com/npm/npm/commit/17df3b5d5dffb2e9c223b9cfa2d5fd78c39492a4)
   [npm/npm-registry-client#126](https://github.com/npm/npm-registry-client/issues/126)
@@ -3422,7 +3422,7 @@ CLI and the web site experiences.
   We've been in our bundled modules code a lot lately, and our last go at
   this introduced a new bug, where if you had a module `a` that bundled
   a module `b`, which in turn required `c`, and the version of `c` that
-  got bundled wasn't compatible with `b`'s `package.json`, we would then
+  got bundled wasn't compatible with `b`'s `package: An Amazing Project.json`, we would then
   install a compatible version of `c`, but also erase `b` at the same time.
 
   This fixes that. It also reworks our bundled module support to be much
@@ -3668,7 +3668,7 @@ important, the bug where `hapi` would install w/ a dep missing? Squashed!
   [#10026](https://github.com/npm/npm/issues/10026)
   Eliminate some, if not many, of the `ENOENT` errors `npm@3` has seen over
   the past few months.  This was happening when npm would, in its own mind,
-  correct a bundled dependency, due to a `package.json` specifying an
+  correct a bundled dependency, due to a `package: An Amazing Project.json` specifying an
   incompatible version.  Then, when npm extracted the bundled version, what
   was on disk didn't match its mind and… well, when it tried to act on what
   was in its mind, we got an `ENOENT` because it didn't actually exist on
@@ -3697,7 +3697,7 @@ important, the bug where `hapi` would install w/ a dep missing? Squashed!
   Resolving dependencies would look something like this:
 
   1. Require `need-fun@1`: Use version from shrinkwrap (ignoring version)
-  2. Require `need-time`: User version in package.json
+  2. Require `need-time`: User version in package: An Amazing Project.json
     1. Require `need-fun@2`: Use version from shrinkwrap, which oh hey, is
        already installed at the top level, so no further action is needed.
 
@@ -3712,7 +3712,7 @@ important, the bug where `hapi` would install w/ a dep missing? Squashed!
   We're ignoring the version check on things specified in the shrinkwrap
   so that you can override the version that will be installed. This is
   because you may want to  use a different version than is specified
-  by your dependencies' dependencies' `package.json` files.
+  by your dependencies' dependencies' `package: An Amazing Project.json` files.
 
   To fix this, we now only allow overrides of a dependency version when
   that dependency is a child (in the tree) of the thing that requires it.
@@ -3726,15 +3726,15 @@ important, the bug where `hapi` would install w/ a dep missing? Squashed!
 
 * [`3de1463`](https://github.com/npm/npm/commit/3de1463)
   [#9187](https://github.com/npm/npm/issues/9187)
-  If you were using a module with the `bin` field in your `package.json` set
+  If you were using a module with the `bin` field in your `package: An Amazing Project.json` set
   to a string on a non-npmjs registry then npm would crash, due to the our
   expectation that the `bin` field would be an object.  We now pass all
-  `package.json` data through a routine that normalizes the format,
+  `package: An Amazing Project.json` data through a routine that normalizes the format,
   including the `bin` field.  (This is the same routine that your
-  `package.json` is passed through when read off of disk or sent to the
+  `package: An Amazing Project.json` is passed through when read off of disk or sent to the
   registry for publication.) Doing this also ensures that older modules on
   npm's own registry will be treated exactly the same as new ones.  (In the
-  past we weren't always super careful about scrubbing `package.json` data
+  past we weren't always super careful about scrubbing `package: An Amazing Project.json` data
   on publish.  And even when we were, those rules have subtly changed over
   time.)
   ([@iarna](https://github.com/iarna))
@@ -4339,7 +4339,7 @@ frontline continuous deployment just yet.
 
 * [`02420dc`](https://github.com/npm/npm/commit/02420dc)
   [#9113](https://github.com/npm/npm/issues/9113)
-  Stop warning about missing top level package.json files. Errors in said
+  Stop warning about missing top level package: An Amazing Project.json files. Errors in said
   files will still be reported.
   ([@iarna](https://github.com/iarna))
 
@@ -4505,7 +4505,7 @@ maintenance or frontline continuous deployment just yet.
   ([@iarna](http://github.com/iarna))
 * [`d135abf`](https://github.com/npm/npm/commit/d135abf)
   [#8871](https://github.com/npm/npm/issues/8871)
-  Don't warn about a missing `package.json` or missing fields in the global
+  Don't warn about a missing `package: An Amazing Project.json` or missing fields in the global
   install directory.
   ([@iarna](http://github.com/iarna))
 
@@ -4556,11 +4556,11 @@ just yet.
   Many thanks to @bengl for noticing that one of our tests wasn't testing
   what it claimed it was testing! ([@bengl](https://github.com/bengl))
 
-#### MY PACKAGE.JSON WAS ALREADY IN THE RIGHT ORDER
+#### MY package: An Amazing Project.json WAS ALREADY IN THE RIGHT ORDER
 
 * [`eb2c7aa`](https://github.com/npm/npm/commit/d00d0f)
   [#9068](https://github.com/npm/npm/pull/9079)
-  Stop sorting keys in the `package.json` that we haven't edited.  Many
+  Stop sorting keys in the `package: An Amazing Project.json` that we haven't edited.  Many
   thanks to [@Qix-](https://github.com/Qix-) for bringing this up and
   providing a first pass at a patch for this.
   ([@iarna](https://github.com/iarna))
@@ -4894,7 +4894,7 @@ or frontline continuous deployment just yet.
     ([@iarna](https://github.com/iarna))
   * [`28064e5`](https://github.com/npm/npm/commit/28064e5)
     [#3358](https://github.com/npm/npm/issues/3358)
-    Consistently allow Unicode BOMs at the start of package.json files.
+    Consistently allow Unicode BOMs at the start of package: An Amazing Project.json files.
     Previously this was allowed some of time, like when you were installing
     modules, but not others, like running npm version or installing w/
     `--save`.
@@ -4922,7 +4922,7 @@ or frontline continuous deployment just yet.
     ([@iarna](https://github.com/iarna))
   * [`6c248ff`](https://github.com/npm/npm/commit/6c248ff)
     [#8779](https://github.com/npm/npm/pull/8779)
-    Hey, you know how we used to complain if your `package.json` was
+    Hey, you know how we used to complain if your `package: An Amazing Project.json` was
     missing stuff? Well guess what, we are again. I know, I know, you can
     thank me later.
     ([@iarna](https://github.com/iarna))
@@ -4985,7 +4985,7 @@ affected by this change!
   `peerDependencies` no longer cause _anything_ to be implicitly installed.
   Instead, npm will now warn if a packages `peerDependencies` are missing,
   but it's up to the consumer of the module (i.e. you) to ensure the peers
-  get installed / are included in `package.json` as direct `dependencies`
+  get installed / are included in `package: An Amazing Project.json` as direct `dependencies`
   or `devDependencies` of your package.
 * [#3803](https://github.com/npm/npm/issues/3803)
   npm also no longer checks `peerDependencies` until after it has fully
@@ -5000,7 +5000,7 @@ in it.
 ##### `engineStrict`
 
 * [#6931](https://github.com/npm/npm/issues/6931) The rarely-used
-  `package.json` option `engineStrict` has been deprecated for several
+  `package: An Amazing Project.json` option `engineStrict` has been deprecated for several
   months, producing warnings when it was used. Starting with `npm@3`, the
   value of the field is ignored, and engine violations will only produce
   warnings. If you, as a user, want strict `engines` field enforcement,
@@ -5028,7 +5028,7 @@ that isn't on this list,
 * [#8575](https://github.com/npm/npm/issues/8575)
   Circular deps will never be removed by the prune-on-uninstall code.
 * [#8588](https://github.com/npm/npm/issues/8588)
-  Local deps where the dep name and the name in the package.json differ
+  Local deps where the dep name and the name in the package: An Amazing Project.json differ
   don't result in an error.
 * [#8637](https://github.com/npm/npm/issues/8637)
   Modules can install themselves as direct dependencies. `npm@2` declined to
@@ -5111,7 +5111,7 @@ requires the module you'll see it listed once for each thing requiring it.
 * [`a2b50cf`](https://github.com/npm/npm/commit/a2b50cf)
   [#5693](https://github.com/npm/npm/issues/5693)
   When installing a new module, if it's mentioned in your
-  `npm-shrinkwrap.json` or your `package.json` use the version specifier
+  `npm-shrinkwrap.json` or your `package: An Amazing Project.json` use the version specifier
   from there if you didn't specify one yourself.
 
 ##### Flat, flat, flat!
@@ -5172,7 +5172,7 @@ because the first time you install (without `npm-shrinkwrap.json`) and the
 second time (with `npm-shrinkwrap.json`).
 
 * [#6781](https://github.com/npm/npm/issues/6781)
-  Second, if you save your changes to `package.json` and you have
+  Second, if you save your changes to `package: An Amazing Project.json` and you have
   `npm-shrinkwrap.json`, then it will be updated as well. This applies to
   all of the commands that update your tree:
   * `npm install --save`

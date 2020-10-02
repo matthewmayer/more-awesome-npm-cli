@@ -43,13 +43,13 @@ function createFixtures (filename, fixture) {
 var fixtures = Dir({
 // The fixture modules
   'moda@1.0.1': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'moda',
       version: '1.0.1'
     })
   }),
   'modb@1.0.0': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modb',
       version: '1.0.0',
       bundleDependencies: ['modc'],
@@ -59,13 +59,13 @@ var fixtures = Dir({
     })
   }),
   'modc@1.0.0': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modc',
       version: '1.0.0'
     })
   }),
   // The local config
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     dependencies: {
       moda: fixturepath('moda@1.0.1'),
       modb: fixturepath('modb@1.0.0')
@@ -73,7 +73,7 @@ var fixtures = Dir({
   }),
   'node_modules': Dir({
     'moda': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'moda',
         version: '1.0.0',
         _requested: { rawSpec: fixturepath('moda@1.0.0') },

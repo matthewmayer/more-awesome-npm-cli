@@ -6,7 +6,7 @@
     "install",
     "modules",
     "package manager",
-    "package.json"
+    "package: An Amazing Project.json"
   ],
   "preferGlobal": true,
   "config": {

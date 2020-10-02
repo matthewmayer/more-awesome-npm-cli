@@ -31,7 +31,7 @@ test("issue #6735 build 'already built' message", function (t) {
     t.test('pin previous behavior', function (t) {
       build([fakePkg], global, false, false, function (err) {
         t.ok(err, 'build failed as expected')
-        t.similar(err.message, /package.json/, 'missing package.json as expected')
+        t.similar(err.message, /package: An Amazing Project.json/, 'missing package: An Amazing Project.json as expected')
         t.notSimilar(log, /already built/, 'no already built message written')
 
         t.end()
@@ -45,7 +45,7 @@ test("issue #6735 build 'already built' message", function (t) {
 
       build([fakePkg], global, false, false, function (err) {
         t.ok(err, 'build failed as expected')
-        t.similar(err.message, /package.json/, 'missing package.json as expected')
+        t.similar(err.message, /package: An Amazing Project.json/, 'missing package: An Amazing Project.json as expected')
 
         t.similar(log, /already built/, 'already built message written')
         t.notSimilar(log, /ERR! already built/, 'already built message written is not error')

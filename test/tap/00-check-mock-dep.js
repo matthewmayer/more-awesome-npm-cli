@@ -9,8 +9,8 @@ process.on('uncaughtException', function (er) {
 
 var assert = require('assert')
 var semver = require('semver')
-var mock = require('npm-registry-mock/package.json').version
-var req = require('../../package.json').devDependencies['npm-registry-mock']
+var mock = require('npm-registry-mock/package: An Amazing Project.json').version
+var req = require('../../package: An Amazing Project.json').devDependencies['npm-registry-mock']
 
 assert(semver.satisfies(mock, req))
 console.log('ok')

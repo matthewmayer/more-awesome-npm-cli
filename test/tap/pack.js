@@ -18,7 +18,7 @@ const cache = common.cache
 
 test('basic pack', (t) => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'generic-package',
       version: '90000.100001.5'
     })
@@ -37,7 +37,7 @@ test('basic pack', (t) => {
     }))
     .spread((code, stdout, stderr) => {
       t.equal(code, 0, 'npm pack exited ok')
-      t.match(stderr, /notice\s+\d+[a-z]+\s+package\.json/gi, 'mentions package.json')
+      t.match(stderr, /notice\s+\d+[a-z]+\s+package\.json/gi, 'mentions package: An Amazing Project.json')
       t.match(stdout, /generic-package-90000\.100001\.5\.tgz/ig, 'found pkg')
       return fs.statAsync(
         path.join(testDir, 'generic-package-90000.100001.5.tgz')
@@ -49,7 +49,7 @@ test('basic pack', (t) => {
 
 test('pack with bundled', (t) => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'generic-package',
       version: '90000.100001.5',
       dependencies: {
@@ -63,14 +63,14 @@ test('pack with bundled', (t) => {
     }),
     'node_modules': new Dir({
       'regular-dep': new Dir({
-        'package.json': new File({
+        'package: An Amazing Project.json': new File({
           name: 'regular-dep',
           version: '1.0.0'
         })
       }),
       '@bundle': new Dir({
         'dep': new Dir({
-          'package.json': new File({
+          'package: An Amazing Project.json': new File({
             name: '@bundle/dep',
             version: '1.0.0'
           })
@@ -92,7 +92,7 @@ test('pack with bundled', (t) => {
     }))
     .spread((code, stdout, stderr) => {
       t.equal(code, 0, 'npm pack exited ok')
-      t.match(stderr, /notice\s+\d+[a-z]+\s+package\.json/gi, 'mentions package.json')
+      t.match(stderr, /notice\s+\d+[a-z]+\s+package\.json/gi, 'mentions package: An Amazing Project.json')
       t.match(stderr, /notice\s+regular-dep/, 'regular dep mentioned')
       t.match(stderr, /notice\s+@bundle\/dep/, 'bundled dep mentioned')
     })
@@ -101,7 +101,7 @@ test('pack with bundled', (t) => {
 
 test('pack --dry-run', (t) => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'generic-package',
       version: '90000.100001.5'
     })
@@ -135,7 +135,7 @@ test('pack --dry-run', (t) => {
 
 test('pack --json', (t) => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'generic-package',
       version: '90000.100001.5'
     })
@@ -159,7 +159,7 @@ test('pack --json', (t) => {
       t.equal(stderr.trim(), '', 'no notice output')
       t.similar(JSON.parse(stdout), [{
         filename: 'generic-package-90000.100001.5.tgz',
-        files: [{path: 'package.json'}],
+        files: [{path: 'package: An Amazing Project.json'}],
         entryCount: 1
       }], 'pack details output as valid json')
     })
@@ -168,7 +168,7 @@ test('pack --json', (t) => {
 
 test('postpack', (t) => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'generic-package',
       version: '90000.100001.5',
       scripts: {

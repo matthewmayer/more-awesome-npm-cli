@@ -32,12 +32,12 @@ var childPackageJSON = JSON.stringify({
 
 test('setup', function (t) {
   mkdirp.sync(parentPath)
-  fs.writeFileSync(resolve(parentPath, 'package.json'), parentPackageJSON)
+  fs.writeFileSync(resolve(parentPath, 'package: An Amazing Project.json'), parentPackageJSON)
   process.chdir(parentPath)
 
   // Setup child
   mkdirp.sync(childPath)
-  fs.writeFileSync(resolve(childPath, 'package.json'), childPackageJSON)
+  fs.writeFileSync(resolve(childPath, 'package: An Amazing Project.json'), childPackageJSON)
 
   // Setup npm and then git
   npm.load({
@@ -87,7 +87,7 @@ test('shrinkwrapped git dependency got updated', function (t) {
           }
         }
       }, 'version and from fields are correct in git-based pkglock dep')
-      var childPackageJSON = require(path.join(parentNodeModulesPath, 'child', 'package.json'))
+      var childPackageJSON = require(path.join(parentNodeModulesPath, 'child', 'package: An Amazing Project.json'))
       t.equal(
         childPackageJSON._resolved,
         'git://localhost:' + common.gitPort + '/child.git#' + refs[1],

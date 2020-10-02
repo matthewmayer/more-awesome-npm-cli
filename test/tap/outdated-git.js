@@ -53,7 +53,7 @@ test('cleanup', function (t) {
 
 function setup () {
   mkdirp.sync(cache)
-  fs.writeFileSync(path.join(pkg, 'package.json'), JSON.stringify(json, null, 2), 'utf8')
+  fs.writeFileSync(path.join(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2), 'utf8')
 }
 
 function cleanup () {

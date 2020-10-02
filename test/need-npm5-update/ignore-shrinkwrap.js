@@ -57,10 +57,10 @@ test('npm install --no-shrinkwrap', function (t) {
     s._server.on('request', function (req) {
       switch (req.url) {
         case '/shrinkwrap.js':
-          t.fail('npm-shrinkwrap.json used instead of package.json')
+          t.fail('npm-shrinkwrap.json used instead of package: An Amazing Project.json')
           break
         case '/package.js':
-          t.pass('package.json used')
+          t.pass('package: An Amazing Project.json used')
       }
     })
 
@@ -124,7 +124,7 @@ function setup () {
   cleanup()
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(

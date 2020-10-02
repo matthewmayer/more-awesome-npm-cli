@@ -62,7 +62,7 @@ For example:
 #### Per-project config file
 
 When working locally in a project, a `.npmrc` file in the root of the
-project (ie, a sibling of `node_modules` and `package.json`) will set
+project (ie, a sibling of `node_modules` and `package: An Amazing Project.json`) will set
 config values specific to this project.
 
 Note that this only applies to the root of the project that you're
@@ -99,5 +99,5 @@ manner.
 * [npm folders](/configuring-npm/folders)
 * [npm config](/cli-commands/npm-config)
 * [config](/using-npm/config)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm](/cli-commands/npm)

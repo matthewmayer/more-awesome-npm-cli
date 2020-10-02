@@ -63,7 +63,7 @@ t.test('setup', (t) => {
       const fixture = new Tacks(
         Dir({
           [path.basename(PKG)]: Dir({
-            'package.json': File({ name: 'npm', version: '0.0.0' })
+            'package: An Amazing Project.json': File({ name: 'npm', version: '0.0.0' })
           }),
           [path.basename(PREFIX)]: Dir({})
         })

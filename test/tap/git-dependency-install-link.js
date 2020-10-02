@@ -71,8 +71,8 @@ test('install from git repo [no --link]', function (t) {
     t.dissimilar(stderr, /Command failed:/, 'expect git to succeed')
     t.dissimilar(stderr, /version not found/, 'should not go to repository')
 
-    readJson(resolve(pkg, 'node_modules', 'child', 'package.json'), function (err, data) {
-      t.ifError(err, 'error reading child package.json')
+    readJson(resolve(pkg, 'node_modules', 'child', 'package: An Amazing Project.json'), function (err, data) {
+      t.ifError(err, 'error reading child package: An Amazing Project.json')
 
       t.equal(data && data.version, '1.0.3')
       t.end()
@@ -92,8 +92,8 @@ test('install from git repo [with --link]', function (t) {
     t.dissimilar(stderr, /version not found/, 'should not go to repository')
     t.equal(stderr, '', 'no actual output on stderr')
 
-    readJson(resolve(pkg, 'node_modules', 'child', 'package.json'), function (err, data) {
-      t.ifError(err, 'error reading child package.json')
+    readJson(resolve(pkg, 'node_modules', 'child', 'package: An Amazing Project.json'), function (err, data) {
+      t.ifError(err, 'error reading child package: An Amazing Project.json')
 
       t.equal(data && data.version, '1.0.3')
       t.end()
@@ -113,7 +113,7 @@ function bootstrap (cb) {
       mkdirp.sync(pkg)
       mkdirp.sync(cache)
 
-      fs.writeFileSync(resolve(pkg, 'package.json'), pjParent)
+      fs.writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), pjParent)
       cb()
     })
   })
@@ -121,7 +121,7 @@ function bootstrap (cb) {
 
 function setup (cb) {
   mkdirp.sync(repo)
-  fs.writeFileSync(resolve(repo, 'package.json'), pjChild)
+  fs.writeFileSync(resolve(repo, 'package: An Amazing Project.json'), pjChild)
   npm.load({
     link: true,
     prefix: pkg,

@@ -103,7 +103,7 @@ function testOutput (t, command, er, code, stdout, stderr) {
 
 function writeMetadata (object) {
   fs.writeFileSync(
-    path.resolve(pkg, 'package.json'),
+    path.resolve(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(object, null, 2) + '\n'
   )
 }
@@ -216,7 +216,7 @@ test('npm run-script env vars accessible', function (t) {
   })
 })
 
-test('npm run-script package.json vars injected', function (t) {
+test('npm run-script package: An Amazing Project.json vars injected', function (t) {
   common.npm(['run-script', 'package-env-vars'], {
     cwd: pkg
   }, function (err, code, stdout, stderr) {
@@ -225,12 +225,12 @@ test('npm run-script package.json vars injected', function (t) {
     t.equal(stderr, '', 'no error output')
     t.match(stdout,
       new RegExp(fullyPopulated.run_script_foo_var),
-      'script injected package.json value')
+      'script injected package: An Amazing Project.json value')
     t.end()
   })
 })
 
-test('npm run-script package.json vars injected with prefix', function (t) {
+test('npm run-script package: An Amazing Project.json vars injected with prefix', function (t) {
   common.npm(['run-script', 'prefixed-package-env-vars'], {
     cwd: pkg
   }, function (err, code, stdout, stderr) {
@@ -239,7 +239,7 @@ test('npm run-script package.json vars injected with prefix', function (t) {
     t.equal(stderr, '', 'no error output')
     t.match(stdout,
       new RegExp(fullyPopulated.run_script_foo_var),
-      'script injected npm_package-prefixed package.json value')
+      'script injected npm_package-prefixed package: An Amazing Project.json value')
     t.end()
   })
 })

@@ -14,7 +14,7 @@ A little release to tide you over while we hammer out the last bits for npm@5.
   [#16213](https://github.com/npm/npm/pull/16213)
   Add `--allow-same-version` option to `npm version` so that you can use `npm version` to run
   your version lifecycles and tag your git repo without actually changing the version number in
-  your `package.json`.
+  your `package: An Amazing Project.json`.
   ([@lucastheisen](https://github.com/lucastheisen))
 * [`f5e8becd0`](https://github.com/npm/npm/commit/f5e8becd05e0426379eb0c999abdbc8e87a7f6f2)
   Timing has been added throughout the install implementation. You can see it by running
@@ -56,7 +56,7 @@ A little release to tide you over while we hammer out the last bits for npm@5.
   ([@desfero](https://github.com/desfero))
 * [`ccbb94934`](https://github.com/npm/npm/commit/ccbb94934d4f677f680c3e2284df3d0ae0e65758)
   [#16267](https://github.com/npm/npm/pull/16267)
-  Fix a missing space in the example package.json.
+  Fix a missing space in the example package: An Amazing Project.json.
   ([@famousgarkin](https://github.com/famousgarkin))
 
 ### DEPENDENCY UPDATES
@@ -648,9 +648,9 @@ runtime's own team seems most practical, so that's what we're doing.
   Remove 0.12 from our supported versions list.
   ([@iarna](https://github.com/iarna))
 
-#### WRITING TO SYMLINKED `package.json` (AND OTHER FILES)
+#### WRITING TO SYMLINKED `package: An Amazing Project.json` (AND OTHER FILES)
 
-If your `package.json`, `npm-shrinkwrap.json` or `.npmrc` were a symlink and
+If your `package: An Amazing Project.json`, `npm-shrinkwrap.json` or `.npmrc` were a symlink and
 you used an `npm` command that modified one of these (eg `npm config set` or
 `npm install --save`) then previously we would have removed your symlink and
 replaced it with an ordinary file. While making these files symlinks is pretty
@@ -1048,7 +1048,7 @@ v5.  We'll have more for you in early December.
   ([@bcoe](https://github.com/bcoe))
 * [`ba091ce`](https://github.com/npm/npm/commit/ba091ce843af5d694f4540e825b095435b3558d8)
   [#14435](https://github.com/npm/npm/pull/14435)
-  Remove an unused zero byte `package.json` found in the test fixtures.
+  Remove an unused zero byte `package: An Amazing Project.json` found in the test fixtures.
   ([@baderbuddy](https://github.com/baderbuddy))
 
 #### DEPENDENCY UPDATES
@@ -1446,7 +1446,7 @@ install`, and `prepublishOnly` will be removed, leaving `prepare` and
   ([@zkat](https://github.com/zkat))
 * [`c27412b`](https://github.com/npm/npm/commit/c27412bb9fc7b09f7707c7d9ad23128959ae1abc)
   [#14290](https://github.com/npm/npm/pull/14290)
-  Replace `prepublish` with `prepare` in `npm help package.json` documentation.
+  Replace `prepublish` with `prepare` in `npm help package: An Amazing Project.json` documentation.
   ([@zkat](https://github.com/zkat))
 
 #### NO MORE PARTIAL SHRINKWRAPS (**BREAKING**)
@@ -1456,7 +1456,7 @@ That's right. No more partial shrinkwraps. That means that if you have an
 isn't explicitly listed there, unless it's a `devDependency`. This will open
 doors to some nice optimizations and make use of `npm shrinkwrap` just generally
 smoother by removing some awful corner cases. We will also skip `devDependency`
-installation from `package.json` if you added `devDependencies` to your
+installation from `package: An Amazing Project.json` if you added `devDependencies` to your
 shrinkwrap by using `npm shrinkwrap --dev`.
 
 * [`b7dfae8`](https://github.com/npm/npm/commit/b7dfae8fd4dc0456605f7a921d20a829afd50864)
@@ -1469,7 +1469,7 @@ shrinkwrap by using `npm shrinkwrap --dev`.
   Treat shrinkwrap as canonical. That is, don't try to fill in for partial
   shrinkwraps. Partial shrinkwraps should produce partial installs. If your
   shrinkwrap contains NO `devDependencies` then we'll still try to install them
-  from your `package.json` instead of assuming you NEVER want `devDependencies`.
+  from your `package: An Amazing Project.json` instead of assuming you NEVER want `devDependencies`.
   ([@iarna](https://github.com/iarna))
 
 #### `npm tag` REMOVED (**BREAKING**)

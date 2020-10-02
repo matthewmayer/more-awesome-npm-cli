@@ -28,7 +28,7 @@ var fixture = new Tacks(Dir({
   global: Dir(),
   tmp: Dir(),
   testdir: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'debug-logs',
       version: '1.0.0',
       scripts: {

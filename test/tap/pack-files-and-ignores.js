@@ -16,7 +16,7 @@ var Dir = Tacks.Dir
 test('basic file inclusion', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -40,7 +40,7 @@ test('basic file inclusion', function (t) {
 test('basic file exclusion', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -64,7 +64,7 @@ test('basic file exclusion', function (t) {
 test('toplevel-only and blanket ignores', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -107,7 +107,7 @@ test('toplevel-only and blanket ignores', function (t) {
 test('.npmignore works for nested directories recursively', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -150,7 +150,7 @@ test('.npmignore works for nested directories recursively', function (t) {
 test('.gitignore should have identical semantics', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -193,7 +193,7 @@ test('.gitignore should have identical semantics', function (t) {
 test('.npmignore should always be overridden by files array', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -224,7 +224,7 @@ test('.npmignore should always be overridden by files array', function (t) {
 test('.gitignore supported for ignores', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -248,7 +248,7 @@ test('.gitignore supported for ignores', function (t) {
 test('.npmignore completely overrides .gitignore', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -279,7 +279,7 @@ test('.npmignore completely overrides .gitignore', function (t) {
 test('files array overrides .npmignore', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -305,7 +305,7 @@ test('files array overrides .npmignore', function (t) {
 test('includes files regardless of emptiness', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -327,7 +327,7 @@ test('includes files regardless of emptiness', function (t) {
 test('.npmignore itself gets included', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -346,7 +346,7 @@ test('.npmignore itself gets included', function (t) {
 test('include default files when missing files spec', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -366,7 +366,7 @@ test('include default files when missing files spec', function (t) {
 test('include main file', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         main: 'foo.js',
@@ -386,7 +386,7 @@ test('include main file', function (t) {
 test('certain files ignored by default', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -439,7 +439,7 @@ test('certain files ignored by default', function (t) {
 test('default-ignored files can be explicitly included', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -511,12 +511,12 @@ test('default-ignored files can be explicitly included', function (t) {
 test('certain files included unconditionally', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
       '.npmignore': File(
-        'package.json',
+        'package: An Amazing Project.json',
         'README',
         'Readme',
         'readme.md',
@@ -549,7 +549,7 @@ test('certain files included unconditionally', function (t) {
     })
   )
   withFixture(t, fixture, function (done) {
-    t.ok(fileExists('package.json'), 'package.json included')
+    t.ok(fileExists('package: An Amazing Project.json'), 'package: An Amazing Project.json included')
     t.ok(fileExists('README'), 'README included')
     t.ok(fileExists('Readme'), 'Readme included')
     t.ok(fileExists('readme.md'), 'readme.md included')
@@ -568,7 +568,7 @@ test('certain files included unconditionally', function (t) {
 test('unconditional inclusion does not capture modules', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),
@@ -601,7 +601,7 @@ test('unconditional inclusion does not capture modules', function (t) {
 test('folder-based inclusion works', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         files: [
@@ -639,7 +639,7 @@ test('folder-based inclusion works', function (t) {
 test('file that starts with @ sign included normally', (t) => {
   const fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5'
       }),

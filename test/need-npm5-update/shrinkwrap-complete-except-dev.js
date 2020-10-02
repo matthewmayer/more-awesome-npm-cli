@@ -55,7 +55,7 @@ var fixture = new Tacks(Dir({
           }
         }
       }),
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'app',
         version: '1.0.0',
         dependencies: {
@@ -67,7 +67,7 @@ var fixture = new Tacks(Dir({
       })
     }),
     'module-a': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'module-a',
         version: '1.0.0',
         dependencies: {
@@ -77,19 +77,19 @@ var fixture = new Tacks(Dir({
       })
     }),
     'module-b': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'module-b',
         version: '1.0.0'
       })
     }),
     'module-c': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'module-c',
         version: '1.0.0'
       })
     }),
     'module-d': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'module-d',
         version: '1.0.0'
       })

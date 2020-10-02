@@ -11,7 +11,7 @@ const configContents = 'sign-git-tag=false\n'
 t.test('setup', t => {
   process.chdir(pkg)
   fs.writeFileSync(npmrc, configContents, 'ascii')
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Lucas Theisen',
     name: 'version-allow-same-version',
     version: '0.0.1',

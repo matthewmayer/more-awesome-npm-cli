@@ -91,7 +91,7 @@ var bundledeepupdatejson = {
 }
 
 function writepjs (dir, content) {
-  fs.writeFileSync(path.join(dir, 'package.json'), JSON.stringify(content, null, 2))
+  fs.writeFileSync(path.join(dir, 'package: An Amazing Project.json'), JSON.stringify(content, null, 2))
 }
 
 function setup () {
@@ -157,7 +157,7 @@ test('bundled', function (t) {
     t.is(code, 0, 'npm itself completed ok')
 
     // This tests that after the install we have a freshly installed version
-    // of `bundle-update` (in alignment with the package.json), instead of the
+    // of `bundle-update` (in alignment with the package: An Amazing Project.json), instead of the
     // version that was bundled with `top-test`.
     // If npm doesn't do this, and selects the bundled version, things go very
     // wrong because npm thinks it has a different module (with different
@@ -169,18 +169,18 @@ test('bundled', function (t) {
     t.like(stderr, /npm verb.*bundle-deep-update/, 'included update warning about deeply bundled dep')
     t.like(stderr, /npm WARN top-test@1\.0\.0 had bundled packages that do not match/, 'single grouped warning')
     fs.stat(bundleupdateNEWpostinstall, function (missing) {
-      t.ok(!missing, 'package.json overrode bundle')
+      t.ok(!missing, 'package: An Amazing Project.json overrode bundle')
     })
     fs.stat(bundledeepupdateNEWpostinstall, function (missing) {
-      t.ok(!missing, 'deep package.json overrode bundle')
+      t.ok(!missing, 'deep package: An Amazing Project.json overrode bundle')
     })
     // Relatedly, when upgrading, if a bundled module is replacing an existing
     // module we want to choose the bundled version, not the version we're replacing.
     fs.stat(bundlekeepOLDpostinstall, function (missing) {
-      t.ok(!missing, 'no override when package.json matches')
+      t.ok(!missing, 'no override when package: An Amazing Project.json matches')
     })
     fs.stat(bundledeepOLDpostinstall, function (missing) {
-      t.ok(!missing, 'deep no override when package.json matches')
+      t.ok(!missing, 'deep no override when package: An Amazing Project.json matches')
     })
   })
 })

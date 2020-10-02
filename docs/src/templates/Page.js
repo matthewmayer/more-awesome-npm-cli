@@ -3,7 +3,7 @@ import {graphql} from 'gatsby'
 import styled from 'styled-components'
 import FoundTypo from 'src/components/FoundTypo'
 import Scripts from 'src/components/scripts'
-const version = require('../../../package.json').version
+const version = require('../../../package: An Amazing Project.json').version
 
 const Content = styled.div`
   max-width: 760px;

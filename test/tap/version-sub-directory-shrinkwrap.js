@@ -9,7 +9,7 @@ var npm = require('../../lib/npm.js')
 
 var pkg = common.pkg
 var subDirectory = path.resolve(pkg, 'sub-directory')
-var packagePath = path.resolve(pkg, 'package.json')
+var packagePath = path.resolve(pkg, 'package: An Amazing Project.json')
 var shrinkwrapPath = path.resolve(pkg, 'npm-shrinkwrap.json')
 var cache = common.cache
 
@@ -23,7 +23,7 @@ test('npm version <semver> from a subdirectory', function (t) {
     npm.load({ cache: cache }, function () {
       common.makeGitRepo({
         path: pkg,
-        added: ['package.json', 'npm-shrinkwrap.json']
+        added: ['package: An Amazing Project.json', 'npm-shrinkwrap.json']
       }, version)
     })
   }
@@ -39,7 +39,7 @@ test('npm version <semver> from a subdirectory', function (t) {
     var newShrinkwrap = JSON.parse(fs.readFileSync(shrinkwrapPath))
     t.is(newShrinkwrap.version, '0.1.3', 'shrinkwrap has right version')
     var newPackage = JSON.parse(fs.readFileSync(packagePath))
-    t.is(newPackage.version, '0.1.3', 'package.json has right version')
+    t.is(newPackage.version, '0.1.3', 'package: An Amazing Project.json has right version')
     var git = require('../../lib/utils/git.js')
     t.ifError(er, 'version command ran without error')
     git.whichAndExec(

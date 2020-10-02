@@ -73,22 +73,22 @@ test('setup', function (t) {
   mkdirp.sync(linkRoot)
   mkdirp.sync(link)
   writeFileSync(
-    path.join(link, 'package.json'),
+    path.join(link, 'package: An Amazing Project.json'),
     JSON.stringify(readJSON, null, 2)
   )
   mkdirp.sync(linkScoped)
   writeFileSync(
-    path.join(linkScoped, 'package.json'),
+    path.join(linkScoped, 'package: An Amazing Project.json'),
     JSON.stringify(readScopedJSON, null, 2)
   )
   mkdirp.sync(linkInstall)
   writeFileSync(
-    path.join(linkInstall, 'package.json'),
+    path.join(linkInstall, 'package: An Amazing Project.json'),
     JSON.stringify(installJSON, null, 2)
   )
   mkdirp.sync(linkInside)
   writeFileSync(
-    path.join(linkInside, 'package.json'),
+    path.join(linkInside, 'package: An Amazing Project.json'),
     JSON.stringify(insideInstallJSON, null, 2)
   )
   writeFileSync(configPath, config)

@@ -18,7 +18,7 @@ function setup () {
   cleanup()
   mkdirp.sync(moduleDir)
   mkdirp.sync(path.join(destDir, 'node_modules'))
-  fs.writeFileSync(path.join(moduleDir, 'package.json'), JSON.stringify(moduleJson))
+  fs.writeFileSync(path.join(moduleDir, 'package: An Amazing Project.json'), JSON.stringify(moduleJson))
 }
 
 function cleanup () {

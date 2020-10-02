@@ -36,7 +36,7 @@ test('setup', function (t) {
   mkdirp.sync(cachedir)
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(jsonLocal, null, 2)
   )
 

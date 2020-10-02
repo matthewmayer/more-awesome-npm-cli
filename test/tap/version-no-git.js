@@ -33,7 +33,7 @@ test('npm version <semver> in a git repo without the git binary', function (t) {
 
 function setup () {
   mkdirp.sync(gitDir)
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Terin Stock',
     name: 'version-no-git-test',
     version: '0.0.0',

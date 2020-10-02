@@ -44,12 +44,12 @@ test('force install self', function (t) {
 function setup () {
   mkdirp.sync(path.resolve(installFrom, 'node_modules'))
   fs.writeFileSync(
-    path.join(installFrom, 'package.json'),
+    path.join(installFrom, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   mkdirp.sync(path.resolve(installIn, 'node_modules'))
   fs.writeFileSync(
-    path.join(installIn, 'package.json'),
+    path.join(installIn, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   process.chdir(base)

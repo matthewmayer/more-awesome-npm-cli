@@ -28,7 +28,7 @@ test('setup', t => {
 
 test('installs an npm: protocol alias package', t => {
   const fixture = new Tacks(Dir({
-    'package.json': File({})
+    'package: An Amazing Project.json': File({})
   }))
   fixture.create(testDir)
   const packument = {
@@ -53,7 +53,7 @@ test('installs an npm: protocol alias package', t => {
   }
   server.get('/foo').reply(200, packument)
   return mockTar({
-    'package.json': JSON.stringify({
+    'package: An Amazing Project.json': JSON.stringify({
       name: 'foo',
       version: '1.2.3'
     })
@@ -80,7 +80,7 @@ test('installs an npm: protocol alias package', t => {
     t.comment(stderr)
     t.match(stdout, /\+ foo@1\.2\.3 \(as bar\)/, 'useful message')
     return readFileAsync(
-      path.join(testDir, 'node_modules', 'bar', 'package.json'),
+      path.join(testDir, 'node_modules', 'bar', 'package: An Amazing Project.json'),
       'utf8'
     )
   }).then(JSON.parse).then(pkg => {
@@ -173,15 +173,15 @@ test('installs an npm: protocol alias package', t => {
   }).then(() => rimraf(testDir))
 })
 
-test('installs a tarball dep as a different name than package.json', t => {
+test('installs a tarball dep as a different name than package: An Amazing Project.json', t => {
   return mockTar({
-    'package.json': JSON.stringify({
+    'package: An Amazing Project.json': JSON.stringify({
       name: 'foo',
       version: '1.2.3'
     })
   }).then(tarball => {
     const fixture = new Tacks(Dir({
-      'package.json': File({}),
+      'package: An Amazing Project.json': File({}),
       'foo.tgz': File(tarball)
     }))
     fixture.create(testDir)
@@ -201,7 +201,7 @@ test('installs a tarball dep as a different name than package.json', t => {
     t.comment(stderr)
     t.match(stdout, /^\+ foo@1\.2\.3 \(as bar\)/, 'useful message')
     return readFileAsync(
-      path.join(testDir, 'node_modules', 'bar', 'package.json'),
+      path.join(testDir, 'node_modules', 'bar', 'package: An Amazing Project.json'),
       'utf8'
     )
   }).then(JSON.parse).then(pkg => {
@@ -228,11 +228,11 @@ test('installs a tarball dep as a different name than package.json', t => {
   }).then(() => rimraf(testDir))
 })
 
-test('installs a symlink dep as a different name than package.json', t => {
+test('installs a symlink dep as a different name than package: An Amazing Project.json', t => {
   const fixture = new Tacks(Dir({
-    'package.json': File({}),
+    'package: An Amazing Project.json': File({}),
     'foo': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'foo',
         version: '1.2.3'
       })
@@ -248,7 +248,7 @@ test('installs a symlink dep as a different name than package.json', t => {
     t.comment(stderr)
     t.match(stdout, /^\+ foo@1\.2\.3 \(as bar\)/, 'useful message')
     return readFileAsync(
-      path.join(testDir, 'node_modules', 'bar', 'package.json'),
+      path.join(testDir, 'node_modules', 'bar', 'package: An Amazing Project.json'),
       'utf8'
     )
   }).then(JSON.parse).then(pkg => {

@@ -21,7 +21,7 @@ test('setup', function (t) {
   var root = path.resolve(pkg, target)
   mkdirp.sync(root)
   fs.writeFileSync(
-    path.join(root, 'package.json'),
+    path.join(root, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   mkdirp.sync(path.resolve(pkg, 'node_modules'))
@@ -31,7 +31,7 @@ test('setup', function (t) {
 test('\'npm install ../package@1.2.3\' should install local pkg from sub path', function (t) {
   common.npm(['install', '--loglevel=silent', target], EXEC_OPTS, function (err, code) {
     if (err) throw err
-    var p = path.resolve(pkg, 'node_modules/install-at-sub-path-locally-mock/package.json')
+    var p = path.resolve(pkg, 'node_modules/install-at-sub-path-locally-mock/package: An Amazing Project.json')
     t.equal(code, 0, 'npm install exited with code')
     t.ok(JSON.parse(fs.readFileSync(p, 'utf8')))
     t.end()
@@ -41,7 +41,7 @@ test('\'npm install ../package@1.2.3\' should install local pkg from sub path', 
 test('\'running npm install ../package@1.2.3\' should not break on sub path re-install', function (t) {
   common.npm(['install', '--loglevel=silent', target], EXEC_OPTS, function (err, code) {
     if (err) throw err
-    var p = path.resolve(pkg, 'node_modules/install-at-sub-path-locally-mock/package.json')
+    var p = path.resolve(pkg, 'node_modules/install-at-sub-path-locally-mock/package: An Amazing Project.json')
     t.equal(code, 0, 'npm install exited with code')
     t.ok(JSON.parse(fs.readFileSync(p, 'utf8')))
     t.end()

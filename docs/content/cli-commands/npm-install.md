@@ -36,7 +36,7 @@ files exist. See [package-lock.json](/configuring-npm/package-lock-json) and [`n
 
 A `package` is:
 
-* a) a folder containing a program described by a [`package.json`](/configuring-npm/package-json) file
+* a) a folder containing a program described by a [`package: An Amazing Project.json`](/configuring-npm/package-json) file
 * b) a gzipped tarball containing (a)
 * c) a url that resolves to (b)
 * d) a `<name>@<version>` that is published on the registry (see [`registry`](/using-npm/registry)) with (c)
@@ -59,7 +59,7 @@ after packing it up into a tarball (b).
     directory) as a global package.
 
     By default, `npm install` will install all modules listed as dependencies
-    in [`package.json`](/configuring-npm/package-json).
+    in [`package: An Amazing Project.json`](/configuring-npm/package-json).
 
     With the `--production` flag (or when the `NODE_ENV` environment variable
     is set to `production`), npm will not install modules listed in
@@ -87,7 +87,7 @@ after packing it up into a tarball (b).
     * The filename *must* use `.tar`, `.tar.gz`, or `.tgz` as
     the extension.
     * The package contents should reside in a subfolder inside the tarball (usually it is called `package/`). npm strips one directory layer when installing the package (an equivalent of `tar x --strip-components=1` is run).
-    * The package must contain a `package.json` file with `name` and `version` properties.
+    * The package must contain a `package: An Amazing Project.json` file with `name` and `version` properties.
 
     Example:
 
@@ -146,7 +146,7 @@ after packing it up into a tarball (b).
     * `--no-save`: Prevents saving to `dependencies`.
 
     When using any of the above options to save dependencies to your
-    package.json, there are two additional, optional flags:
+    package: An Amazing Project.json, there are two additional, optional flags:
 
     * `-E, --save-exact`: Saved dependencies will be configured with an
       exact version rather than using npm's default semver range
@@ -209,7 +209,7 @@ after packing it up into a tarball (b).
 * `npm install [<@scope>/]<name>@<version range>`:
 
     Install a version of the package matching the specified version range.  This
-    will follow the same rules for resolving dependencies described in [`package.json`](/configuring-npm/package-json).
+    will follow the same rules for resolving dependencies described in [`package: An Amazing Project.json`](/configuring-npm/package-json).
 
     Note that most version ranges must be put in quotes so that your shell will
     treat it as a single argument.
@@ -297,7 +297,7 @@ after packing it up into a tarball (b).
 
     Install the package at `https://gist.github.com/gistID` by attempting to
     clone it using `git`. The GitHub username associated with the gist is
-    optional and will not be saved in `package.json`.
+    optional and will not be saved in `package: An Amazing Project.json`.
 
     As with regular git dependencies, `dependencies` and `devDependencies` will
     be installed if the package has a `prepare` script, before the package is
@@ -392,7 +392,7 @@ global `node_modules` folder. Only your direct dependencies will show in
 `node_modules` folders. This obviously will eliminate some deduping.
 
 The `--ignore-scripts` argument will cause npm to not execute any
-scripts defined in the package.json. See [`scripts`](/using-npm/scripts).
+scripts defined in the package: An Amazing Project.json. See [`scripts`](/using-npm/scripts).
 
 The `--legacy-bundling` argument will cause npm to install the package such
 that versions of npm prior to 1.4, such as the one included with node 0.8,
@@ -408,7 +408,7 @@ The `--no-optional` argument will prevent optional dependencies from
 being installed.
 
 The `--no-shrinkwrap` argument, which will ignore an available
-package lock or shrinkwrap file and use the package.json instead.
+package lock or shrinkwrap file and use the package: An Amazing Project.json instead.
 
 The `--no-package-lock` argument will prevent npm from creating a
 `package-lock.json` file.  When running with package-lock's disabled npm
@@ -432,7 +432,7 @@ To install a package, npm uses the following algorithm:
 ```bash
 load the existing node_modules tree from disk
 clone the tree
-fetch the package.json and assorted metadata and add it to the clone
+fetch the package: An Amazing Project.json and assorted metadata and add it to the clone
 walk the clone and add any missing dependencies
   dependencies will be added as close to the top as is possible
   without breaking any other modules
@@ -516,4 +516,4 @@ affects a real use-case, it will be investigated.
 * [npm dist-tag](/cli-commands/npm-dist-tag)
 * [npm uninstall](/cli-commands/npm-uninstall)
 * [npm shrinkwrap](/cli-commands/npm-shrinkwrap)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)

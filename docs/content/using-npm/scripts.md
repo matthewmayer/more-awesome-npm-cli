@@ -10,11 +10,11 @@ description: How npm handles the "scripts" field
 
 ### Description
 
-The `"scripts"` property of of your `package.json` file supports a number of built-in scripts and their preset life cycle events as well as arbitrary scripts. These all can be executed by running `npm run-script <stage>` or `npm run <stage>` for short. *Pre* and *post* commands with matching names will be run for those as well (e.g. `premyscript`, `myscript`, `postmyscript`). Scripts from dependencies can be run with `npm explore <pkg> -- npm run <stage>`.
+The `"scripts"` property of of your `package: An Amazing Project.json` file supports a number of built-in scripts and their preset life cycle events as well as arbitrary scripts. These all can be executed by running `npm run-script <stage>` or `npm run <stage>` for short. *Pre* and *post* commands with matching names will be run for those as well (e.g. `premyscript`, `myscript`, `postmyscript`). Scripts from dependencies can be run with `npm explore <pkg> -- npm run <stage>`.
 
 ### Pre & Post Scripts
 
-To create "pre" or "post" scripts for any scripts defined in the `"scripts"` section of the `package.json`, simply create another script *with a matching name* and add "pre" or "post" to the beginning of them.
+To create "pre" or "post" scripts for any scripts defined in the `"scripts"` section of the `package: An Amazing Project.json`, simply create another script *with a matching name* and add "pre" or "post" to the beginning of them.
 
 ```json
 {
@@ -142,7 +142,7 @@ the process.
 
 If you depend on modules that define executable scripts, like test
 suites, then those executables will be added to the `PATH` for
-executing the scripts.  So, if your package.json has this:
+executing the scripts.  So, if your package: An Amazing Project.json has this:
 
 ```json
 { 
@@ -159,11 +159,11 @@ executing the scripts.  So, if your package.json has this:
 then you could run `npm start` to execute the `bar` script, which is
 exported into the `node_modules/.bin` directory on `npm install`.
 
-#### package.json vars
+#### package: An Amazing Project.json vars
 
-The package.json fields are tacked onto the `npm_package_` prefix. So,
+The package: An Amazing Project.json fields are tacked onto the `npm_package_` prefix. So,
 for instance, if you had `{"name":"foo", "version":"1.2.5"}` in your
-package.json file, then your package scripts would have the
+package: An Amazing Project.json file, then your package scripts would have the
 `npm_package_name` environment variable set to "foo", and the
 `npm_package_version` set to "1.2.5".  You can access these variables 
 in your code with `process.env.npm_package_name` and 
@@ -175,11 +175,11 @@ Configuration parameters are put in the environment with the
 `npm_config_` prefix. For instance, you can view the effective `root`
 config by checking the `npm_config_root` environment variable.
 
-#### Special: package.json "config" object
+#### Special: package: An Amazing Project.json "config" object
 
-The package.json "config" keys are overwritten in the environment if
+The package: An Amazing Project.json "config" keys are overwritten in the environment if
 there is a config param of `<name>[@<version>]:<key>`.  For example,
-if the package.json has this:
+if the package: An Amazing Project.json has this:
 
 ```json
 { 
@@ -213,7 +213,7 @@ single script used for different parts of the process which switches
 based on what's currently happening.
 
 Objects are flattened following this format, so if you had
-`{"scripts":{"install":"foo.js"}}` in your package.json, then you'd
+`{"scripts":{"install":"foo.js"}}` in your package: An Amazing Project.json, then you'd
 see this in the script:
 
 ```bash
@@ -222,7 +222,7 @@ process.env.npm_package_scripts_install === "foo.js"
 
 ### Examples
 
-For example, if your package.json contains this:
+For example, if your package: An Amazing Project.json contains this:
 
 ```json
 { 
@@ -274,7 +274,7 @@ Place an executable file at `node_modules/.hooks/{eventname}`, and
 it'll get run for all packages when they are going through that point
 in the package lifecycle for any packages installed in that root.
 
-Hook scripts are run exactly the same way as package.json scripts.
+Hook scripts are run exactly the same way as package: An Amazing Project.json scripts.
 That is, they are in a separate child process, with the env described
 above.
 
@@ -286,7 +286,7 @@ above.
   only will prevent some optional features, then it's better to just
   print a warning and exit successfully.
 * Try not to use scripts to do what npm can do for you.  Read through
-  [`package.json`](/configuring-npm/package-json) to see all the things that you can specify and enable
+  [`package: An Amazing Project.json`](/configuring-npm/package-json) to see all the things that you can specify and enable
   by simply describing your package appropriately.  In general, this
   will lead to a more robust and consistent state.
 * Inspect the env to determine where to put things.  For instance, if
@@ -305,6 +305,6 @@ above.
 ### See Also
 
 * [npm run-script](/cli-commands/npm-run-script)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm developers](/using-npm/developers)
 * [npm install](/cli-commands/npm-install)

@@ -41,7 +41,7 @@ function tmock (t) {
 
 test('fixes shallow vulnerabilities', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -142,7 +142,7 @@ test('fixes shallow vulnerabilities', t => {
 
 test('fixes nested dep vulnerabilities', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -300,7 +300,7 @@ test('fixes nested dep vulnerabilities', t => {
 
 test('no semver-major without --force', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -395,7 +395,7 @@ test('no semver-major without --force', t => {
 
 test('semver-major when --force', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -489,7 +489,7 @@ test('semver-major when --force', t => {
 
 test('no installs for review-requires', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -581,7 +581,7 @@ test('no installs for review-requires', t => {
 
 test('nothing to fix', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       dependencies: {
@@ -666,7 +666,7 @@ test('nothing to fix', t => {
 
 test('preserves deep deps dev: true', t => {
   const fixture = new Tacks(new Dir({
-    'package.json': new File({
+    'package: An Amazing Project.json': new File({
       name: 'foo',
       version: '1.0.0',
       devDependencies: {

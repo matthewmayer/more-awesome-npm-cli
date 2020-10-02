@@ -76,12 +76,12 @@ simply override the `--registry` option for that `publish` command.
 
 ### I don't want my package published in the official registry. It's private.
 
-Set `"private": true` in your package.json to prevent it from being
+Set `"private": true` in your package: An Amazing Project.json to prevent it from being
 published at all, or
 `"publishConfig":{"registry":"http://my-internal-registry.local"}`
 to force it to be published only to your internal registry.
 
-See [`package.json`](/configuring-npm/package-json) for more info on what goes in the package.json file.
+See [`package: An Amazing Project.json`](/configuring-npm/package-json) for more info on what goes in the package: An Amazing Project.json file.
 
 ### Will you replicate from my registry into the public one?
 

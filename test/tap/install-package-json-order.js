@@ -10,21 +10,21 @@ var workdir = path.join(pkg, 'workdir')
 var tmp = path.join(pkg, 'tmp')
 var fs = require('fs')
 
-test('package.json sorting after install', function (t) {
-  var packageJson = path.resolve(pkg, 'package.json')
+test('package: An Amazing Project.json sorting after install', function (t) {
+  var packageJson = path.resolve(pkg, 'package: An Amazing Project.json')
   var installedPackage = path.resolve(workdir,
-    'node_modules/install-package-json-order/package.json')
+    'node_modules/install-package-json-order/package: An Amazing Project.json')
 
   mkdirp.sync(tmp)
   mkdirp.sync(workdir)
 
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     'name': 'install-package-json-order',
     'version': '0.0.0',
     'array': [ 'one', 'two', 'three' ]
   }, null, 2), 'utf8')
 
-  fs.writeFileSync(path.resolve(workdir, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(workdir, 'package: An Amazing Project.json'), JSON.stringify({
     'name': 'install-package-json-order-work',
     'version': '0.0.0'
   }, null, 2), 'utf8')

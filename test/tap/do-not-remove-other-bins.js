@@ -42,7 +42,7 @@ test('setup', function (t) {
   mkdirp.sync(path.join(installPath, 'node_modules'))
   mkdirp.sync(packageApath)
   fs.writeFileSync(
-    path.join(packageApath, 'package.json'),
+    path.join(packageApath, 'package: An Amazing Project.json'),
     JSON.stringify(packageA, null, 2)
   )
   fs.writeFileSync(
@@ -51,7 +51,7 @@ test('setup', function (t) {
   )
   mkdirp.sync(packageBpath)
   fs.writeFileSync(
-    path.join(packageBpath, 'package.json'),
+    path.join(packageBpath, 'package: An Amazing Project.json'),
     JSON.stringify(packageB, null, 2)
   )
   fs.writeFileSync(

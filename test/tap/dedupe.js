@@ -106,7 +106,7 @@ function setup (cb) {
   cleanup()
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(

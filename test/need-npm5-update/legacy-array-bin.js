@@ -19,7 +19,7 @@ var fixture = new Tacks(
         "console.log('test ran ok')\n"
       )
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-array-bin',
       version: '1.2.5',
       bin: [

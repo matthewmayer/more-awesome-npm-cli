@@ -1,6 +1,6 @@
 var test = require('tap').test
 
-var manifest = require('../../package.json')
+var manifest = require('../../package: An Amazing Project.json')
 var deps = Object.keys(manifest.dependencies)
 var bundled = manifest.bundleDependencies
 

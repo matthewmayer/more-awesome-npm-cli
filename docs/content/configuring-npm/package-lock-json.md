@@ -11,7 +11,7 @@ description: A manifestation of the manifest
 ### Description
 
 `package-lock.json` is automatically generated for any operations where npm
-modifies either the `node_modules` tree, or `package.json`. It describes the
+modifies either the `node_modules` tree, or `package: An Amazing Project.json`. It describes the
 exact tree that was generated, such that subsequent installs are able to
 generate identical trees, regardless of intermediate dependency updates.
 
@@ -41,12 +41,12 @@ a package, `package-lock.json` will be completely ignored.
 #### name
 
 The name of the package this is a package-lock for. This must match what's in
-`package.json`.
+`package: An Amazing Project.json`.
 
 #### version
 
 The version of the package this is a package-lock for. This must match what's in
-`package.json`.
+`package: An Amazing Project.json`.
 
 #### lockfileVersion
 
@@ -57,7 +57,7 @@ whose semantics were used when generating this `package-lock.json`.
 
 This is a [subresource
 integrity](https://w3c.github.io/webappsec/specs/subresourceintegrity/) value
-created from the `package.json`. No preprocessing of the `package.json` should
+created from the `package: An Amazing Project.json`. No preprocessing of the `package: An Amazing Project.json` should
 be done. Subresource integrity strings can be produced by modules like
 [`ssri`](https://www.npmjs.com/package/ssri).
 
@@ -145,5 +145,5 @@ The dependencies of this dependency, exactly as at the top level.
 * [npm shrinkwrap](/cli-commands/npm-shrinkwrap)
 * [shrinkwrap.json](/configuring-npm/shrinkwrap-json)
 * [package-locks](/configuring-npm/package-locks)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm install](/cli-commands/npm-install)

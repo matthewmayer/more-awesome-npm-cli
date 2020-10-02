@@ -72,7 +72,7 @@ function bootstrap (t) {
   rimraf.sync(pkg)
   mkdirp.sync(pkg)
   process.chdir(pkg)
-  fs.writeFileSync('package.json', pjParent)
+  fs.writeFileSync('package: An Amazing Project.json', pjParent)
 }
 
 function setup (cb) {
@@ -80,7 +80,7 @@ function setup (cb) {
   rimraf.sync(repos)
 
   mkdirp.sync(topwt)
-  fs.writeFileSync(resolve(topwt, 'package.json'), pjChild)
+  fs.writeFileSync(resolve(topwt, 'package: An Amazing Project.json'), pjChild)
   mkdirp.sync(subwt)
   fs.writeFileSync(resolve(subwt, 'foo.txt'), 'This is provided by submodule')
   npm.load({ registry: common.registry, loglevel: 'silent' }, function () {

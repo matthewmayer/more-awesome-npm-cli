@@ -36,7 +36,7 @@ test('environment variables replacing in configs', function (t) {
     NPM_AUTH_TOKEN: 'xxxxxxxxxxxxxxx'
   })
   mkdirp.sync(packagePath)
-  const packageJsonPath = path.resolve(packagePath, 'package.json')
+  const packageJsonPath = path.resolve(packagePath, 'package: An Amazing Project.json')
   const configPath = path.resolve(packagePath, '.npmrc')
   fs.writeFileSync(packageJsonPath, packageJsonFile)
   fs.writeFileSync(configPath, inputConfigFile)

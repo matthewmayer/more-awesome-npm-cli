@@ -38,14 +38,14 @@ var fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     'cycler': Dir({
-      'package.json': File(cycler)
+      'package: An Amazing Project.json': File(cycler)
     }),
     node_modules: Dir({
       'cycler': Dir({
-        'package.json': File(cycler)
+        'package: An Amazing Project.json': File(cycler)
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'upgrade-lifecycles',
       version: '1.0.0',
       dependencies: {

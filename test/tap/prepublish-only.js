@@ -43,13 +43,13 @@ var fixture = new Tacks(Dir({
       'console.log("ok")\n'
     ].join('\n') + '\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'helper',
       version: '6.6.6',
       bin: './script.js'
     })
   }),
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'npm-test-prepublish-only',
     version: '1.2.5',
     dependencies: {

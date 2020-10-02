@@ -19,7 +19,7 @@ test('404-parent: if parent exists, specify parent in error message', function (
 })
 
 function setup () {
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Evan Lucas',
     name: '404-parent-test',
     version: '0.0.0',

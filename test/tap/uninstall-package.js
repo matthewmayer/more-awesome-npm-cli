@@ -22,7 +22,7 @@ var json = {
 
 test('setup', function (t) {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   t.end()
@@ -66,7 +66,7 @@ test('returns a list of removed items', function (t) {
 test('does not fail if installed package lacks a name somehow', function (t) {
   const scope = path.resolve(pkg, 'node_modules/@isaacs')
   const scopePkg = path.resolve(scope, 'namespace-test')
-  const pj = path.resolve(scopePkg, 'package.json')
+  const pj = path.resolve(scopePkg, 'package: An Amazing Project.json')
   fs.writeFileSync(pj, JSON.stringify({
     lol: 'yolo',
     name: 99

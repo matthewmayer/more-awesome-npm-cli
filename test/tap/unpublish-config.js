@@ -16,7 +16,7 @@ var json = {
 
 test('setup', function (t) {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json), 'utf8'
   )
   fs.writeFileSync(

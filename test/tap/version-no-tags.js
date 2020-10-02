@@ -48,7 +48,7 @@ test('npm version <semver> without git tag', function (t) {
 })
 
 function setup () {
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Evan Lucas',
     name: 'version-no-tags-test',
     version: '0.0.0',

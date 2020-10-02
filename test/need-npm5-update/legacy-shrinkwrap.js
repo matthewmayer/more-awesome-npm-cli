@@ -61,7 +61,7 @@ var fixture = new Tacks(
         }
       }
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       author: 'Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)',
       name: 'npm-test-shrinkwrap',
       version: '0.0.0',

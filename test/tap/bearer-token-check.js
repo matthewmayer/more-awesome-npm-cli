@@ -62,7 +62,7 @@ t.teardown(() => server.close())
 
 t.test('setup', function (t) {
   mkdirp.sync(modules)
-  writeFileSync(resolve(pkg, 'package.json'), JSON.stringify(json, null, 2) + '\n')
+  writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2) + '\n')
   writeFileSync(outfile, contents)
   writeFileSync(
     resolve(pkg, 'npm-shrinkwrap.json'),

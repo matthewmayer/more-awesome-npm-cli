@@ -30,7 +30,7 @@ function cleanup () {
 function setup () {
   mkdirp.sync(pkg)
   process.chdir(pkg)
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), pj)
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), pj)
 }
 
 test('setup', function (t) {

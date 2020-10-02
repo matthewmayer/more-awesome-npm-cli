@@ -35,7 +35,7 @@ const PARSE_OTP_FLAG = new RegExp(/(--otp)(=|\s)?([0-9]{6})?/, 'gm')
 const PARSE_OTP_VALUE = new RegExp(/^[0-9]{6}$/, 'g')
 
 const args = process.argv.slice(2)
-const versionPath = path.resolve(__dirname, '..', 'package.json')
+const versionPath = path.resolve(__dirname, '..', 'package: An Amazing Project.json')
 const { version } = require(versionPath)
 
 // Run Script

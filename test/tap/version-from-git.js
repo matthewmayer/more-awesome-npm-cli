@@ -9,7 +9,7 @@ var test = require('tap').test
 var npm = require('../../lib/npm.js')
 
 var pkg = common.pkg
-var packagePath = path.resolve(pkg, 'package.json')
+var packagePath = path.resolve(pkg, 'package: An Amazing Project.json')
 var cache = common.cache
 
 var json = { name: 'cat', version: '0.1.2' }
@@ -44,7 +44,7 @@ test('npm version from-git with a valid tag creates a new commit', function (t) 
   }
 })
 
-test('npm version from-git with a valid tag updates the package.json version', function (t) {
+test('npm version from-git with a valid tag updates the package: An Amazing Project.json version', function (t) {
   var version = '1.2.3'
   setup()
   createTag(t, version, runVersion)
@@ -58,10 +58,10 @@ test('npm version from-git with a valid tag updates the package.json version', f
 
   function checkManifest (er) {
     t.ifError(er, 'npm run version ran without error')
-    fs.readFile(path.resolve(pkg, 'package.json'), 'utf8', function (er, data) {
+    fs.readFile(path.resolve(pkg, 'package: An Amazing Project.json'), 'utf8', function (er, data) {
       t.ifError(er, 'read manifest without error')
       var manifest = JSON.parse(data)
-      t.equal(manifest.version, version, 'updated the package.json version')
+      t.equal(manifest.version, version, 'updated the package: An Amazing Project.json version')
       t.done()
     })
   }
@@ -199,7 +199,7 @@ function createGitRepo (t, cb) {
     t.ifError(er, 'npm load ran without issue')
     common.makeGitRepo({
       path: pkg,
-      added: ['package.json']
+      added: ['package: An Amazing Project.json']
     }, cb)
   })
 }
@@ -213,7 +213,7 @@ function createTag (t, tag, cb) {
     var git = require('../../lib/utils/git.js')
     common.makeGitRepo({
       path: pkg,
-      added: ['package.json'],
+      added: ['package: An Amazing Project.json'],
       commands: [git.chainableExec(['tag', tag, '-am', tag], opts)]
     }, cb)
   })

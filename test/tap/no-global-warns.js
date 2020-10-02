@@ -39,7 +39,7 @@ test('setup', function (t) {
   mkdirp.sync(mockGlobal)
   mkdirp.sync(toInstall)
   writeFileSync(
-    path.join(toInstall, 'package.json'),
+    path.join(toInstall, 'package: An Amazing Project.json'),
     JSON.stringify(installJSON, null, 2)
   )
   writeFileSync(configPath, config)

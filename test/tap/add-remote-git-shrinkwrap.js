@@ -29,7 +29,7 @@ var pjChild = JSON.stringify({
 
 test('setup', function (t) {
   mkdirp.sync(pkg)
-  fs.writeFileSync(resolve(pkg, 'package.json'), pjParent)
+  fs.writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), pjParent)
   setup(function (er, r) {
     t.ifError(er, 'git started up successfully')
 
@@ -90,7 +90,7 @@ test('clean', function (t) {
 
 function setup (cb) {
   mkdirp.sync(repo)
-  fs.writeFileSync(resolve(repo, 'package.json'), pjChild)
+  fs.writeFileSync(resolve(repo, 'package: An Amazing Project.json'), pjChild)
   npm.load({ prefix: pkg, registry: common.registry, loglevel: 'silent' }, function () {
     git = require('../../lib/utils/git.js')
 

@@ -30,7 +30,7 @@ var PACKAGE_JSON2 = {
 test('setup', function (t) {
   mkdirp.sync(path.resolve(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(PACKAGE_JSON1, null, 2)
   )
   mr({ port: common.port }, function (er, s) {
@@ -53,7 +53,7 @@ test('install noargs installs devDependencies', function (t) {
       t.ifError(err, 'npm install ran without issue')
       t.notOk(code, 'npm install exited with code 0')
 
-      var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+      var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
       var pkgJson = JSON.parse(fs.readFileSync(p))
 
       t.equal(pkgJson.version, '1.3.1')
@@ -64,7 +64,7 @@ test('install noargs installs devDependencies', function (t) {
 
 test('install noargs installs updated devDependencies', function (t) {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(PACKAGE_JSON2, null, 2)
   )
 
@@ -80,7 +80,7 @@ test('install noargs installs updated devDependencies', function (t) {
       t.ifError(err, 'npm install ran without issue')
       t.notOk(code, 'npm install exited with code 0')
 
-      var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+      var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
       var pkgJson = JSON.parse(fs.readFileSync(p))
 
       t.equal(pkgJson.version, '1.5.1')

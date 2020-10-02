@@ -9,7 +9,7 @@ var test = require('tap').test
 var common = require('../common-tap')
 
 var pkg = common.pkg
-var installed = join(pkg, 'node_modules', 'underscore', 'package.json')
+var installed = join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
 
 var json = {
   name: 'npm-it-test',
@@ -58,7 +58,7 @@ function setup (t) {
     rimraf(join(pkg, 'package-lock.json'), () => t.pass('lock file'))
   })
   t.test('create', t => {
-    writeFileSync(join(pkg, 'package.json'), JSON.stringify(json, null, 2))
+    writeFileSync(join(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2))
     t.end()
   })
   t.end()

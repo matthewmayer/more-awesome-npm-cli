@@ -19,7 +19,7 @@ test('invalid url format returns appropriate error', function (t) {
   var pkgPath = path.resolve(common.pkg, json.name)
   mkdirp.sync(pkgPath)
   fs.writeFileSync(
-    path.join(pkgPath, 'package.json'),
+    path.join(pkgPath, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   common.npm(['install'], {cwd: pkgPath}, function (err, code, stdout, stderr) {

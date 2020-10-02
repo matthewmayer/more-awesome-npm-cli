@@ -32,13 +32,13 @@ var fixture = new Tacks(
     cache: Dir(),
     mods: Dir({
       mod1: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'mod1',
           version: '1.0.0'
         })
       }),
       mod2: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'mod2',
           version: '1.0.0',
           dependencies: {
@@ -47,7 +47,7 @@ var fixture = new Tacks(
         })
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'shrinkwrap-local-dependency',
       version: '1.0.0',
       dependencies: {

@@ -24,7 +24,7 @@ aliases: c
 ### Description
 
 npm gets its config settings from the command line, environment
-variables, `npmrc` files, and in some cases, the `package.json` file.
+variables, `npmrc` files, and in some cases, the `package: An Amazing Project.json` file.
 
 See [npmrc](/configuring-npm/npmrc) for more information about the npmrc files.
 
@@ -80,6 +80,6 @@ global config.
 
 * [npm folders](/configuring-npm/folders)
 * [npm config](/cli-commands/npm-config)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npmrc](/configuring-npm/npmrc)
 * [npm](/cli-commands/npm)

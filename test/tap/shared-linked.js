@@ -14,7 +14,7 @@ var bugdir = path.join(testdir, 'modules', 'bug')
 // This is an absolutely minimal version of the optimist included with
 // npm-registry-mock.
 var optimist = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     dependencies: {
       minimist: '~0.0.1',
       wordwrap: '~0.0.2'
@@ -24,7 +24,7 @@ var optimist = Dir({
   }),
   node_modules: Dir({
     minimist: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         _shasum: 'd7aa327bcecf518f9106ac6b8f003fa3bcea8566',
         _resolve: 'foo',
         name: 'minimist',
@@ -32,7 +32,7 @@ var optimist = Dir({
       })
     }),
     wordwrap: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         _shasum: 'b79669bb42ecb409f83d583cad52ca17eaa1643f',
         _resolve: 'foo',
         name: 'wordwrap',
@@ -58,7 +58,7 @@ var fixture = new Tacks(
           linked1: Symlink('../../../global/lib/node_modules/linked1'),
           linked2: Symlink('../../../global/lib/node_modules/linked2')
         }),
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'bug',
           version: '10800.0.0',
           devDependencies: {
@@ -69,7 +69,7 @@ var fixture = new Tacks(
         })
       }),
       linked1: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'linked1',
           version: '1.0.0',
           devDependencies: {
@@ -81,7 +81,7 @@ var fixture = new Tacks(
         })
       }),
       linked2: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'linked2',
           version: '1.0.0',
           devDependencies: {

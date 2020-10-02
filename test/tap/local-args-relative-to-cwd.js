@@ -13,7 +13,7 @@ var fixture = new Tacks(
     example: Dir({
     }),
     mod1: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'mod1',
         version: '1.0.0'
       })

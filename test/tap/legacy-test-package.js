@@ -17,7 +17,7 @@ var fixture = new Tacks(
     README: File(
       'just an npm test\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-test-package',
       author: 'Testy McMock',
       version: '1.2.3-99-b',

@@ -10,7 +10,7 @@ var script = process.platform === 'win32' ? 'echo %PATH%' : 'echo $PATH'
 t.test('setup', function (t) {
   rimraf.sync(dir)
   mkdirp.sync(dir)
-  fs.writeFileSync(dir + '/package.json', JSON.stringify({
+  fs.writeFileSync(dir + '/package: An Amazing Project.json', JSON.stringify({
     name: 'my_node_modules',
     version: '1.2.3',
     scripts: {

@@ -25,8 +25,8 @@ const env = common.newEnv().extend({
 
 /**
  * NOTE: Tarball Fixtures
- * They contain package.json files with dependencies like the following:
- * a-1.0.0.tgz: package/package.json
+ * They contain package: An Amazing Project.json files with dependencies like the following:
+ * a-1.0.0.tgz: package/package: An Amazing Project.json
  * {
  *   "name":"a",
  *   "version":"1.0.0",
@@ -34,7 +34,7 @@ const env = common.newEnv().extend({
  *     "b":"./b-1.0.0.tgz"
  *   }
  * }
- * example-1.0.0.tgz: package/package.json
+ * example-1.0.0.tgz: package/package: An Amazing Project.json
  * {
  *   "name":"example",
  *   "version":"1.0.0",
@@ -67,7 +67,7 @@ const fixture = new Tacks(Dir({
       'hex'
     )),
     dev: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'dev',
         version: '1.0.0',
         devDependencies: {
@@ -85,7 +85,7 @@ const fixture = new Tacks(Dir({
       'hex'
     )),
     optional: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'optional',
         version: '1.0.0',
         optionalDependencies: {

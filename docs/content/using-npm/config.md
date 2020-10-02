@@ -111,9 +111,9 @@ npm ls --global --parseable --long --loglevel info
 
 ### Per-Package Config Settings
 
-When running scripts (see [`scripts`](/using-npm/scripts)) the package.json "config"
+When running scripts (see [`scripts`](/using-npm/scripts)) the package: An Amazing Project.json "config"
 keys are overwritten in the environment if there is a config param of
-`<name>[@<version>]:<key>`.  For example, if the package.json has
+`<name>[@<version>]:<key>`.  For example, if the package: An Amazing Project.json has
 this:
 
 ```json
@@ -134,7 +134,7 @@ then the user could change the behavior by doing:
 npm config set foo:port 80
 ```
 
-See [package.json](/configuring-npm/package-json) for more information.
+See [package: An Amazing Project.json](/configuring-npm/package-json) for more information.
 
 ### Config Settings
 
@@ -544,7 +544,7 @@ proxy settings will be honored by the underlying `request` library.
 * Type: Boolean
 
 If true, npm will not exit with an error code when `run-script` is invoked for
-a script that isn't defined in the `scripts` section of `package.json`. This
+a script that isn't defined in the `scripts` section of `package: An Amazing Project.json`. This
 option can be used when it's desirable to optionally run a script when it's
 present and fail if the script fails. This is useful, for example, when running
 scripts that may only apply for some builds in an otherwise generic CI setup.
@@ -561,7 +561,7 @@ If true, npm will not run `prepublish` scripts.
 * Default: false
 * Type: Boolean
 
-If true, npm does not run scripts specified in package.json files.
+If true, npm does not run scripts specified in package: An Amazing Project.json files.
 
 #### init-module
 
@@ -607,7 +607,7 @@ The value `npm init` should use by default for the package license.
 * Type: semver
 
 The value that `npm init` should use by default for the package
-version number, if not already set in package.json.
+version number, if not already set in package: An Amazing Project.json.
 
 #### json
 
@@ -934,12 +934,12 @@ Remove failed installs.
 * Default: true
 * Type: Boolean
 
-Save installed packages to a package.json file as dependencies.
+Save installed packages to a package: An Amazing Project.json file as dependencies.
 
 When used with the `npm rm` command, it removes it from the `dependencies`
 object.
 
-Only works if there is already a package.json file present.
+Only works if there is already a package: An Amazing Project.json file present.
 
 #### save-bundle
 
@@ -969,19 +969,19 @@ also the default behavior if `--save` is true, and neither `--save-dev` or
 * Default: false
 * Type: Boolean
 
-Save installed packages to a package.json file as `devDependencies`.
+Save installed packages to a package: An Amazing Project.json file as `devDependencies`.
 
 When used with the `npm rm` command, it removes it from the
 `devDependencies` object.
 
-Only works if there is already a package.json file present.
+Only works if there is already a package: An Amazing Project.json file present.
 
 #### save-exact
 
 * Default: false
 * Type: Boolean
 
-Dependencies saved to package.json using `--save`, `--save-dev` or
+Dependencies saved to package: An Amazing Project.json using `--save`, `--save-dev` or
 `--save-optional` will be configured with an exact version rather than
 using npm's default semver range operator.
 
@@ -990,20 +990,20 @@ using npm's default semver range operator.
 * Default: false
 * Type: Boolean
 
-Save installed packages to a package.json file as
+Save installed packages to a package: An Amazing Project.json file as
 optionalDependencies.
 
 When used with the `npm rm` command, it removes it from the
 `devDependencies` object.
 
-Only works if there is already a package.json file present.
+Only works if there is already a package: An Amazing Project.json file present.
 
 #### save-prefix
 
 * Default: '^'
 * Type: String
 
-Configure how versions of packages installed to a package.json file via
+Configure how versions of packages installed to a package: An Amazing Project.json file via
 `--save` or `--save-dev` get prefixed.
 
 For example if a package has version `1.2.3`, by default its version is

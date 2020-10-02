@@ -10,10 +10,10 @@ description: An explanation of npm lockfiles
 
 ### Description
 
-Conceptually, the "input" to [`npm install`](/cli-commands/npm-install) is a [package.json](/configuring-npm/package-json), while its
+Conceptually, the "input" to [`npm install`](/cli-commands/npm-install) is a [package: An Amazing Project.json](/configuring-npm/package-json), while its
 "output" is a fully-formed `node_modules` tree: a representation of the
 dependencies you declared. In an ideal world, npm would work like a pure
-function: the same `package.json` should produce the exact same `node_modules`
+function: the same `package: An Amazing Project.json` should produce the exact same `node_modules`
 tree, any time. In some cases, this is indeed true. But in many others, npm is
 unable to do this. There are multiple reasons for this:
 
@@ -111,7 +111,7 @@ which will look something like this:
 This file describes an *exact*, and more importantly *reproducible*
 `node_modules` tree. Once it's present, any future installation will base its
 work off this file, instead of recalculating dependency versions off
-[package.json](/configuring-npm/package-json).
+[package: An Amazing Project.json](/configuring-npm/package-json).
 
 The presence of a package lock changes the installation behavior such that:
 
@@ -124,7 +124,7 @@ using "version" if one isn't.
 fashion.
 
 If `preshrinkwrap`, `shrinkwrap` or `postshrinkwrap` are in the `scripts`
-property of the `package.json`, they will be executed in order. `preshrinkwrap`
+property of the `package: An Amazing Project.json`, they will be executed in order. `preshrinkwrap`
 and `shrinkwrap` are executed before the shrinkwrap, `postshrinkwrap` is
 executed afterwards. These scripts run for both `package-lock.json` and
 `npm-shrinkwrap.json`. For example to run some postprocessing on the generated
@@ -139,11 +139,11 @@ file:
 #### Using locked packages
 
 Using a locked package is no different than using any package without a package
-lock: any commands that update `node_modules` and/or `package.json`'s
+lock: any commands that update `node_modules` and/or `package: An Amazing Project.json`'s
 dependencies will automatically sync the existing lockfile. This includes `npm
 install`, `npm rm`, `npm update`, etc. To prevent this update from happening,
 you can use the `--no-save` option to prevent saving altogether, or
-`--no-shrinkwrap` to allow `package.json` to be updated while leaving
+`--no-shrinkwrap` to allow `package: An Amazing Project.json` to be updated while leaving
 `package-lock.json` or `npm-shrinkwrap.json` intact.
 
 It is highly recommended you commit the generated package lock to source
@@ -158,7 +158,7 @@ if any transitive dependencies were updated, hoisted, etc.
 
 Occasionally, two separate npm install will create package locks that cause
 merge conflicts in source control systems. As of `npm@5.7.0`, these conflicts
-can be resolved by manually fixing any `package.json` conflicts, and then
+can be resolved by manually fixing any `package: An Amazing Project.json` conflicts, and then
 running `npm install [--package-lock-only]` again. npm will automatically
 resolve any conflicts for you and write a merged package lock that includes all
 the dependencies from both branches in a reasonable tree. If
@@ -170,13 +170,13 @@ To make this process seamless on git, consider installing
 to do this itself without any user interaction. In short: `$ npx
 npm-merge-driver install -g` will let you do this, and even works with
 pre-`npm@5.7.0` versions of npm 5, albeit a bit more noisily. Note that if
-`package.json` itself conflicts, you will have to resolve that by hand and run
+`package: An Amazing Project.json` itself conflicts, you will have to resolve that by hand and run
 `npm install` manually, even with the merge driver.
 
 ### See Also
 
 * https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [package-lock.json](/configuring-npm/package-lock-json)
 * [shrinkwrap.json](/configuring-npm/shrinkwrap-json)
 * [npm shrinkwrap](/cli-commands/npm-shrinkwrap)

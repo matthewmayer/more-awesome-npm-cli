@@ -12,7 +12,7 @@ const multiplePackages = path.join(base, 'top-level-funding')
 
 function getFixturePackage ({ name, version, dependencies, funding }) {
   return Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name,
       version: version || '1.0.0',
       funding: funding || {
@@ -25,7 +25,7 @@ function getFixturePackage ({ name, version, dependencies, funding }) {
 }
 
 const fixture = new Tacks(Dir({
-  'package.json': File({}),
+  'package: An Amazing Project.json': File({}),
   'single-funding-package': getFixturePackage({
     name: 'single-funding-package'
   }),

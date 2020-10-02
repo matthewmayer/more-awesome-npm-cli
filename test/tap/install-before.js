@@ -25,7 +25,7 @@ test('setup', t => {
 
 test('installs an npm package before a certain date', t => {
   const fixture = new Tacks(Dir({
-    'package.json': File({})
+    'package: An Amazing Project.json': File({})
   }))
   fixture.create(testDir)
   const packument = {
@@ -56,7 +56,7 @@ test('installs an npm package before a certain date', t => {
   }
   server.get('/foo').reply(200, packument)
   return mockTar({
-    'package.json': JSON.stringify({
+    'package: An Amazing Project.json': JSON.stringify({
       name: 'foo',
       version: '1.2.3'
     })

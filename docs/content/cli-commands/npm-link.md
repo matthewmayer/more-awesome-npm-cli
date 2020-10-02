@@ -30,7 +30,7 @@ Next, in some other location, `npm link package-name` will create a
 symbolic link from globally-installed `package-name` to `node_modules/`
 of the current folder.
 
-Note that `package-name` is taken from `package.json`,
+Note that `package-name` is taken from `package: An Amazing Project.json`,
 not from directory name.
 
 The package name can be optionally prefixed with a scope. See [`scope`](/using-npm/npm-scope).
@@ -85,7 +85,7 @@ npm link @myorg/privatepackage
 ### See Also
 
 * [npm developers](/using-npm/developers)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm install](/cli-commands/npm-install)
 * [npm folders](/configuring-npm/folders)
 * [npm config](/cli-commands/npm-config)

@@ -22,9 +22,9 @@ packages are currently outdated.
 In the output:
 
 * `wanted` is the maximum version of the package that satisfies the semver
-  range specified in `package.json`. If there's no available semver range (i.e.
+  range specified in `package: An Amazing Project.json`. If there's no available semver range (i.e.
   you're running `npm outdated --global`, or the package isn't included in
-  `package.json`), then `wanted` shows the currently-installed version.
+  `package: An Amazing Project.json`), then `wanted` shows the currently-installed version.
 * `latest` is the version of the package tagged as latest in the registry.
   Running `npm publish` with no special configuration will publish the package
   with a dist-tag of `latest`. This may or may not be the maximum version of
@@ -34,9 +34,9 @@ In the output:
   `npm outdated` defaults to a depth of 0, so unless you override that, you'll
   always be seeing only top-level dependencies that are outdated.
 * `package type` (when using `--long` / `-l`) tells you whether this package is
-  a `dependency` or a `devDependency`. Packages not included in `package.json`
+  a `dependency` or a `devDependency`. Packages not included in `package: An Amazing Project.json`
   are always marked `dependencies`.
-* `homepage` (when using `--long` / `-l`) is the `homepage` value contained in the package's `package.json`
+* `homepage` (when using `--long` / `-l`) is the `homepage` value contained in the package's `package: An Amazing Project.json`
 * Red means there's a newer version matching your semver requirements, so you should update now.
 * Yellow indicates that there's a newer version above your semver requirements (usually new major, or new 0.x minor) so proceed with caution.
 

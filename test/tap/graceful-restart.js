@@ -55,7 +55,7 @@ var pjGraceful = JSON.stringify({
 }, null, 2) + '\n'
 
 test('graceless restart', function (t) {
-  fs.writeFileSync(resolve(pkg, 'package.json'), pjGraceless)
+  fs.writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), pjGraceless)
   createChild(['run-script', 'restart'], function (err, code, out) {
     t.ifError(err, 'restart finished successfully')
     t.equal(code, 0, 'npm run-script exited with code')
@@ -65,7 +65,7 @@ test('graceless restart', function (t) {
 })
 
 test('graceful restart', function (t) {
-  fs.writeFileSync(resolve(pkg, 'package.json'), pjGraceful)
+  fs.writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), pjGraceful)
   createChild(['run-script', 'restart'], function (err, code, out) {
     t.ifError(err, 'restart finished successfully')
     t.equal(code, 0, 'npm run-script exited with code')

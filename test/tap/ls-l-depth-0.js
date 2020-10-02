@@ -42,7 +42,7 @@ test('setup', function (t) {
   mkdirp.sync(modules)
   mkdirp.sync(dep)
 
-  writeFileSync(resolve(dep, 'package.json'), JSON.stringify(fixture))
+  writeFileSync(resolve(dep, 'package: An Amazing Project.json'), JSON.stringify(fixture))
   return mr({ port: common.port }).then((s) => {
     t.parent.teardown(() => s.close())
     return common.npm(['pack', dep], EXEC_OPTS)

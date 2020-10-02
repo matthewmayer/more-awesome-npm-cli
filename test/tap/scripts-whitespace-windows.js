@@ -43,7 +43,7 @@ if (process.argv.length === 8)
 test('setup', function (t) {
   mkdirp.sync(tmp)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(
@@ -53,7 +53,7 @@ test('setup', function (t) {
 
   mkdirp.sync(path.join(dep, 'bin'))
   fs.writeFileSync(
-    path.join(dep, 'package.json'),
+    path.join(dep, 'package: An Amazing Project.json'),
     JSON.stringify(dependency, null, 2)
   )
   fs.writeFileSync(path.join(dep, 'bin', 'foo'), foo)

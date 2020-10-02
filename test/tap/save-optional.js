@@ -33,12 +33,12 @@ const fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     example: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'example',
         version: '1.0.0'
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'save-optional',
       version: '1.0.0'
     })

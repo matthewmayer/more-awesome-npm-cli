@@ -16,7 +16,7 @@ var fixture = new Tacks(
     README: File(
       'just an npm test\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-private',
       version: '9.9.9-9',
       homepage: 'http://www.youtube.com/watch?v=1MLry6Cn_D4',

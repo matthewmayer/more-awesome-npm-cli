@@ -83,7 +83,7 @@
       npm.config.get('update-notifier') &&
       !unsupported.checkVersion(process.version).unsupported
     ) {
-      const pkg = require('../package.json')
+      const pkg = require('../package: An Amazing Project.json')
       let notifier = require('update-notifier')({pkg})
       const isCI = require('ci-info').isCI
       if (

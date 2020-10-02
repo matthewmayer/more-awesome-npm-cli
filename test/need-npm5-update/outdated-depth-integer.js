@@ -29,7 +29,7 @@ function cleanup () {
 function setup () {
   mkdirp.sync(pkg)
   process.chdir(pkg)
-  fs.writeFileSync('package.json', pj)
+  fs.writeFileSync('package: An Amazing Project.json', pj)
 }
 
 test('setup', function (t) {

@@ -81,25 +81,25 @@ var server
 var testdirContent = {
   node_modules: Dir({}),
   pkga: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'pkga',
       version: '1.0.0'
     })
   }),
   pkgb: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'pkgb',
       version: '1.0.0'
     })
   }),
   pkgc: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'pkgc',
       version: '1.0.0'
     })
   }),
   pkgd: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'pkgd',
       version: '1.0.0'
     })
@@ -141,7 +141,7 @@ slashes.forEach(function (os) {
     : function (ss) { return ss.replace(/\//g, '\\') }
   installOk.push(os + '-file-abs-f')
   testdirContent[os + '-file-abs-f'] = Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: os + '-file-abs-f',
       version: '1.0.0',
       dependencies: {
@@ -151,7 +151,7 @@ slashes.forEach(function (os) {
   })
   installOk.push(os + '-file-abs-fff')
   testdirContent[os + '-file-abs-fff'] = Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: os + '-file-abs-fff',
       version: '1.0.0',
       dependencies: {
@@ -161,7 +161,7 @@ slashes.forEach(function (os) {
   })
   installOk.push(os + '-file-rel')
   testdirContent[os + '-file-rel'] = Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: os + '-file-rel',
       version: '1.0.0',
       dependencies: {
@@ -171,7 +171,7 @@ slashes.forEach(function (os) {
   })
   installOk.push(os + '-file-rel-fffff')
   testdirContent[os + '-file-rel-fffff'] = Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: os + '-file-rel-fffff',
       version: '1.0.0',
       dependencies: {
@@ -182,7 +182,7 @@ slashes.forEach(function (os) {
 })
 
 testdirContent['win-abs-drive-win'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'win-abs-drive-win',
     version: '1.0.0',
     dependencies: {
@@ -192,7 +192,7 @@ testdirContent['win-abs-drive-win'] = Dir({
 })
 
 testdirContent['win-abs-drive-unix'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'win-abs-drive-unix',
     version: '1.0.0',
     dependencies: {
@@ -232,14 +232,14 @@ test('specifiers', function (t) {
   })
 })
 testdirContent['mkdirp'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'mkdirp',
     version: '9.9.9'
   })
 })
 testdirContent['example'] = Dir({
   'minimist': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'minimist',
       version: '9.9.9'
     })
@@ -248,7 +248,7 @@ testdirContent['example'] = Dir({
 testdirContent['wordwrap'] = Dir({
 })
 testdirContent['prefer-pkg'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'perfer-pkg',
     version: '1.0.0',
     dependencies: {
@@ -256,7 +256,7 @@ testdirContent['prefer-pkg'] = Dir({
     }
   }),
   'latest': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'mkdirp',
       version: '9.9.9'
     })
@@ -279,7 +279,7 @@ test('ambiguity', function (t) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
       const result = JSON.parse(stdout.trim())
-      t.like(result, {added: [{name: 'wordwrap', version: '0.0.2'}]}, 'even with local dir w/o package.json, got global')
+      t.like(result, {added: [{name: 'wordwrap', version: '0.0.2'}]}, 'even with local dir w/o package: An Amazing Project.json, got global')
       t.done()
     })
   })
@@ -305,7 +305,7 @@ test('ambiguity', function (t) {
   t.test('test ambiguity for github repos')
 })
 testdirContent['existing-matches'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'existing-matches',
     version: '1.0.0',
     dependencies: {
@@ -326,23 +326,23 @@ test('existing install matches', function (t) {
   // have to make these by hand because tacks doesn't support absolute paths in symlinks
   fs.symlinkSync(testdir + '/pkgb', testdir + '/existing-matches/node_modules/pkgb', 'junction')
   fs.symlinkSync(testdir + '/pkgc', testdir + '/existing-matches/node_modules/pkgc', 'junction')
-  t.test('relative symlink counts as match of relative symlink in package.json', function (t) {
+  t.test('relative symlink counts as match of relative symlink in package: An Amazing Project.json', function (t) {
     common.npm(['ls', '--json'], {cwd: path.join(testdir, 'existing-matches'), env: conf.env}, function (err, code, stdout) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
       if (stdout) t.comment(stdout.trim())
       t.test('specifically test that output is valid')
-      // relative symlink counts as match of relative symlink in package.json (pkga)
-      // relative symlink counts as match of abs symlink in package.json (pkgc)
-      // abs symlink counts as match of relative symlink in package.json (pkgb)
-      // abs symlink counts as match of abs symlink in package.json (pkgd)
+      // relative symlink counts as match of relative symlink in package: An Amazing Project.json (pkga)
+      // relative symlink counts as match of abs symlink in package: An Amazing Project.json (pkgc)
+      // abs symlink counts as match of relative symlink in package: An Amazing Project.json (pkgb)
+      // abs symlink counts as match of abs symlink in package: An Amazing Project.json (pkgd)
       t.done()
     })
   })
 })
 var ibdir = testdir + '/install-behavior'
 testdirContent['ib-out'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'ib-out',
     version: '1.0.0',
     dependencies: {
@@ -352,12 +352,12 @@ testdirContent['ib-out'] = Dir({
 })
 
 testdirContent['install-behavior'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'install-behavior',
     version: '1.0.0'
   }),
   'ib-in': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'ib-in',
       version: '1.0.0',
       dependencies: {
@@ -384,7 +384,7 @@ testdirContent['install-behavior'] = Dir({
   'not-module': Dir({}),
   'test-preinstall': Dir({
     'preinstall.js': File('console.log("CWD:" + process.cwd())'),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'test-preinstall',
       version: '1.0.0',
       scripts: {
@@ -450,7 +450,7 @@ test('install behavior', function (t) {
       t.done()
     })
   })
-  t.test('directories without package.json should give good error message', function (t) {
+  t.test('directories without package: An Amazing Project.json should give good error message', function (t) {
     common.npm(['install', 'file:not-module', '--json'], ibconf, function (err, code, stdout) {
       if (err) throw err
       t.not(code, 0, 'error on dir w/o module')
@@ -473,7 +473,7 @@ test('install behavior', function (t) {
 })
 var sbdir = testdir + '/save-behavior'
 testdirContent['save-behavior'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'save-behavior',
     version: '1.0.0'
   }),
@@ -483,7 +483,7 @@ testdirContent['save-behavior'] = Dir({
     dependencies: {}
   }),
   'transitive': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'transitive',
       version: '1.0.0',
       dependencies: {
@@ -493,7 +493,7 @@ testdirContent['save-behavior'] = Dir({
   })
 })
 testdirContent['sb-transitive'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'sb-transitive',
     version: '1.0.0',
     dependencies: {
@@ -501,7 +501,7 @@ testdirContent['sb-transitive'] = Dir({
     }
   }),
   'sbta': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'sbta',
       version: '1.0.0'
     })
@@ -509,7 +509,7 @@ testdirContent['sb-transitive'] = Dir({
 })
 var sbdirp = testdir + '/save-behavior-pre'
 testdirContent['save-behavior-pre'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'save-behavior',
     version: '1.0.0'
   }),
@@ -520,7 +520,7 @@ testdirContent['save-behavior-pre'] = Dir({
   })
 })
 testdirContent['sb-transitive-preserve'] = Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     name: 'sb-transitive-preserve',
     version: '1.0.0',
     dependencies: {
@@ -528,7 +528,7 @@ testdirContent['sb-transitive-preserve'] = Dir({
     }
   }),
   'sbtb': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'sbtb',
       version: '1.0.0'
     })
@@ -537,26 +537,26 @@ testdirContent['sb-transitive-preserve'] = Dir({
 test('save behavior', function (t) {
   t.plan(6)
   var sbconf = {cwd: sbdir, env: conf.env, stdio: conf.stdio}
-  t.test('to package.json and npm-shrinkwrap.json w/ abs', function (t) {
+  t.test('to package: An Amazing Project.json and npm-shrinkwrap.json w/ abs', function (t) {
     common.npm(['install', '--save', 'file:' + testdir + '/pkga'], sbconf, function (err, code, stdout) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
-      var pjson = readJson(sbdir + '/package.json')
+      var pjson = readJson(sbdir + '/package: An Amazing Project.json')
       var shrinkwrap = readJson(sbdir + '/npm-shrinkwrap.json')
-      t.is(pjson.dependencies.pkga, 'file:../pkga', 'package.json')
+      t.is(pjson.dependencies.pkga, 'file:../pkga', 'package: An Amazing Project.json')
       var sdep = shrinkwrap.dependencies
       t.like(sdep, {pkga: {version: 'file:../pkga', resolved: null}}, 'npm-shrinkwrap.json')
       t.done()
     })
   })
-  t.test('to package.json and npm-shrinkwrap.json w/ drive abs')
-  t.test('to package.json and npm-shrinkwrap.json w/ rel', function (t) {
+  t.test('to package: An Amazing Project.json and npm-shrinkwrap.json w/ drive abs')
+  t.test('to package: An Amazing Project.json and npm-shrinkwrap.json w/ rel', function (t) {
     common.npm(['install', '--save', 'file:../pkgb'], sbconf, function (err, code, stdout) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
-      var pjson = readJson(sbdir + '/package.json')
+      var pjson = readJson(sbdir + '/package: An Amazing Project.json')
       var shrinkwrap = readJson(sbdir + '/npm-shrinkwrap.json')
-      t.is(pjson.dependencies.pkgb, 'file:../pkgb', 'package.json')
+      t.is(pjson.dependencies.pkgb, 'file:../pkgb', 'package: An Amazing Project.json')
       var sdep = shrinkwrap.dependencies
       t.like(sdep, {pkgb: {version: 'file:../pkgb', resolved: null}}, 'npm-shrinkwrap.json')
       t.done()
@@ -566,9 +566,9 @@ test('save behavior', function (t) {
     common.npm(['install', '--save', 'file:transitive'], sbconf, function (err, code, stdout) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
-      var pjson = readJson(sbdir + '/package.json')
+      var pjson = readJson(sbdir + '/package: An Amazing Project.json')
       var shrinkwrap = readJson(sbdir + '/npm-shrinkwrap.json')
-      t.is(pjson.dependencies.transitive, 'file:transitive', 'package.json')
+      t.is(pjson.dependencies.transitive, 'file:transitive', 'package: An Amazing Project.json')
       var sdep = shrinkwrap.dependencies.transitive || {}
       var tdep = shrinkwrap.dependencies.pkgc
       t.is(sdep.version, 'file:transitive', 'npm-shrinkwrap.json direct dep')
@@ -580,10 +580,10 @@ test('save behavior', function (t) {
     common.npm(['install', '--save', 'file:../sb-transitive'], sbconf, function (err, code, stdout) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
-      var pjson = readJson(sbdir + '/package.json')
+      var pjson = readJson(sbdir + '/package: An Amazing Project.json')
       var shrinkwrap = readJson(sbdir + '/npm-shrinkwrap.json')
       var deps = pjson.dependencies || {}
-      t.is(deps['sb-transitive'], 'file:../sb-transitive', 'package.json')
+      t.is(deps['sb-transitive'], 'file:../sb-transitive', 'package: An Amazing Project.json')
       var sdep = shrinkwrap.dependencies['sb-transitive'] || {}
       var tdep = sdep.dependencies.sbta
       t.like(tdep, {bundled: null, version: 'file:../sb-transitive/sbta'}, 'npm-shrinkwrap.json transitive dep')
@@ -597,9 +597,9 @@ test('save behavior', function (t) {
     common.npm(['install', '--save', 'file:../sb-transitive-preserve'], preserveConf, function (err, code, stdout) {
       if (err) throw err
       t.is(code, 0, 'command ran ok')
-      var pjson = readJson(sbdirp + '/package.json')
+      var pjson = readJson(sbdirp + '/package: An Amazing Project.json')
       var shrinkwrap = readJson(sbdirp + '/npm-shrinkwrap.json')
-      t.is(pjson.dependencies['sb-transitive-preserve'], 'file:../sb-transitive-preserve', 'package.json')
+      t.is(pjson.dependencies['sb-transitive-preserve'], 'file:../sb-transitive-preserve', 'package: An Amazing Project.json')
       var sdep = shrinkwrap.dependencies['sb-transitive-preserve'] || {}
       var tdep = shrinkwrap.dependencies.sbtb
       t.like(sdep, {bundled: null, version: 'file:../sb-transitive-preserve'}, 'npm-shrinkwrap.json direct dep')
@@ -612,7 +612,7 @@ test('save behavior', function (t) {
 var rmdir = testdir + '/remove-behavior'
 testdirContent['remove-behavior'] = Dir({
   'rmsymlink': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'remove-behavior',
       version: '1.0.0',
       dependencies: {
@@ -640,7 +640,7 @@ testdirContent['remove-behavior'] = Dir({
       }
     }),
     dep1: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'dep1',
         version: '1.0.0',
         dependencies: {
@@ -652,7 +652,7 @@ testdirContent['remove-behavior'] = Dir({
       })
     }),
     dep2: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'dep2',
         version: '1.0.0'
       })
@@ -662,7 +662,7 @@ testdirContent['remove-behavior'] = Dir({
     })
   }),
   'rmesymlink': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'remove-behavior',
       version: '1.0.0',
       dependencies: {
@@ -694,7 +694,7 @@ testdirContent['remove-behavior'] = Dir({
     })
   }),
   edep1: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'edep1',
       version: '1.0.0',
       dependencies: {
@@ -706,7 +706,7 @@ testdirContent['remove-behavior'] = Dir({
     })
   }),
   edep2: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'edep2',
       version: '1.0.0'
     })

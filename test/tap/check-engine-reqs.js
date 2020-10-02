@@ -55,7 +55,7 @@ test('warns on bad engine not strict', function (t) {
 function setup () {
   mkdirp.sync(path.resolve(installFrom, 'node_modules'))
   fs.writeFileSync(
-    path.join(installFrom, 'package.json'),
+    path.join(installFrom, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   mkdirp.sync(path.resolve(installIn, 'node_modules'))

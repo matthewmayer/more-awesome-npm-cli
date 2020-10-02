@@ -109,43 +109,43 @@ function setup (cb) {
 
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    join(pkg, 'package.json'),
+    join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(deduper, null, 2)
   )
 
   mkdirp.sync(join(modules, 'first'))
   fs.writeFileSync(
-    join(modules, 'first', 'package.json'),
+    join(modules, 'first', 'package: An Amazing Project.json'),
     JSON.stringify(first, null, 2)
   )
 
   mkdirp.sync(join(modules, 'first', 'node_modules', 'firstUnique'))
   fs.writeFileSync(
-    join(modules, 'first', 'node_modules', 'firstUnique', 'package.json'),
+    join(modules, 'first', 'node_modules', 'firstUnique', 'package: An Amazing Project.json'),
     JSON.stringify(firstUnique, null, 2)
   )
 
   mkdirp.sync(join(modules, 'first', 'node_modules', '@scope', 'shared'))
   fs.writeFileSync(
-    join(modules, 'first', 'node_modules', '@scope', 'shared', 'package.json'),
+    join(modules, 'first', 'node_modules', '@scope', 'shared', 'package: An Amazing Project.json'),
     JSON.stringify(shared, null, 2)
   )
 
   mkdirp.sync(join(modules, 'second'))
   fs.writeFileSync(
-    join(modules, 'second', 'package.json'),
+    join(modules, 'second', 'package: An Amazing Project.json'),
     JSON.stringify(second, null, 2)
   )
 
   mkdirp.sync(join(modules, 'second', 'node_modules', 'secondUnique'))
   fs.writeFileSync(
-    join(modules, 'second', 'node_modules', 'secondUnique', 'package.json'),
+    join(modules, 'second', 'node_modules', 'secondUnique', 'package: An Amazing Project.json'),
     JSON.stringify(secondUnique, null, 2)
   )
 
   mkdirp.sync(join(modules, 'second', 'node_modules', '@scope', 'shared'))
   fs.writeFileSync(
-    join(modules, 'second', 'node_modules', '@scope', 'shared', 'package.json'),
+    join(modules, 'second', 'node_modules', '@scope', 'shared', 'package: An Amazing Project.json'),
     JSON.stringify(shared, null, 2)
   )
 }

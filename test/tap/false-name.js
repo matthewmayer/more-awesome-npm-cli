@@ -1,7 +1,7 @@
 // this is a test for fix #2538
 
 // the false_name-test-package has the name property 'test-package' set
-// in the package.json and a dependency named 'test-package' is also a
+// in the package: An Amazing Project.json and a dependency named 'test-package' is also a
 // defined dependency of 'test-package-with-one-dep'.
 //
 // this leads to a conflict during installation and the fix is covered
@@ -72,7 +72,7 @@ test('cleanup', function (t) {
 
 function setup () {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(path.join(pkg, 'index.js'), indexContent)

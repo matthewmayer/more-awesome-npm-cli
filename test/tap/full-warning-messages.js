@@ -44,7 +44,7 @@ function modJoin () {
 }
 
 function writeJson (mod, data) {
-  fs.writeFileSync(path.resolve(mod, 'package.json'), JSON.stringify(data))
+  fs.writeFileSync(path.resolve(mod, 'package: An Amazing Project.json'), JSON.stringify(data))
 }
 
 function setup () {

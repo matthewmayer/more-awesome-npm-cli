@@ -9,7 +9,7 @@ const mkdirp = require('mkdirp')
 
 t.test('setup', t => {
   mkdirp.sync(resolve(pkg, 'package'))
-  const pj = resolve(pkg, 'package', 'package.json')
+  const pj = resolve(pkg, 'package', 'package: An Amazing Project.json')
   writeFileSync(pj, JSON.stringify({
     name: 'foo',
     version: '1.2.3'
@@ -21,7 +21,7 @@ t.test('setup', t => {
     gzip: true,
     cwd: pkg
   }, ['package'])
-  writeFileSync(resolve(pkg, 'package.json'), JSON.stringify({
+  writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     name: 'root',
     version: '1.2.3',
     dependencies: {
@@ -39,7 +39,7 @@ t.test('remove node_modules', t => rimraf(resolve(pkg, 'node_modules'), t.end))
 t.test('run ci and check modes', t =>
   common.npm(['ci'], { cwd: pkg, stdio: 'inherit' }).then(([code]) => {
     t.equal(code, 0)
-    const file = resolve(pkg, 'node_modules', 'foo', 'package.json')
+    const file = resolve(pkg, 'node_modules', 'foo', 'package: An Amazing Project.json')
     // bitwise AND against 0o705 so that we can detect whether
     // the file is world-readable.
     // Typical unix systems would leave the file 0o644

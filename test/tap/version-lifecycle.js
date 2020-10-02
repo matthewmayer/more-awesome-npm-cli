@@ -14,7 +14,7 @@ var configContents = 'sign-git-commit=false\nsign-git-tag=false\n'
 
 test('npm version <semver> with failing preversion lifecycle script', function (t) {
   setup()
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Alex Wolfe',
     name: 'version-lifecycle',
     version: '0.0.0',
@@ -41,7 +41,7 @@ test('npm version <semver> with failing preversion lifecycle script', function (
 
 test('npm version <semver> with failing version lifecycle script', function (t) {
   setup()
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Alex Wolfe',
     name: 'version-lifecycle',
     version: '0.0.0',
@@ -68,7 +68,7 @@ test('npm version <semver> with failing version lifecycle script', function (t) 
 
 test('npm version <semver> with failing postversion lifecycle script', function (t) {
   setup()
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Alex Wolfe',
     name: 'version-lifecycle',
     version: '0.0.0',
@@ -95,7 +95,7 @@ test('npm version <semver> with failing postversion lifecycle script', function 
 
 test('npm version <semver> execution order', function (t) {
   setup()
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Alex Wolfe',
     name: 'version-lifecycle',
     version: '0.0.0',
@@ -124,19 +124,19 @@ test('npm version <semver> execution order', function (t) {
 
         t.equal('0.0.0', readPackage('preversion').version, 'preversion')
         t.deepEqual(readStatus('preversion', t), {
-          'preversion-package.json': 'A'
+          'preversion-package: An Amazing Project.json': 'A'
         })
 
         t.equal('0.0.1', readPackage('version').version, 'version')
         t.deepEqual(readStatus('version', t), {
-          'package.json': 'M',
-          'preversion-package.json': 'A',
-          'version-package.json': 'A'
+          'package: An Amazing Project.json': 'M',
+          'preversion-package: An Amazing Project.json': 'A',
+          'version-package: An Amazing Project.json': 'A'
         })
 
         t.equal('0.0.1', readPackage('postversion').version, 'postversion')
         t.deepEqual(readStatus('postversion', t), {
-          'postversion-package.json': 'A'
+          'postversion-package: An Amazing Project.json': 'A'
         })
         t.end()
       })
@@ -157,11 +157,11 @@ function makeScript (lifecycle) {
   function contents (lifecycle) {
     var fs = require('fs')
     var exec = require('child_process').exec
-    fs.createReadStream('package.json')
-      .pipe(fs.createWriteStream(lifecycle + '-package.json'))
+    fs.createReadStream('package: An Amazing Project.json')
+      .pipe(fs.createWriteStream(lifecycle + '-package: An Amazing Project.json'))
       .on('close', function () {
         exec(
-          'git add ' + lifecycle + '-package.json',
+          'git add ' + lifecycle + '-package: An Amazing Project.json',
           function () {
             exec(
               'git status --porcelain',
@@ -182,7 +182,7 @@ function makeScript (lifecycle) {
 }
 
 function readPackage (lifecycle) {
-  return JSON.parse(fs.readFileSync(path.join(pkg, lifecycle + '-package.json'), 'utf-8'))
+  return JSON.parse(fs.readFileSync(path.join(pkg, lifecycle + '-package: An Amazing Project.json'), 'utf-8'))
 }
 
 function readStatus (lifecycle, t) {

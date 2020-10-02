@@ -25,14 +25,14 @@ files in the package directory are included if no local `.gitignore` or
 [`developers`](/using-npm/developers) for full details on what's included in the published package, as well as details on how the package is built.
 
 By default npm will publish to the public registry. This can be overridden by
-specifying a different default registry or using a [`scope`](/using-npm/npm-scope) in the name (see [`package.json`](/configuring-npm/package-json)).
+specifying a different default registry or using a [`scope`](/using-npm/npm-scope) in the name (see [`package: An Amazing Project.json`](/configuring-npm/package-json)).
 
 * `<folder>`:
-  A folder containing a package.json file
+  A folder containing a package: An Amazing Project.json file
 
 * `<tarball>`:
   A url or file path to a gzipped tar archive containing a single folder
-  with a package.json file inside.
+  with a package: An Amazing Project.json file inside.
 
 * `[--tag <tag>]`
   Registers the published package with the given tag, such that `npm install

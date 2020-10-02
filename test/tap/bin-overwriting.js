@@ -42,7 +42,7 @@ t.test('setup', { bail: true }, t => {
 
   // create first package
   mkdirp(pkg + '/first')
-  writeFileSync(pkg + '/first/package.json', JSON.stringify({
+  writeFileSync(pkg + '/first/package: An Amazing Project.json', JSON.stringify({
     name: 'first',
     version: '1.0.0',
     bin: { beep: 'first.js' }
@@ -52,7 +52,7 @@ t.test('setup', { bail: true }, t => {
 
   // create second package
   mkdirp(pkg + '/second')
-  writeFileSync(pkg + '/second/package.json', JSON.stringify({
+  writeFileSync(pkg + '/second/package: An Amazing Project.json', JSON.stringify({
     name: 'second',
     version: '1.0.0',
     bin: { beep: 'second.js' }

@@ -93,20 +93,20 @@ test('cleanup', function (t) {
 
 function bootstrap () {
   mkdirp.sync(pkg)
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), pjParent)
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), pjParent)
 
   mkdirp.sync(pkgLocalPrivate)
-  fs.writeFileSync(path.resolve(pkgLocalPrivate, 'package.json'), pjLocalPrivate)
+  fs.writeFileSync(path.resolve(pkgLocalPrivate, 'package: An Amazing Project.json'), pjLocalPrivate)
 
   mkdirp.sync(pkgScopedLocalPrivate)
-  fs.writeFileSync(path.resolve(pkgScopedLocalPrivate, 'package.json'), pjScopedLocalPrivate)
+  fs.writeFileSync(path.resolve(pkgScopedLocalPrivate, 'package: An Amazing Project.json'), pjScopedLocalPrivate)
 
   mkdirp.sync(pkgLocalUnderscore)
-  fs.writeFileSync(path.resolve(pkgLocalUnderscore, 'package.json'), pjLocalUnderscore)
+  fs.writeFileSync(path.resolve(pkgLocalUnderscore, 'package: An Amazing Project.json'), pjLocalUnderscore)
 }
 
 function bumpLocalPrivate () {
-  fs.writeFileSync(path.resolve(pkgLocalPrivate, 'package.json'), pjLocalPrivateBumped)
+  fs.writeFileSync(path.resolve(pkgLocalPrivate, 'package: An Amazing Project.json'), pjLocalPrivateBumped)
 }
 
 function cleanup () {

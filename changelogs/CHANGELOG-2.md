@@ -59,7 +59,7 @@ next main development version.
 * [`e5cb5e8`](https://github.com/npm/npm/commit/e5cb5e8fcf4642836fedf3f3421c994a8e27e19b)
   [#13717](https://github.com/npm/npm/pull/13717)
   Document that `npm link` will link the files specified in the `bin` field of
-  `package.json` to `{prefix}/bin/{name}`.
+  `package: An Amazing Project.json` to `{prefix}/bin/{name}`.
   ([@legodude17](https://github.com/legodude17))
 
 #### DEPENDENCY UPDATES
@@ -274,7 +274,7 @@ rotating-media-based hard drives.
 
 Under 6.0.0, the behavior was reliable enough to be nearly deterministic, and
 made it very difficult for publishers using `.npmignore` files in combination
-with `"files"` stanzas in `package.json` to get their packages onto the
+with `"files"` stanzas in `package: An Amazing Project.json` to get their packages onto the
 registry without one or more files missing from the packed tarball. The entire
 saga is contained within [the issue](https://github.com/npm/npm/issues/5082),
 but the summary is that an improvement to the performance of
@@ -471,10 +471,10 @@ status.
   ([@iarna](https://github.com/iarna), [@jamestalmage](https://github.com/jamestalmage))
 * [`04815e4`](https://github.com/npm/npm/commit/04815e436035de785279fd000cdbc821cc1f3447)
   [npm/npmlog#32](https://github.com/npm/npmlog/pull/32)
-  `npmlog@2.0.4`: Add `"files"` stanza to `package.json`.
+  `npmlog@2.0.4`: Add `"files"` stanza to `package: An Amazing Project.json`.
   ([@jamestalmage](https://github.com/jamestalmage))
 * [`9e29ad2`](https://github.com/npm/npm/commit/9e29ad227300bb970e7bcd21029944d4733e40db)
-  `wrappy@1.0.2`: Add `"files"` stanza to `package.json`.
+  `wrappy@1.0.2`: Add `"files"` stanza to `package: An Amazing Project.json`.
   ([@jamestalmage](https://github.com/jamestalmage))
 * [`44af4d4`](https://github.com/npm/npm/commit/44af4d475ac65bdce6d088173273ce4a4f74a49e)
   `abbrev@1.0.9` ([@jorrit](https://github.com/jorrit))
@@ -502,7 +502,7 @@ I have a couple of doc fixes and a shrinkwrap fix for you all this week.
   ([@reconbot](https://github.com/reconbot))
 * [`f9ff7f3`](https://github.com/npm/npm/commit/f9ff7f36cc2c2c3fbb4f6eef91491b589d049d5f)
   [#12586](https://github.com/npm/npm/pull/12586)
-  Correct `package.json` documentation as to when `node-gyp rebuild` called.
+  Correct `package: An Amazing Project.json` documentation as to when `node-gyp rebuild` called.
   This now matches https://docs.npmjs.com/misc/scripts#default-values
   ([@reconbot](https://github.com/reconbot))
 
@@ -660,7 +660,7 @@ deps, as any good LTS release train should be. 🙆
   ([@reconbot](https://github.com/reconbot))
 * [`3cfe99e`](https://github.com/npm/npm/commit/3cfe99e3a757c5d8cbb1c2789410e9802563abac)
   [#12093](https://github.com/npm/npm/pull/12093)
-  Update `bugs` url in `package.json` to use the `https` URL for Github.
+  Update `bugs` url in `package: An Amazing Project.json` to use the `https` URL for Github.
   ([@watilde](https://github.com/watilde))
 * [`ecf865f`](https://github.com/npm/npm/commit/ecf865f4eed1419c75442e0d52bc34ba1647de15)
   [#12075](https://github.com/npm/npm/pull/12075)
@@ -932,7 +932,7 @@ The npm CLI team's time recently has been sunk into npm's many years of tech deb
 These patches were previously released for `npm@3`, and then ported back to `npm@2` LTS.
 
 * [`437c537`](https://github.com/npm/npm/commit/437c537e2be5923c6d2c2753154564ba13db8fd9) [#11613](https://github.com/npm/npm/pull/11613) Fix up one of the tests after rebasing the legacy test rewrite to `npm@2`. ([@zkat](https://github.com/zkat))
-* [`55abd0c`](https://github.com/npm/npm/commit/55abd0cc20e87a144d33ce2d459f65e7506da576) [#11613](https://github.com/npm/npm/pull/11613) Test that the `package.json` `files` section and `.npmignore` do what they're supposed to. ([@zkat](https://github.com/zkat))
+* [`55abd0c`](https://github.com/npm/npm/commit/55abd0cc20e87a144d33ce2d459f65e7506da576) [#11613](https://github.com/npm/npm/pull/11613) Test that the `package: An Amazing Project.json` `files` section and `.npmignore` do what they're supposed to. ([@zkat](https://github.com/zkat))
 * [`a2b99b6`](https://github.com/npm/npm/commit/a2b99b6273ada14b2121ebc0acb7933e630edd9d) [#11613](https://github.com/npm/npm/pull/11613) Test that npm's distribution binary is complete and can be installed and used. ([@iarna](https://github.com/iarna))
 * [`8a8c36c`](https://github.com/npm/npm/commit/8a8c36ce51166006022e5c5d4f8655bbc458d651) [#11613](https://github.com/npm/npm/pull/11613) Test that environment variables are properly passed into scripts.
   ([@iarna](https://github.com/zkat))
@@ -1114,7 +1114,7 @@ these people do, and now so do you!
 
 * [`dcde451`](https://github.com/npm/npm/commit/dcde451cb85a6ca08acc6ef45782c652f1d8fc89)
   [#11232](https://github.com/npm/npm/pull/11232)
-  Update automatically included/excluded packages in `package.json`.
+  Update automatically included/excluded packages in `package: An Amazing Project.json`.
   ([@jscissr](https://github.com/jscissr))
 * [`e3f8d5b`](https://github.com/npm/npm/commit/e3f8d5be5ac5ec1d72db42f7abf50cc4a8c5935c)
   [#11273](https://github.com/npm/npm/pull/11273)
@@ -1162,7 +1162,7 @@ a few things here and there, and tweak a bunch of documentation? 😁
 
 * [`5c0e4c4`](https://github.com/npm/npm/commit/5c0e4c45a29d774ab729e86044377d4e5e424252)
   [#10940](https://github.com/npm/npm/pull/10940)
-  Ignore failures replacing `package.json`. writeFileAtomic is not atomic in
+  Ignore failures replacing `package: An Amazing Project.json`. writeFileAtomic is not atomic in
   Windows, it fails if the file is being accessed concurrently.
   ([@orangemocha](https://github.com/orangemocha))
 * [`2c44d8d`](https://github.com/npm/npm/commit/2c44d8dc8c267d5e054d0175ce2f4750f0986463)
@@ -1198,7 +1198,7 @@ We got a TON of lovely documentation patches, too! Thanks all for submitting!
   ([@ljharb](https://github.com/ljharb))
 * [`ae9c452`](https://github.com/npm/npm/commit/ae9c4521222d60ab4a69c19fee5e361c62f41fae)
   [#11128](https://github.com/npm/npm/pull/11128)
-  Add link to local paths section indocs for `package.json`.
+  Add link to local paths section indocs for `package: An Amazing Project.json`.
   ([@orangejulius](https://github.com/orangejulius))
 * [`663a8c6`](https://github.com/npm/npm/commit/663a8c6b4b1647f9b86c15ef32e30023edc8c060)
   [#11044](https://github.com/npm/npm/pull/11044)
@@ -1427,7 +1427,7 @@ Thanksgiving to all our friends in the USA.
   nonexistent `npm-rm(1)` documentation. ([@KenanY](https://github.com/KenanY))
 * [`777a271`](https://github.com/npm/npm/commit/777a271830a42d4ee62540a89f764a6e7d62de19)
   [#10474](https://github.com/npm/npm/issues/10474) Clarify that install finds
-  dependencies in `package.json`. ([@sleekweasel](https://github.com/sleekweasel))
+  dependencies in `package: An Amazing Project.json`. ([@sleekweasel](https://github.com/sleekweasel))
 * [`dcf4b5c`](https://github.com/npm/npm/commit/dcf4b5cbece1b0ef55ab7665d9acacc0b6b7cd6e)
   [#10497](https://github.com/npm/npm/issues/10497) Clarify what a package is
   slightly. ([@aredridel](https://github.com/aredridel))
@@ -1456,7 +1456,7 @@ CLI and the web site experiences.
 
 * [`0e8b15e`](https://github.com/npm/npm/commit/0e8b15e9fbc89e31bd00e573b648846beddfb835)
   [#9327](https://github.com/npm/npm/issues/9327) `npm access` no longer has
-  problems when run in a directory that doesn't contain a `package.json`.
+  problems when run in a directory that doesn't contain a `package: An Amazing Project.json`.
   ([@othiym23](https://github.com/othiym23))
 * [`c4e939c`](https://github.com/npm/npm/commit/c4e939c1d493601d25dcb88e6ffcca73076fd3fd)
   [npm/npm-registry-client#126](https://github.com/npm/npm-registry-client/issues/126)
@@ -1540,7 +1540,7 @@ version, in which case that version wouldn't be used, to everyone's surprise.
 #### A BUG FIX
 
 * [`eacac8f`](https://github.com/npm/npm/commit/eacac8f05014d15217c3d8264d0b00a72eafe2d2)
-  [#9965](https://github.com/npm/npm/issues/9965) Fix a corrupt `package.json`
+  [#9965](https://github.com/npm/npm/issues/9965) Fix a corrupt `package: An Amazing Project.json`
   file introduced by a merge conflict in
   [`022691a`](https://github.com/npm/npm/commit/022691a).
   ([@waynebloss](https://github.com/waynebloss))
@@ -1954,7 +1954,7 @@ No actual dep updates this week, but we're bumping a couple of devDeps:
 So apparently the `preferGlobal` option hasn't quite been warning correctly for
 some time. But now it should be all better! tl;dr: if you try and install a
 dependency with `preferGlobal: true`, and it's _not already_ in your
-`package.json`, you'll get a warning that the author would really rather you
+`package: An Amazing Project.json`, you'll get a warning that the author would really rather you
 install it with `--global`. This should prevent Windows PowerShell from thinking
 npm has failed just because of a benign warning.
 
@@ -1983,7 +1983,7 @@ npm has failed just because of a benign warning.
   ([@othiym23](https://github.com/othiym23))
 * [`cbde823`](https://github.com/npm/npm/commit/cbde8233436bf0ea62a4740869b4990322c20659)
   `init-package-json@1.9.1`: Add a `silent` option to suppress output on writing the
-  generated `package.json`. Also, updated to use `validate-npm-package-license@3.0.1`.
+  generated `package: An Amazing Project.json`. Also, updated to use `validate-npm-package-license@3.0.1`.
   ([@zkat](https://github.com/zkat))
 * [`08fda46`](https://github.com/npm/npm/commit/08fda465452b4d77f1ced8050ee3a35a77fc30a5)
   `tar@2.2.0`: Minor improvements. ([@othiym23](https://github.com/othiym23))
@@ -2003,7 +2003,7 @@ npm has failed just because of a benign warning.
   [#9396](https://github.com/npm/npm/issues/9396) Improve the `EISDIR` error
   message returned by npm's error-handling code to give users a better hint of
   what's most likely going on.  Usually, error reports with this error code are
-  about people trying to install things without a `package.json`.
+  about people trying to install things without a `package: An Amazing Project.json`.
   ([@KenanY](https://github.com/KenanY))
 * [`2677457`](https://github.com/npm/npm/commit/26774579c739c5951351e58263cf4d6ea3d66ec8)
   [#9360](https://github.com/npm/npm/issues/9360) Make it easier to run
@@ -2175,7 +2175,7 @@ like _you_, which we think is swell. Thanks!
   --link` against them. ([@murgatroid99](https://github.com/murgatroid99))
 * [`422da66`](https://github.com/npm/npm/commit/422da664bd3ce71313da447f170507faf5aac46a)
   [#9108](https://github.com/npm/npm/issues/9108) Clear up minor confusion
-  around wording in `bundledDependencies` section of `package.json` docs.
+  around wording in `bundledDependencies` section of `package: An Amazing Project.json` docs.
   ([@derekpeterson](https://github.com/derekpeterson))
 * [`6b42d99`](https://github.com/npm/npm/commit/6b42d99460885e715772d3487b1c548d2bc8a738)
   [#9146](https://github.com/npm/npm/issues/9146) Include scripts that run for
@@ -2255,7 +2255,7 @@ There's a couple of doc updates! The last one might be interesting.
 * [`cf09e75`](https://github.com/npm/npm/commit/cf09e754931739af32647d667b671e72a4c79081)
   [#9022](https://github.com/npm/npm/issues/9022) Document the `"access"` field
   in `"publishConfig"`. Did you know you don't need to use `--access=public`
-  when publishing scoped packages?! Just put it in your `package.json`!
+  when publishing scoped packages?! Just put it in your `package: An Amazing Project.json`!
   Go refresh yourself on scopes packages by [checking our docs](https://docs.npmjs.com/getting-started/scoped-packages) on them.
   ([@boennemann](https://github.com/boennemann))
 * [`bfd73da`](https://github.com/npm/npm/commit/bfd73da33349cc2afb8278953b2ae16ea95023de)
@@ -2478,7 +2478,7 @@ with the `npm doctor` stuff described in
 
 Seriously! This patch lets you add files to the `version` commit before it's
 made, So you can add additional metadata files, more automated changes to
-`package.json`, or even generate `CHANGELOG.md` automatically pre-commit if
+`package: An Amazing Project.json`, or even generate `CHANGELOG.md` automatically pre-commit if
 you're into that sort of thing. I'm so happy this is there I can't even. Do you
 have other fun usecases for this? Tell
 [npmbot (@npmjs)](http://twitter.com/npmjs) about it!
@@ -2596,7 +2596,7 @@ with this fix.
 
 * [`679bf47`](https://github.com/npm/npm/commit/679bf4745ac2cfbb01c9ce273e189807fd04fa33)
   [#40](http://github.com/npm/read-installed/issues/40) `read-installed@4.0.1`:
-  Handle prerelease versions in top-level dependencies not in `package.json`
+  Handle prerelease versions in top-level dependencies not in `package: An Amazing Project.json`
   without marking those packages as invalid.
   ([@benjamn](https://github.com/benjamn))
 * [`3a67410`](https://github.com/npm/npm/commit/3a6741068c9119174c920496778aeee870ebdac0)
@@ -2651,10 +2651,10 @@ intellectual property, and the convergence of me,
 [@kemitchell](https://github.com/kemitchell), and
 [@jandrieu](https://github.com/jandrieu) in one place allowed us to hammmer out
 a small but significant issue that had been bedeviling early adopters of the
-new SPDX expression syntax in `package.json` license fields: how to deal with
+new SPDX expression syntax in `package: An Amazing Project.json` license fields: how to deal with
 packages that are left without a license on purpose.
 
-Refer to [the docs](https://github.com/npm/npm/blob/16a3dd545b10f8a2464e2037506ce39124739b41/doc/files/package.json.md#license)
+Refer to [the docs](https://github.com/npm/npm/blob/16a3dd545b10f8a2464e2037506ce39124739b41/doc/files/package: An Amazing Project.json.md#license)
 for the specifics, but the short version is that instead of using
 `LicenseRef-LICENSE` for proprietary licenses, you can now use either
 `UNLICENSED` if you want to make it clear that you don't _want_ your software
@@ -2666,7 +2666,7 @@ file actually exists, but for now you're all on the honor system.
 * [`4827fc7`](https://github.com/npm/npm/commit/4827fc784117c17f35dd9b51b21d1eff6094f661)
   [#8557](https://github.com/npm/npm/issues/8557)
   `normalize-package-data@2.2.1`: Allow `UNLICENSED` and `SEE LICENSE IN
-  <filename>` in "license" field of `package.json`.
+  <filename>` in "license" field of `package: An Amazing Project.json`.
   ([@kemitchell](https://github.com/kemitchell))
 * [`16a3dd5`](https://github.com/npm/npm/commit/16a3dd545b10f8a2464e2037506ce39124739b41)
   [#8557](https://github.com/npm/npm/issues/8557) Document the new accepted
@@ -2708,7 +2708,7 @@ file actually exists, but for now you're all on the honor system.
   `nock@2.6.0`: Refined interception behavior.
   ([@pgte](https://github.com/pgte))
 * [`9583cc3`](https://github.com/npm/npm/commit/9583cc3cb192c2fced006927cfba7cd37b588605)
-  `fstream-npm@1.0.3`: Ensure that `main` entry in `package.json` is always
+  `fstream-npm@1.0.3`: Ensure that `main` entry in `package: An Amazing Project.json` is always
   included in the bundled package tarball.
   ([@coderhaoxin](https://github.com/coderhaoxin))
 * [`df89493`](https://github.com/npm/npm/commit/df894930f2716adac28740b29b2e863170919990)
@@ -2737,7 +2737,7 @@ NodeConf Adventure!
   `spdx@0.4.1`: License range updates
   ([@kemitchell](https://github.com/kemitchell))
 * [`2dd055b`](https://github.com/npm/npm/commit/2dd055b)
-  `normalize-package-data@2.2.1`: Fixes a crashing bug when the package.json
+  `normalize-package-data@2.2.1`: Fixes a crashing bug when the package: An Amazing Project.json
   `scripts` property is not an object.
   ([@iarna](https://github.com/iarna))
 * [`e02e85d`](https://github.com/npm/npm/commit/e02e85d)
@@ -2809,7 +2809,7 @@ while it lasts. :3
   `graceful-fs@3.0.8`: io.js fixes.
   ([@zkat](https://github.com/zkat))
 * [`f8bd453`](https://github.com/npm/npm/commit/f8bd453b1a1c46ba7666cb166595e8a011eae443)
-  `config-chain@1.1.9`: Added MIT license to package.json
+  `config-chain@1.1.9`: Added MIT license to package: An Amazing Project.json
   ([@zkat](https://github.com/zkat))
 
 ### v2.11.1 (2015-05-28):
@@ -2864,7 +2864,7 @@ usability improvement for npm!
   the [`npm version`](https://github.com/npm/npm/blob/master/doc/cli/npm-version.md)
   command has run. This makes it easy to, for instance, require that your
   test suite passes before bumping the version by just adding `"preversion":
-  "npm test"` to the scripts section of your `package.json`.
+  "npm test"` to the scripts section of your `package: An Amazing Project.json`.
   ([@watilde](https://github.com/watilde))
 * [`8a46136`](https://github.com/npm/npm/commit/8a46136f42e416cbadb533bcf89d73d681ed421d)
   [#8185](https://github.com/npm/npm/issues/8185)
@@ -3043,9 +3043,9 @@ expression parser, and has integrated it into npm in a few different ways.
 
 For you as a user of npm, this means:
 
-* npm now has proper support for dual licensing in `package.json`, due to
-  SPDX's compound expression syntax. Run `npm help package.json` for details.
-* npm will warn you if the `package.json` for your project is either missing a
+* npm now has proper support for dual licensing in `package: An Amazing Project.json`, due to
+  SPDX's compound expression syntax. Run `npm help package: An Amazing Project.json` for details.
+* npm will warn you if the `package: An Amazing Project.json` for your project is either missing a
   `"license"` field, or if the value of that field isn't a valid SPDX
   expression (pro tip: `"BSD"` becomes `"BSD-2-Clause"` in SPDX (unless you
   really want one of its variants); `"MIT"` and `"ISC"` are fine as-is; the
@@ -3055,7 +3055,7 @@ For you as a user of npm, this means:
   interactively (pro tip: I mostly use `npm init -y`, having previously run
   `npm config set init.license=MIT` / `npm config set init.author.email=foo` /
   `npm config set init.author.name=me`).
-* The documentation for `package.json` has been updated to tell you how to use
+* The documentation for `package: An Amazing Project.json` has been updated to tell you how to use
   the `"license"` field properly with SPDX.
 
 In general, this shouldn't be a big deal for anybody other than people trying
@@ -3069,7 +3069,7 @@ anyway. Future you will thank past you someday, unless you are
 
 * [`8669f7d`](https://github.com/npm/npm/commit/8669f7d88c472ccdd60e140106ac43cca636a648)
   [#8179](https://github.com/npm/npm/issues/8179) Document how to use SPDX in
-  `license` stanzas in `package.json`, including how to migrate from old busted
+  `license` stanzas in `package: An Amazing Project.json`, including how to migrate from old busted
   license declaration arrays to fancy new compound-license clauses.
   ([@kemitchell](https://github.com/kemitchell))
 * [`98ad98c`](https://github.com/npm/npm/commit/98ad98cb11f3d3ba29a488ef1ab050b066d9c7f6)
@@ -3190,7 +3190,7 @@ am delighted that we get so many of these pull requests. Thanks, everybody!
   ([@mikemaccana](https://github.com/mikemaccana))
 * [`873e467`](https://github.com/npm/npm/commit/873e46757e1986761b15353f94580a071adcb383)
   [#8069](https://github.com/npm/npm/issues/8069) Take the old, dead npm
-  mailing list address out of `package.json`. It seems that people don't have
+  mailing list address out of `package: An Amazing Project.json`. It seems that people don't have
   much trouble figuring out how to report errors to npm.
   ([@robertkowalski](https://github.com/robertkowalski))
 
@@ -3252,10 +3252,10 @@ small features. They're just enough to qualify for a semver-minor bump:
 
 * [`18ce0ec`](https://github.com/npm/npm/commit/18ce0ecd2d94ad3af01e997f1396515892dd363c)
   [#3032](https://github.com/npm/npm/issues/3032) `npm unpublish` will now use
-  the registry set in `package.json`, just like `npm publish`. This only
+  the registry set in `package: An Amazing Project.json`, just like `npm publish`. This only
   applies, for now, when unpublishing the entire package, as unpublishing a
   single version requires the name be included on the command line and
-  therefore doesn't read from `package.json`. ([@watilde](https://github.com/watilde))
+  therefore doesn't read from `package: An Amazing Project.json`. ([@watilde](https://github.com/watilde))
 * [`9ad2100`](https://github.com/npm/npm/commit/9ad210042242e51d52b2a8b633d8e59248f5faa4)
   [#8008](https://github.com/npm/npm/issues/8008) Once again, when considering
   what to install on `npm install`, include `devDependencies`.
@@ -3380,7 +3380,7 @@ other issues that affect parity between git and npm registry packages.)
 
 Big thanks to [@ewie](https://github.com/ewie) for identifying an issue with
 how npm was handling `peerDependencies` that were implicitly installed from the
-`package.json` files of scoped dependencies. This
+`package: An Amazing Project.json` files of scoped dependencies. This
 [will be a moot point](https://github.com/npm/npm/issues/6565#issuecomment-74971689)
 with the release of `npm@3`, but until then, it's important that
 `peerDependency` auto-installation work as expected.
@@ -3411,7 +3411,7 @@ had to say about this work:
 > CONTRIBUTING.md is inadequate, but another important factor is that the tests
 > themselves are written in a variety of styles.  One of the most notable
 > examples of this is the fact that many tests use fixture directories to store
-> precooked test scenarios and package.json files.
+> precooked test scenarios and package: An Amazing Project.json files.
 >
 > This had some negative consequences:
 >
@@ -3509,7 +3509,7 @@ Here's a summary of what's changed:
 
 * Instead of converting the GitHub shorthand syntax to a `git+ssh:`, `git:`, or
   `git+https:` URL and saving that, save the shorthand itself to
-  `package.json`.
+  `package: An Amazing Project.json`.
 * If presented with shortcuts, try cloning via the git protocol, SSH, and HTTPS
   (in that order).
 * No longer prompt for credentials -- it didn't work right with the spinner,
@@ -3522,7 +3522,7 @@ Here's a summary of what's changed:
   and `gitlab:` shorthand prefixes. GitHub shortcuts will continue to be
   normalized to `org/repo` instead of being saved as `github:org/repo`, but
   `gitlab:`, `gist:`, and `bitbucket:` prefixes will be used on the command
-  line and from `package.json`. BE CAREFUL WITH THIS. `package.json` files
+  line and from `package: An Amazing Project.json`. BE CAREFUL WITH THIS. `package: An Amazing Project.json` files
   published with the new shorthand syntax can _only_ be read by `npm@2.8.0` and
   later, and this feature is mostly meant for playing around with it. If you
   want to save git dependencies in a form that older versions of npm can read,
@@ -3540,7 +3540,7 @@ Extra testing of this change is requested.
 * [`6b0f588`](https://github.com/npm/npm/commit/6b0f58877f37df9904490ffbaaad33862bd36dce)
   [#7867](https://github.com/npm/npm/issues/7867) Use git shorthand and git
   URLs as presented by user. Support new `hosted-git-info` shortcut syntax.
-  Save shorthand in `package.json`. Try cloning via `git:`, `git+ssh:`, and
+  Save shorthand in `package: An Amazing Project.json`. Try cloning via `git:`, `git+ssh:`, and
   `git+https:`, in that order, when supported by the underlying hosting
   provider. ([@othiym23](https://github.com/othiym23))
 * [`75d4267`](https://github.com/npm/npm/commit/75d426787869d54ca7400408f562f971b34649ef)
@@ -3554,12 +3554,12 @@ Extra testing of this change is requested.
   ([@othiym23](https://github.com/othiym23))
 * [`9220e59`](https://github.com/npm/npm/commit/9220e59f8def8c82c6d331a39ba29ad4c44e3a9b)
   [#7867](https://github.com/npm/npm/issues/7867) Ensure that non-prefixed and
-  non-normalized GitHub shortcuts are saved to `package.json`.
+  non-normalized GitHub shortcuts are saved to `package: An Amazing Project.json`.
   ([@othiym23](https://github.com/othiym23))
 * [`dd398e9`](https://github.com/npm/npm/commit/dd398e98a8eba27eeba84378200da3d078fdf980)
   [#7867](https://github.com/npm/npm/issues/7867) `hosted-git-info@2.1.1`:
   Ensure that `gist:` shorthand survives being round-tripped through
-  `package.json`. ([@othiym23](https://github.com/othiym23))
+  `package: An Amazing Project.json`. ([@othiym23](https://github.com/othiym23))
 * [`33d1420`](https://github.com/npm/npm/commit/33d1420bf2f629332fceb2ac7e174e63ac48f96a)
   [#7867](https://github.com/npm/npm/issues/7867) `hosted-git-info@2.1.0`: Add
   support for auth embedded directly in git URLs.
@@ -3645,7 +3645,7 @@ dependencies on GitHub (whether they're specified with the GitHub
 first, and to fall back to using `git+ssh:` if `git:` doesn't work. Previously,
 sometimes npm would use `git:` and `git+ssh:` in some cases (most notably when
 using GitHub shortcut syntax on the command line), and use `git+https:` in
-others (when the GitHub shortcut syntax was present in `package.json`). This
+others (when the GitHub shortcut syntax was present in `package: An Amazing Project.json`). This
 led to subtle and hard-to-understand inconsistencies, and we're glad that as of
 `npm@2.7.6`, we've finally gotten things to where they were before we started,
 only slightly more consistent overall.
@@ -3678,7 +3678,7 @@ the code that handles Git dependencies.
   ([@mantoni](https://github.com/mantoni))
 * [`da015ee`](https://github.com/npm/npm/commit/da015eee45f6daf384598151d06a9b57ffce136e)
   [#7074](https://github.com/npm/npm/issues/7074) `read-package-json@1.3.3`:
-  `read-package-json` no longer caches `package.json` files, which trades a
+  `read-package-json` no longer caches `package: An Amazing Project.json` files, which trades a
   very small performance loss for the elimination of a large class of really
   annoying race conditions. See [#7074](https://github.com/npm/npm/issues/7074)
   for the grisly details. ([@othiym23](https://github.com/othiym23))
@@ -3931,7 +3931,7 @@ the code that handles Git dependencies.
   ([@watilde](https://github.com/watilde))
 * [`b6bd99a`](https://github.com/npm/npm/commit/b6bd99a73f575545fbbaef95c12237c47dd32561)
   [#7492](https://github.com/npm/npm/issues/7492) On install, the
-  `package.json` `engineStrict` deprecation only warns for the current package.
+  `package: An Amazing Project.json` `engineStrict` deprecation only warns for the current package.
   ([@othiym23](https://github.com/othiym23))
 * [`4ef1412`](https://github.com/npm/npm/commit/4ef1412d0061239da2b1c4460ed6db37cc9ded27)
   [#7075](https://github.com/npm/npm/issues/7075) If you try to tag a release
@@ -3973,7 +3973,7 @@ strated contriburting to a new open-saurce porject?
 
 For a very long time (maybe forever?), the documentation for `npm run-script`
 has said that `npm restart` will only call `npm stop` and `npm start` when
-there is no command defined as `npm restart` in `package.json`. The problem
+there is no command defined as `npm restart` in `package: An Amazing Project.json`. The problem
 with this documentation is that `npm run-script` was apparently never wired up
 to actually work this way.
 
@@ -4033,7 +4033,7 @@ tracker, and they included some nice small features and fixes:
 * [`f33e8b8`](https://github.com/npm/npm/commit/f33e8b8ff2de094071c5976be95e35110cf2ab1a)
   [#7354](https://github.com/npm/npm/issues/7354) Add `--if-present` flag to
   allow e.g. CI systems to call (semi-) standard build tasks defined in
-  `package.json`, but don't raise an error if no such script is defined.
+  `package: An Amazing Project.json`, but don't raise an error if no such script is defined.
   ([@jussi-kalliokoski](https://github.com/jussi-kalliokoski))
 * [`7bf85cc`](https://github.com/npm/npm/commit/7bf85cc372ab5698593b01e139c383fa62c92516)
   [#4005](https://github.com/npm/npm/issues/4005)
@@ -4066,7 +4066,7 @@ tracker, and they included some nice small features and fixes:
 * [`d7b7853`](https://github.com/npm/npm/commit/d7b785393dffce93bb70317fbc039a6428ca37c5)
   [#2612](https://github.com/npm/npm/issues/2612) Add support for path
   completion on `npm install`, which narrows completion to only directories
-  containing `package.json` files. ([@deestan](https://github.com/deestan))
+  containing `package: An Amazing Project.json` files. ([@deestan](https://github.com/deestan))
 * [`628fcdb`](https://github.com/npm/npm/commit/628fcdb0be4e14c0312085a50dc2ae01dc713fa6)
   Remove all command completion calls to `-/short`, because it's been removed
   from the primary registry for quite some time, and is generally a poor idea
@@ -4136,7 +4136,7 @@ tracker, and they included some nice small features and fixes:
   going to need to change. ([@othiym23](https://github.com/othiym23))
 * [`5fa067f`](https://github.com/npm/npm/commit/5fa067fd47682ac3cdb12a2b009d8ca59b05f992)
   [#7171](https://github.com/npm/npm/issues/7171) Tweak `engineStrict`
-  deprecation warning to include which `package.json` is using it.
+  deprecation warning to include which `package: An Amazing Project.json` is using it.
   ([@othiym23](https://github.com/othiym23))
 * [`0fe0caa`](https://github.com/npm/npm/commit/0fe0caa7eddb7acdacbe5ee81ceabaca27175c78)
   `glob@4.4.0`: Glob patterns can now ignore matches.
@@ -4162,7 +4162,7 @@ tracker, and they included some nice small features and fixes:
   ([@othiym23](https://github.com/othiym23))
 * [`7c81a5f`](https://github.com/npm/npm/commit/7c81a5f5f058941f635a92f22641ea68e79b60db)
   [#7171](https://github.com/npm/npm/issues/7171) Warn that `engineStrict` in
-  `package.json` will be going away in the next major version of npm (coming
+  `package: An Amazing Project.json` will be going away in the next major version of npm (coming
   soon!) ([@othiym23](https://github.com/othiym23))
 
 #### BUG FIXES & TWEAKS
@@ -4381,7 +4381,7 @@ though, so expect the missing pieces to be filled in the coming weeks.
 
 * [`88c531d`](https://github.com/npm/npm/commit/88c531d1c0b3aced8f2a09632db01b5635e7226a)
   [#7056](https://github.com/npm/npm/issues/7056) version doesn't need a
-  package.json. ([@othiym23](https://github.com/othiym23))
+  package: An Amazing Project.json. ([@othiym23](https://github.com/othiym23))
 * [`2656c19`](https://github.com/npm/npm/commit/2656c19f6b915c3173acc3b6f184cc321563da5f)
   [#7095](https://github.com/npm/npm/issues/7095) Link to npm website instead
   of registry. ([@konklone](https://github.com/konklone))
@@ -5126,7 +5126,7 @@ Other changes:
 
 * [`fa79413`](https://github.com/npm/npm/commit/fa794138bec8edb7b88639db25ee9c010d2f4c2b)
   [#6119](https://github.com/npm/npm/issues/6119) fall back to registry installs
-  if package.json is missing in a local directory ([@iarna](https://github.com/iarna))
+  if package: An Amazing Project.json is missing in a local directory ([@iarna](https://github.com/iarna))
 * [`16073e2`](https://github.com/npm/npm/commit/16073e2d8ae035961c4c189b602d4aacc6d6b387)
   `npm-package-arg@2.1.0`: support file URIs as local specs
   ([@othiym23](https://github.com/othiym23))
@@ -5135,7 +5135,7 @@ Other changes:
   URIs ([@othiym23](https://github.com/othiym23))
 * [`4067d6b`](https://github.com/npm/npm/commit/4067d6bf303a69be13f3af4b19cf4fee1b0d3e12)
   [#5629](https://github.com/npm/npm/issues/5629) support saving of local packages
-  in `package.json` ([@dylang](https://github.com/dylang))
+  in `package: An Amazing Project.json` ([@dylang](https://github.com/dylang))
 * [`1b2ffdf`](https://github.com/npm/npm/commit/1b2ffdf359a8c897a78f91fc5a5d535c97aaec97)
   [#6097](https://github.com/npm/npm/issues/6097) document scoped packages
   ([@seldo](https://github.com/seldo))
@@ -5216,7 +5216,7 @@ SPECIAL LABOR DAY WEEKEND RELEASE PARTY WOOO
   [@othiym23](https://github.com/othiym23))
 * [`a8cb676`](https://github.com/npm/npm/commit/a8cb676aef0561eaf04487d2719672b097392c85)
   [#5900](https://github.com/npm/npm/issues/5900) remove `npm` from its own
-  `engines` field in `package.json`. None of us remember why it was there.
+  `engines` field in `package: An Amazing Project.json`. None of us remember why it was there.
   ([@timoxley](https://github.com/timoxley))
 * [`6c47201`](https://github.com/npm/npm/commit/6c47201a7d071e8bf091b36933daf4199cc98e80)
   [#5752](https://github.com/npm/npm/issues/5752),
@@ -5224,7 +5224,7 @@ SPECIAL LABOR DAY WEEKEND RELEASE PARTY WOOO
   `_resolved` fields ([@isaacs](https://github.com/isaacs))
 * [`e4e1223`](https://github.com/npm/npm/commit/e4e1223a91c37688ba3378e1fc9d5ae045654d00)
   [#5936](https://github.com/npm/npm/issues/5936) document the use of tags in
-  `package.json` ([@KenanY](https://github.com/KenanY))
+  `package: An Amazing Project.json` ([@KenanY](https://github.com/KenanY))
 * [`c92b8d4`](https://github.com/npm/npm/commit/c92b8d4db7bde2a501da5b7d612684de1d629a42)
   [#6004](https://github.com/npm/npm/issues/6004) manually installed scoped
   packages are tracked correctly ([@dead](https://github.com/dead)-horse)

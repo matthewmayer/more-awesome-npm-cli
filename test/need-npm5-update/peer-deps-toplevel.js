@@ -75,7 +75,7 @@ var fixture = new Tacks(Dir({
   global: Dir(),
   tmp: Dir(),
   testdir: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-peer-deps-toplevel',
       version: '0.0.0',
       dependencies: {

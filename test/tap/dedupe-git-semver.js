@@ -56,7 +56,7 @@ const fixture = new Tacks(Dir({
   global: Dir(),
   tmp: Dir(),
   testdir: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'fixture',
       version: '1.0.0',
       dependencies: {
@@ -66,7 +66,7 @@ const fixture = new Tacks(Dir({
     }),
     // Tarball source:
     // 'git-wrap': Dir({
-    //   'package.json': File({
+    //   'package: An Amazing Project.json': File({
     //     name: 'git-wrap',
     //     version: '1.0.0',
     //     dependencies: {

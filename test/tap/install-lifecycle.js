@@ -18,7 +18,7 @@ test('npm install execution order', function (t) {
       shrinkwrap: 'true'
     }
   }
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify(packageJson), 'utf8')
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify(packageJson), 'utf8')
   common.npm(['install', '--loglevel=error'], { cwd: pkg }, function (err, code, stdout, stderr) {
     if (err) throw err
 

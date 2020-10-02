@@ -252,7 +252,7 @@
 
 * [`19ce061a2`](https://github.com/npm/cli/commit/19ce061a2ee165d8de862c8f0f733c222846b9e1)
   `bin-links@1.1.5` Properly normalize, sanitize, and verify `bin` entries
-  in `package.json`.
+  in `package: An Amazing Project.json`.
 * [`59c836aae`](https://github.com/npm/cli/commit/59c836aae8d0104a767e80c540b963c91774012a)
   `npm-packlist@1.4.7`
 * [`fb4ecd7d2`](https://github.com/npm/cli/commit/fb4ecd7d2810b0b4897daaf081a5e2f3f483b310)
@@ -288,7 +288,7 @@
   ([@craigloewen-msft](https://github.com/craigloewen-msft))
 * [`e4b97962e`](https://github.com/npm/cli/commit/e4b97962e5fce0d49beb541ce5a0f96aee0525de)
   [#504](https://github.com/npm/cli/pull/504)
-  remove unnecessary package.json read when reading shrinkwrap
+  remove unnecessary package: An Amazing Project.json read when reading shrinkwrap
   ([@Lighting-Jack](https://github.com/Lighting-Jack))
 * [`1c65d26ac`](https://github.com/npm/cli/commit/1c65d26ac9f10ac0037094c207d216fbf0e969bf)
   [#501](https://github.com/npm/cli/pull/501)
@@ -1115,7 +1115,7 @@ due to [a .git directory in the release](https://npm.community/t/8454).
 * [`b7b54f2d1`](https://github.com/npm/cli/commit/b7b54f2d18e2d8d65ec67c850b21ae9f01c60e7e)
   [#3](https://github.com/npm/cli/pull/3)
   Add support for package aliases. This allows packages to be installed under a
-  different directory than the package name listed in `package.json`, and adds a
+  different directory than the package name listed in `package: An Amazing Project.json`, and adds a
   new dependency type to allow this to be done for registry dependencies.
   ([@zkat](https://github.com/zkat))
 * [`684bccf06`](https://github.com/npm/cli/commit/684bccf061dfc97bb759121bc0ad635e01c65868)
@@ -1207,7 +1207,7 @@ the directory path for a package within a monorepo.
 
 * [`3663cdef2`](https://github.com/npm/cli/commit/3663cdef205fa9ba2c2830e5ef7ceeb31c30298c)
   [#140](https://github.com/npm/cli/pull/140)
-  Update package.json docs to include repository.directory details.
+  Update package: An Amazing Project.json docs to include repository.directory details.
   ([@greysteil](https://github.com/greysteil))
 
 ### BUGFIXES
@@ -1948,7 +1948,7 @@ bumped due to bugs that had been around for a while.
   [npm/cli#27](https://github.com/npm/cli/pull/27)
   `wrappy` was previously added to dependencies in order to flatten it, but we
   no longer do legacy-style for npm itself, so it has been removed from
-  `package.json`.
+  `package: An Amazing Project.json`.
   ([@rickschubert](https://github.com/rickschubert))
 
 ### DOCUMENTATION
@@ -2219,7 +2219,7 @@ occasionally see `Error: write after end at MiniPass.write`.
 
 * [`0e1726c03`](https://github.com/npm/npm/commit/0e1726c0350a02d5a60f5fddb1e69c247538625e)
   We can now determine if the commitid of a git dependency in the lockfile is derived
-  from the specifier in the package.json and if it isn't we now trigger an update for it.
+  from the specifier in the package: An Amazing Project.json and if it isn't we now trigger an update for it.
   ([@iarna](https://github.com/iarna))
 
 ### OTHER BUGS
@@ -2360,7 +2360,7 @@ repository to maintain your organizational scaffolding tools or whatnot. ✨
   ([@zkat](https://github.com/zkat))
 * [`5ee1384d0`](https://github.com/npm/npm/commit/5ee1384d02c3f11949d7a26ec6322488476babe6)
   [#20597](https://github.com/npm/npm/pull/20597)
-  Infer a version range when a `package.json` has a dist-tag instead of a
+  Infer a version range when a `package: An Amazing Project.json` has a dist-tag instead of a
   version range in one of its dependency specs. Previously, this would cause
   dependencies to be flagged as invalid.
   ([@zkat](https://github.com/zkat))
@@ -2453,7 +2453,7 @@ as `https://` URLs instead of versions.
 
 * [`89102c0d9`](https://github.com/npm/npm/commit/89102c0d995c3d707ff2b56995a97a1610f8b532)
   When saving the lock-file compute how the dependency is being required instead of using
-  `_resolved` in the `package.json`.  This fixes the bug that was converting
+  `_resolved` in the `package: An Amazing Project.json`.  This fixes the bug that was converting
   registry dependencies into `https://` dependencies.
   ([@iarna](https://github.com/iarna))
 * [`676f1239a`](https://github.com/npm/npm/commit/676f1239ab337ff967741895dbe3a6b6349467b6)
@@ -2611,11 +2611,11 @@ longer benefit from the service.
   [#20390](https://github.com/npm/npm/pull/20390)
   Fix a scenario where a git dependency had a comittish associated with it
   that was not a complete commitid.  `npm` would never consider that entry
-  in the `package.json` as matching the entry in the `package-lock.json` and
+  in the `package: An Amazing Project.json` as matching the entry in the `package-lock.json` and
   this resulted in inappropriate pruning or reinstallation of git
   dependencies.  This has been addressed in two ways, first, the addition of the
   `from` field as described in [#20384](https://github.com/npm/npm/pull/20384) means
-  we can exactly match the `package.json`. Second, when that's missing (when working with
+  we can exactly match the `package: An Amazing Project.json`. Second, when that's missing (when working with
   older `package-lock.json` files), we assume that the match is ok.  (If
   it's not, we'll fix it up when a real installation is done.)
   ([@iarna](https://github.com/iarna))

@@ -126,26 +126,26 @@ test('setup', function (t) {
 
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
 
   mkdirp.sync(path.join(deps, 'd1'))
   fs.writeFileSync(
-    path.join(deps, 'd1', 'package.json'),
+    path.join(deps, 'd1', 'package: An Amazing Project.json'),
     JSON.stringify(d1, null, 2)
   )
 
   mkdirp.sync(path.join(deps, 'd2'))
   fs.writeFileSync(
-    path.join(deps, 'd2', 'package.json'),
+    path.join(deps, 'd2', 'package: An Amazing Project.json'),
     JSON.stringify(d2, null, 2)
   )
   fs.writeFileSync(path.join(deps, 'd2', 'blart.js'), blart)
 
   mkdirp.sync(path.join(deps, 'opdep'))
   fs.writeFileSync(
-    path.join(deps, 'opdep', 'package.json'),
+    path.join(deps, 'opdep', 'package: An Amazing Project.json'),
     JSON.stringify(opdep_json, null, 2)
   )
   mr({ port: common.port }, function (er, server) {

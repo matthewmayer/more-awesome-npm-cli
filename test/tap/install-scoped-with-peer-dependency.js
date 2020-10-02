@@ -22,7 +22,7 @@ test('setup', function (t) {
   mkdirp.sync(local)
   mkdirp.sync(path.resolve(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(local, 'package.json'),
+    path.join(local, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   t.end()

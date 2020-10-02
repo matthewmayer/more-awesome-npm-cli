@@ -40,11 +40,11 @@ test('install --save with \'^\' save prefix should accept minor updates', functi
     console.error('back from install!', code)
     t.equal(code, 0, 'npm install exited with code 0')
 
-    var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+    var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
     t.ok(JSON.parse(fs.readFileSync(p)))
 
     var pkgJson = JSON.parse(fs.readFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       'utf8'
     ))
     t.deepEqual(
@@ -70,11 +70,11 @@ test('install --save-dev with \'^\' save prefix should accept minor dev updates'
   ).then(([code]) => {
     t.equal(code, 0, 'npm install exited with code 0')
 
-    var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+    var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
     t.ok(JSON.parse(fs.readFileSync(p)))
 
     var pkgJson = JSON.parse(fs.readFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       'utf8'
     ))
     t.deepEqual(
@@ -101,11 +101,11 @@ test('install --save with \'~\' save prefix should accept patch updates', functi
   ).then(([code]) => {
     t.equal(code, 0, 'npm install exited with code 0')
 
-    var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+    var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
     t.ok(JSON.parse(fs.readFileSync(p)))
 
     var pkgJson = JSON.parse(fs.readFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       'utf8'
     ))
     t.deepEqual(
@@ -131,11 +131,11 @@ test('install --save-dev with \'~\' save prefix should accept patch updates', fu
   ).then(([code]) => {
     t.notOk(code, 'npm install exited with code 0')
 
-    var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+    var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
     t.ok(JSON.parse(fs.readFileSync(p)))
 
     var pkgJson = JSON.parse(fs.readFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       'utf8'
     ))
     t.deepEqual(
@@ -154,7 +154,7 @@ function setup (t) {
   })
   t.test('create', t => {
     fs.writeFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       JSON.stringify(json, null, 2)
     )
     t.end()

@@ -11,7 +11,7 @@ var pkg = common.pkg
 test('setup', function (t) {
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify({
       name: 'publish-access',
       version: '1.2.5'

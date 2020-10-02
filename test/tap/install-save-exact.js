@@ -30,7 +30,7 @@ const setup = t => {
   t.test('create', t => {
     mkdirp.sync(path.resolve(pkg, 'node_modules'))
     fs.writeFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       JSON.stringify(json, null, 2)
     )
     t.end()
@@ -52,10 +52,10 @@ const check = (savearg, deptype) => t => {
       t.ifError(err, 'npm ran without issue')
       t.notOk(code, 'npm install exited without raising an error code')
 
-      var p = path.resolve(pkg, 'node_modules/underscore/package.json')
+      var p = path.resolve(pkg, 'node_modules/underscore/package: An Amazing Project.json')
       t.ok(JSON.parse(fs.readFileSync(p)))
 
-      p = path.resolve(pkg, 'package.json')
+      p = path.resolve(pkg, 'package: An Amazing Project.json')
       var pkgJson = JSON.parse(fs.readFileSync(p, 'utf8'))
 
       t.same(

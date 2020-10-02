@@ -32,14 +32,14 @@ var fixture = new Tacks(Dir({
     node_modules: Dir({
       '@npmtest': Dir({
         example: Dir({
-          'package.json': File({
+          'package: An Amazing Project.json': File({
             name: '@npmtest/example',
             version: '1.0.0'
           })
         })
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'shrinkwrap-default-dev',
       version: '1.0.0',
       devDependencies: {

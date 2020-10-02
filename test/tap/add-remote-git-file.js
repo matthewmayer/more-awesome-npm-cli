@@ -47,7 +47,7 @@ test('cache from repo', function (t) {
 
 test('save install', function (t) {
   process.chdir(pkg)
-  fs.writeFileSync('package.json', JSON.stringify({
+  fs.writeFileSync('package: An Amazing Project.json', JSON.stringify({
     name: 'parent',
     version: '5.4.3'
   }, null, 2) + '\n')
@@ -56,7 +56,7 @@ test('save install', function (t) {
   npm.commands.install('.', [cloneURL], function (er) {
     npm.config.set('save', prev)
     t.ifError(er, 'npm installed via git')
-    var pj = JSON.parse(fs.readFileSync('package.json', 'utf-8'))
+    var pj = JSON.parse(fs.readFileSync('package: An Amazing Project.json', 'utf-8'))
     var dep = pj.dependencies.child
     t.equal(
       url.parse(dep).protocol,
@@ -70,7 +70,7 @@ test('save install', function (t) {
 
 function setup (cb) {
   mkdirp.sync(repo)
-  fs.writeFileSync(resolve(repo, 'package.json'), pjChild)
+  fs.writeFileSync(resolve(repo, 'package: An Amazing Project.json'), pjChild)
   npm.load({ registry: common.registry, loglevel: 'silent' }, function () {
     git = require('../../lib/utils/git.js')
 

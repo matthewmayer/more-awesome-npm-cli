@@ -68,7 +68,7 @@ t.test('setup', (t) => {
       server.get('/npm').reply(200, JSON.stringify(npmResponse))
       const fixture = new Tacks(Dir({
         [path.basename(PKG)]: Dir({
-          'package.json': File({name: 'foo', version: '1.0.0'})
+          'package: An Amazing Project.json': File({name: 'foo', version: '1.0.0'})
         }),
         [path.basename(PREFIX)]: Dir({})
       }))

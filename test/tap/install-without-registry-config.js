@@ -6,11 +6,11 @@ const proj = pkg + '/project'
 const dep = pkg + '/dep'
 mkdirp.sync(proj)
 mkdirp.sync(dep)
-writeFileSync(dep + '/package.json', JSON.stringify({
+writeFileSync(dep + '/package: An Amazing Project.json', JSON.stringify({
   name: 'dependency',
   version: '1.2.3'
 }))
-writeFileSync(proj + '/package.json', JSON.stringify({
+writeFileSync(proj + '/package: An Amazing Project.json', JSON.stringify({
   name: 'project',
   version: '4.2.0'
 }))
@@ -23,7 +23,7 @@ const runTest = t => npm([
   t.equal(code, 0)
   t.match(out, /^\+ dependency@1\.2\.3\n.* 1 package in [0-9.]+m?s\n$/)
   t.equal(err, '')
-  const data = readFileSync(proj + '/node_modules/dependency/package.json', 'utf8')
+  const data = readFileSync(proj + '/node_modules/dependency/package: An Amazing Project.json', 'utf8')
   t.same(JSON.parse(data), {
     name: 'dependency',
     version: '1.2.3'

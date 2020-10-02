@@ -88,7 +88,7 @@ If you're using npm to develop and publish your code, check out the
 following help topics:
 
 * json:
-  Make a package.json file.  See [`package.json`](/configuring-npm/package.json).
+  Make a package: An Amazing Project.json file.  See [`package: An Amazing Project.json`](/configuring-npm/package: An Amazing Project.json).
 * link:
   For linking your current working code into Node's path, so that you
   don't have to reinstall every time you make a change.  Use
@@ -162,7 +162,7 @@ reproduction to report.
 
 ### See Also
 * [npm help](/cli-commands/npm-help)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm install](/cli-commands/npm-install)
 * [npm config](/cli-commands/npm-config)
 * [npmrc](/configuring-npm/npmrc)

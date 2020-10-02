@@ -11,7 +11,7 @@ var fixture = new Tacks(
   Dir({
     node_modules: Dir({
       'yes': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _requested: {
             rawSpec: 'file:///mods/yes'
           },
@@ -52,7 +52,7 @@ var fixture = new Tacks(
           'node  "%~dp0\\..\\yes\\yes.js" %*')
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'test',
       version: '1.0.0',
       devDependencies: {

@@ -35,7 +35,7 @@ var fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     failure: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'failure',
         version: '1.0.0',
         scripts: {
@@ -44,13 +44,13 @@ var fixture = new Tacks(Dir({
       })
     }),
     success: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'success',
         version: '1.0.0'
       })
     }),
     slow: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'slow',
         version: '1.0.0',
         scripts: {
@@ -58,7 +58,7 @@ var fixture = new Tacks(Dir({
         }
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'anon-cli-metrics-test',
       version: '1.0.0'
     })

@@ -16,7 +16,7 @@ var fixture = new Tacks(Dir({
     'node_modules': Dir({}) // so it doesn't try to install into npm's own node_modules
   }),
   'test-module': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: '@test/linked',
       version: '1.0.0',
       bin: {

@@ -131,17 +131,17 @@ function setup () {
   mkdirp.sync(linkRoot)
   mkdirp.sync(link)
   writeFileSync(
-    path.join(link, 'package.json'),
+    path.join(link, 'package: An Amazing Project.json'),
     JSON.stringify(linkedJSON, null, 2)
   )
   mkdirp.sync(linkDep)
   writeFileSync(
-    path.join(linkDep, 'package.json'),
+    path.join(linkDep, 'package: An Amazing Project.json'),
     JSON.stringify(linkedDepJSON, null, 2)
   )
   mkdirp.sync(linkInstall)
   writeFileSync(
-    path.join(linkInstall, 'package.json'),
+    path.join(linkInstall, 'package: An Amazing Project.json'),
     JSON.stringify(installJSON, null, 2)
   )
   writeFileSync(configPath, config)

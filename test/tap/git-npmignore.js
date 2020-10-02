@@ -28,7 +28,7 @@ var fixture = new Tacks(Dir({
       't.js': File(
         "require('tap').test(function (t) { t.pass('I am a test!'); t.end(); });"
       ),
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'gitch',
         version: '1.0.0',
         private: true,
@@ -49,7 +49,7 @@ var modules = resolve(testdir, 'node_modules')
 var installed = resolve(modules, 'gitch')
 var expected = [
   'a.js',
-  'package.json'
+  'package: An Amazing Project.json'
 ].sort()
 
 var NPM_OPTS = {

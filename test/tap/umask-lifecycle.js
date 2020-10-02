@@ -35,7 +35,7 @@ var expected = [
 test('setup', function (t) {
   rimraf.sync(pkg)
   mkdirp.sync(pkg)
-  fs.writeFileSync(pkg + '/package.json', pj)
+  fs.writeFileSync(pkg + '/package: An Amazing Project.json', pj)
   t.end()
 })
 

@@ -29,7 +29,7 @@ var fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     mod1: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'mod1',
         version: '1.0.0',
         scripts: {},
@@ -40,7 +40,7 @@ var fixture = new Tacks(Dir({
       })
     }),
     mod2: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'mod2',
         version: '1.0.0',
         scripts: {},
@@ -63,7 +63,7 @@ var fixture = new Tacks(Dir({
         }
       }
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'shrinkwrap-optional-platform',
       version: '1.0.0',
       optionalDependencies: {

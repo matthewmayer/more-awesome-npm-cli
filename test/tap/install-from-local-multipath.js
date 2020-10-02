@@ -115,7 +115,7 @@ var child2Lock = {
 test('setup', function (t) {
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(parent, null, 2)
   )
 
@@ -126,7 +126,7 @@ test('setup', function (t) {
 
   mkdirp.sync(path.join(root, 'children', 'child-1-1'))
   fs.writeFileSync(
-    path.join(root, 'children', 'child-1-1', 'package.json'),
+    path.join(root, 'children', 'child-1-1', 'package: An Amazing Project.json'),
     JSON.stringify(child11, null, 2)
   )
   fs.writeFileSync(
@@ -136,7 +136,7 @@ test('setup', function (t) {
 
   mkdirp.sync(path.join(root, 'children', 'child-1-2'))
   fs.writeFileSync(
-    path.join(root, 'children', 'child-1-2', 'package.json'),
+    path.join(root, 'children', 'child-1-2', 'package: An Amazing Project.json'),
     JSON.stringify(child12, null, 2)
   )
   fs.writeFileSync(
@@ -146,7 +146,7 @@ test('setup', function (t) {
 
   mkdirp.sync(path.join(root, 'children', 'child-2'))
   fs.writeFileSync(
-    path.join(root, 'children', 'child-2', 'package.json'),
+    path.join(root, 'children', 'child-2', 'package: An Amazing Project.json'),
     JSON.stringify(child2, null, 2)
   )
   fs.writeFileSync(

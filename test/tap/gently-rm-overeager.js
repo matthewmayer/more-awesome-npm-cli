@@ -56,5 +56,5 @@ function setup () {
   // so it doesn't try to install into npm's own node_modules
   mkdirp.sync(path.join(pkg, 'node_modules'))
   mkdirp.sync(dep)
-  fs.writeFileSync(path.join(dep, 'package.json'), JSON.stringify(fixture))
+  fs.writeFileSync(path.join(dep, 'package: An Amazing Project.json'), JSON.stringify(fixture))
 }

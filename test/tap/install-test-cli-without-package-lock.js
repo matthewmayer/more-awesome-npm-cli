@@ -28,13 +28,13 @@ var dependency = {
 test('setup', function (t) {
   mkdirp.sync(path.join(pkg, 'dependency'))
   fs.writeFileSync(
-    path.join(pkg, 'dependency', 'package.json'),
+    path.join(pkg, 'dependency', 'package: An Amazing Project.json'),
     JSON.stringify(dependency, null, 2)
   )
 
   mkdirp.sync(path.join(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
 

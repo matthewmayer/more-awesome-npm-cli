@@ -26,7 +26,7 @@ var systemNode = which.sync('node', { nothrow: true, path: PATH })
 
 test('setup', function (t) {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify({}, null, 2)
   )
   t.end()

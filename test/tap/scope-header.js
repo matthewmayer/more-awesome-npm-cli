@@ -37,20 +37,20 @@ var fixture = new Tacks(Dir({
   tmp: Dir(),
   testdir: Dir({
     'with-scope': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: '@example/with-scope',
         version: '1.0.0'
       })
     }),
     'without-scope': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'without-scope',
         version: '1.0.0'
       })
     }),
     'only-project-scope': Dir({
       '.npmrc': File('@example:registry=thisisinvalid\n'),
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: '@example/only-project-scope',
         version: '1.0.0'
       })

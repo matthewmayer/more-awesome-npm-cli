@@ -28,7 +28,7 @@ function verify (t, files, code) {
     return t.fail('exited with failure: ' + code)
   }
   var actual = fs.readdirSync(target).sort()
-  var expect = files.concat(['.npmignore', 'package.json']).sort()
+  var expect = files.concat(['.npmignore', 'package: An Amazing Project.json']).sort()
   t.same(actual, expect)
 }
 

@@ -18,7 +18,7 @@ var fixture = new Tacks(
     README: File(
       'just an npm test\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-missing-bindir',
       version: '0.0.0',
       directories: {
@@ -50,7 +50,7 @@ test('missing-bindir', function (t) {
     if (err) throw err
     t.is(code, 0, 'install went ok')
     t.is(installedExists('README'), true, 'README')
-    t.is(installedExists('package.json'), true, 'package.json')
+    t.is(installedExists('package: An Amazing Project.json'), true, 'package: An Amazing Project.json')
     common.npm(['rm', fixturepath], {cwd: basepath}, removeCheckAndDone)
   }
 

@@ -32,7 +32,7 @@ const fixture = new Tacks(Dir({
   testdir: Dir({
     node_modules: Dir({
       minimist: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _integrity: 'sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=',
           _resolved: 'https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz',
           name: 'minimist',
@@ -40,7 +40,7 @@ const fixture = new Tacks(Dir({
         })
       }),
       mkdirp: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _integrity: 'sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=',
           _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz',
           dependencies: {
@@ -51,7 +51,7 @@ const fixture = new Tacks(Dir({
         })
       }),
       null: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _integrity: 'sha1-WoIdUnAxMlyG06AasQFzKgkfoew=',
           _resolved: 'https://registry.npmjs.org/null/-/null-1.0.1.tgz',
           _spec: 'null',
@@ -81,7 +81,7 @@ const fixture = new Tacks(Dir({
         }
       }
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'with-lock',
       version: '1.0.0',
       dependencies: {

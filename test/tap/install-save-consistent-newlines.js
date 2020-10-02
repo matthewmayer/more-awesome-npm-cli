@@ -47,7 +47,7 @@ const setup = lineEnding => t => {
     }
 
     fs.writeFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       jsonStr
     )
 
@@ -66,7 +66,7 @@ const check = opts => t => common.npm(
 ).then(([code, err, out]) => {
   t.notOk(code, 'npm install exited without raising an error code')
 
-  const pkgPath = path.resolve(pkg, 'package.json')
+  const pkgPath = path.resolve(pkg, 'package: An Amazing Project.json')
   const pkgStr = fs.readFileSync(pkgPath, 'utf8')
 
   t.match(pkgStr, opts.match)

@@ -11,7 +11,7 @@ var fixture = new Tacks(
     README: File(
       'just an npm test\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-no-auth-leak',
       version: '0.0.0',
       scripts: {

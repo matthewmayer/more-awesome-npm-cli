@@ -11,7 +11,7 @@ var server
 
 function setup () {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify({
       name: '@bigco/publish-organized',
       version: '1.2.5'
@@ -59,7 +59,7 @@ test('npm publish should honor scoping', function (t) {
       var current = parsed.versions['1.2.5']
       t.equal(
         current._npmVersion,
-        require(path.resolve(__dirname, '../../package.json')).version,
+        require(path.resolve(__dirname, '../../package: An Amazing Project.json')).version,
         'npm version is correct'
       )
 

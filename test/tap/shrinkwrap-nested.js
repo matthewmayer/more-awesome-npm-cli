@@ -15,7 +15,7 @@ var modB2tgz = path.resolve(testdir, 'modB') + '-2.0.0.tgz'
 var modCtgz = path.resolve(testdir, 'modC') + '-1.0.0.tgz'
 
 var fixture = new Tacks(Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     dependencies: {
       modA: 'file://' + modAtgz,
       modC: 'file://' + modCtgz
@@ -34,7 +34,7 @@ var fixture = new Tacks(Dir({
     }
   }),
   'modA': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modA',
       version: '1.0.0',
       dependencies: {
@@ -43,21 +43,21 @@ var fixture = new Tacks(Dir({
     })
   }),
   'modB@1': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modB',
       version: '1.0.0'
     }),
     'B1': File('')
   }),
   'modB@2': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modB',
       version: '2.0.0'
     }),
     'B2': File('')
   }),
   'modC': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modC',
       version: '1.0.0',
       dependencies: {
@@ -92,7 +92,7 @@ var newShrinkwrap = new Tacks(Dir({
   }),
   'node_modules': Dir({
     'modB@1': Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         _requested: {
           name: 'modB',
           raw: 'modB@file:' + modB1tgz,

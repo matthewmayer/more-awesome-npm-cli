@@ -9,7 +9,7 @@ var npm = require('../../lib/npm.js')
 
 var pkg = common.pkg
 var subDirectory = path.resolve(pkg, 'sub-directory')
-var packagePath = path.resolve(pkg, 'package.json')
+var packagePath = path.resolve(pkg, 'package: An Amazing Project.json')
 var cache = common.cache
 
 var json = { name: 'cat', version: '0.1.2' }
@@ -24,7 +24,7 @@ test('npm version <semver> from a subdirectory', function (t) {
     npm.load({ cache: cache }, function () {
       common.makeGitRepo({
         path: pkg,
-        added: ['package.json']
+        added: ['package: An Amazing Project.json']
       }, version)
     })
   }

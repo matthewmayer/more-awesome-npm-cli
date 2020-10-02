@@ -312,7 +312,7 @@ npm yourself.
 
 ### v1.4.15 (2014-06-10):
 
-* cache: atomic de-race-ified package.json writing
+* cache: atomic de-race-ified package: An Amazing Project.json writing
   ([@isaacs](https://github.com/isaacs))
 * `fstream@0.1.26` ([@isaacs](https://github.com/isaacs))
 * `graceful-fs@3.0.2` ([@isaacs](https://github.com/isaacs))
@@ -435,7 +435,7 @@ npm yourself.
   https://github.com/npm/read-installed/commit/6680ba6ef235b1ca3273a00b70869798ad662ddc,
   [@isaacs](https://github.com/isaacs))
 * Fix npm crashing when doing `npm shrinkwrap` in the presence of a
-  `package.json` with no dependencies.
+  `package: An Amazing Project.json` with no dependencies.
   ([`a9d9fa5`](https://github.com/npm/npm/commit/a9d9fa5ad3b8c925a589422b7be28d2735f320b0),
   [@kislyuk](https://github.com/kislyuk))
 * Fix error when using `npm view` on packages that have no versions or have
@@ -453,12 +453,12 @@ npm yourself.
 
 ### v1.4.5 (2014-03-18):
 
-* Sort dependencies in `package.json` when doing `npm install --save` and all
+* Sort dependencies in `package: An Amazing Project.json` when doing `npm install --save` and all
   its variants.
   ([`6fd6ff7`](https://github.com/npm/npm/commit/6fd6ff7e536ea6acd33037b1878d4eca1f931985),
   [@domenic](https://github.com/domenic))
 * Add `--save-exact` option, usable alongside `--save` and its variants, which
-  will write the exact version number into `package.json` instead of the
+  will write the exact version number into `package: An Amazing Project.json` instead of the
   appropriate semver-compatibility range.
   ([`17f07df`](https://github.com/npm/npm/commit/17f07df8ad8e594304c2445bf7489cb53346f2c5),
   [@timoxley](https://github.com/timoxley))
@@ -551,7 +551,7 @@ npm yourself.
   npm/npm-registry-client@25e2b019a1588155e5f87d035c27e79963b75951,
   npm/npm-registry-client@9e41e9101b68036e0f078398785f618575f3cdde,
   npm/npm-registry-client@2c8dba990de6a59af6545b75cc00a6dc12777c2a)
-* Show an error to the user when doing `npm update` and the `package.json`
+* Show an error to the user when doing `npm update` and the `package: An Amazing Project.json`
   specifies a version that does not exist.
   ([@evanlucas](https://github.com/evanlucas),
   [`027a33a`](https://github.com/npm/npm/commit/027a33a5c594124cc1d82ddec5aee2c18bc8dc32))
@@ -661,7 +661,7 @@ Dependency updates:
 
 ### v1.3.18 (2013-12-16):
 
-* Added an `--ignore-scripts` option, which will prevent `package.json` scripts
+* Added an `--ignore-scripts` option, which will prevent `package: An Amazing Project.json` scripts
   from being run. Most notably, this will work on `npm install`, so e.g. `npm
   install --ignore-scripts` will not run preinstall and prepublish scripts.
   ([`d7e67bf`](https://github.com/npm/npm/commit/d7e67bf0d94b085652ec1c87d595afa6f650a8f6),

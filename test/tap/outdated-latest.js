@@ -55,13 +55,13 @@ const fixture = new Tacks(Dir({
   testdir: Dir({
     node_modules: Dir({
       example: Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'example',
           version: '1.2.3'
         })
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'outdated-latest',
       version: '1.0.0',
       dependencies: {

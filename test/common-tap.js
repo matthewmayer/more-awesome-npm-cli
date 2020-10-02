@@ -184,7 +184,7 @@ exports.makeGitRepo = function (params, cb) {
   var root = params.path || process.cwd()
   var user = params.user || 'PhantomFaker'
   var email = params.email || 'nope@not.real'
-  var added = params.added || ['package.json']
+  var added = params.added || ['package: An Amazing Project.json']
   var message = params.message || 'stub repo'
 
   var opts = { cwd: root, env: { PATH: process.env.PATH || process.env.Path } }

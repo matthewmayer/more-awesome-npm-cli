@@ -60,10 +60,10 @@ function bootstrap () {
   mkdirp.sync(path.join(dir, 'node_modules'))
 
   mkdirp.sync(pkg)
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), pj)
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), pj)
 
   mkdirp.sync(dep)
-  fs.writeFileSync(path.resolve(dep, 'package.json'), pjDep)
+  fs.writeFileSync(path.resolve(dep, 'package: An Amazing Project.json'), pjDep)
 }
 
 function cleanup () {

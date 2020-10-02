@@ -16,7 +16,7 @@ t.test('setup', t => {
   mkdirp.sync(moda)
   mkdirp.sync(modb)
 
-  writeFileSync(resolve(app, 'package.json'), JSON.stringify({
+  writeFileSync(resolve(app, 'package: An Amazing Project.json'), JSON.stringify({
     name: 'app',
     version: '1.2.3',
     dependencies: {
@@ -24,7 +24,7 @@ t.test('setup', t => {
     }
   }))
 
-  writeFileSync(resolve(moda, 'package.json'), JSON.stringify({
+  writeFileSync(resolve(moda, 'package: An Amazing Project.json'), JSON.stringify({
     name: 'moda',
     version: '1.2.3',
     dependencies: {
@@ -32,7 +32,7 @@ t.test('setup', t => {
     }
   }))
 
-  writeFileSync(resolve(modb, 'package.json'), JSON.stringify({
+  writeFileSync(resolve(modb, 'package: An Amazing Project.json'), JSON.stringify({
     name: 'modb',
     version: '1.2.3'
   }))
@@ -58,7 +58,7 @@ t.test('install again from package-lock', t =>
         'moda',
         'node_modules',
         'modb',
-        'package.json'
+        'package: An Amazing Project.json'
       )
       const data = JSON.parse(readFileSync(depPkg, 'utf8'))
       t.strictSame(data, {

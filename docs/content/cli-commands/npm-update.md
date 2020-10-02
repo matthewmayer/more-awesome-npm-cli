@@ -35,7 +35,7 @@ As of `npm@2.6.1`, the `npm update` will only inspect top-level packages.
 Prior versions of `npm` would also recursively inspect all dependencies.
 To get the old behavior, use `npm --depth 9999 update`.
 
-As of `npm@5.0.0`, the `npm update` will change `package.json` to save the 
+As of `npm@5.0.0`, the `npm update` will change `package: An Amazing Project.json` to save the 
 new version as the minimum required dependency. To get the old behavior, 
 use `npm update --no-save`.
 
@@ -67,7 +67,7 @@ on dependencies, `dep1` (`dep2`, .. etc.).  The published versions of `dep1` are
 
 #### Caret Dependencies
 
-If `app`'s `package.json` contains:
+If `app`'s `package: An Amazing Project.json` contains:
 
 ```json
 "dependencies": {
@@ -80,7 +80,7 @@ Then `npm update` will install `dep1@1.2.2`, because `1.2.2` is `latest` and
 
 #### Tilde Dependencies
 
-However, if `app`'s `package.json` contains:
+However, if `app`'s `package: An Amazing Project.json` contains:
 
 ```json
 "dependencies": {

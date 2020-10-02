@@ -42,7 +42,7 @@ var json = {
 
 test('setup', function (t) {
   mkdirp.sync(pkg)
-  fs.writeFileSync(path.join(pkg, 'package.json'), JSON.stringify(json, null, 2))
+  fs.writeFileSync(path.join(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2))
   process.chdir(pkg)
 
   var allOpts = {

@@ -27,7 +27,7 @@ test('scoped packages pass public access if set', function (t) {
   }).put('/@bigco%2fpublish-access', true).reply(201, {ok: true})
 
   fs.writeFile(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify({
       name: '@bigco/publish-access',
       version: '1.2.5',

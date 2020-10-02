@@ -21,7 +21,7 @@ var PACKAGE_JSON1 = {
 t.test('setup', function (t) {
   mkdirp.sync(path.resolve(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(PACKAGE_JSON1, null, 2)
   )
   mr({ port: common.port }, function (er, s) {

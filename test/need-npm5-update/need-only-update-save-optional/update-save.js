@@ -60,7 +60,7 @@ test('update regular dependencies only', function (t) {
     t.ifError(err)
     t.notOk(code, 'npm update exited with code 0')
 
-    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package.json'), 'utf8'))
+    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package: An Amazing Project.json'), 'utf8'))
     t.deepEqual(
       pkgdata.dependencies,
       { mkdirp: '^0.3.5' },
@@ -88,7 +88,7 @@ test('update devDependencies only', function (t) {
     t.ifError(err)
     t.notOk(code, 'npm update exited with code 0')
 
-    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package.json'), 'utf8'))
+    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package: An Amazing Project.json'), 'utf8'))
     t.deepEqual(
       pkgdata.dependencies,
       json.dependencies,
@@ -116,7 +116,7 @@ test('update optionalDependencies only', function (t) {
     t.ifError(err)
     t.notOk(code, 'npm update exited with code 0')
 
-    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package.json'), 'utf8'))
+    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package: An Amazing Project.json'), 'utf8'))
     t.deepEqual(
       pkgdata.dependencies,
       json.dependencies,
@@ -144,7 +144,7 @@ test('optionalDependencies are merged into dependencies during --save', function
     t.ifError(err)
     t.notOk(code, 'npm update exited with code 0')
 
-    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package.json'), 'utf8'))
+    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package: An Amazing Project.json'), 'utf8'))
     t.deepEqual(
       pkgdata.dependencies,
       { mkdirp: '^0.3.5' },
@@ -172,7 +172,7 @@ test('semver prefix is replaced with configured save-prefix', function (t) {
     t.ifError(err)
     t.notOk(code, 'npm update exited with code 0')
 
-    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package.json'), 'utf8'))
+    var pkgdata = JSON.parse(fs.readFileSync(path.join(pkg, 'package: An Amazing Project.json'), 'utf8'))
     t.deepEqual(
       pkgdata.dependencies,
       { mkdirp: '~0.3.5' },
@@ -212,7 +212,7 @@ function setup (extendWith) {
   var template = clone(json)
   extend(template, extendWith)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(template, null, 2)
   )
   return template

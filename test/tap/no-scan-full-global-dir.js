@@ -21,7 +21,7 @@ var dirs = {}
 var files = {}
 Object.keys(packages).forEach(function (name) {
   dirs[path.join(packages[name].path, 'node_modules')] = packages[name].children || []
-  files[path.join(packages[name].path, 'package.json')] = packages[name].package
+  files[path.join(packages[name].path, 'package: An Amazing Project.json')] = packages[name].package
 })
 
 var mockReaddir = function (name, cb) {

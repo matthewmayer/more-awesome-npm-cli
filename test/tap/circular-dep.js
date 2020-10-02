@@ -80,7 +80,7 @@ test('cleanup', function (t) {
 function setup (cb) {
   mkdirp.sync(minimist)
   fs.writeFileSync(
-    path.join(minimist, 'package.json'),
+    path.join(minimist, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   process.chdir(path.resolve(pkg, 'minimist'))

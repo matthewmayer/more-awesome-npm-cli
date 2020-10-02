@@ -29,9 +29,9 @@ var depdeppj = {
 test('setup', function (t) {
   rimraf.sync(pkg)
   mkdirp.sync(depdep)
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify(pj))
-  fs.writeFileSync(path.resolve(dep, 'package.json'), JSON.stringify(deppj))
-  fs.writeFileSync(path.resolve(depdep, 'package.json'), JSON.stringify(depdeppj))
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify(pj))
+  fs.writeFileSync(path.resolve(dep, 'package: An Amazing Project.json'), JSON.stringify(deppj))
+  fs.writeFileSync(path.resolve(depdep, 'package: An Amazing Project.json'), JSON.stringify(depdeppj))
   t.end()
 })
 

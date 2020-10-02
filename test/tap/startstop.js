@@ -33,7 +33,7 @@ function testOutput (t, command, er, code, stdout, stderr) {
 test('setup', function (t) {
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   t.end()

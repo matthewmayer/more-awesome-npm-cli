@@ -22,7 +22,7 @@ var json = {
 
 function setup (cb) {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   process.chdir(pkg)

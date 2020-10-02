@@ -8,7 +8,7 @@ var npm = require('../../lib/npm.js')
 
 var pkg = common.pkg
 var npmrc = path.resolve(pkg, '.npmrc')
-var packagePath = path.resolve(pkg, 'package.json')
+var packagePath = path.resolve(pkg, 'package: An Amazing Project.json')
 
 var json = { name: 'blah', version: '0.1.2' }
 

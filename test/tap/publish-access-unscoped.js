@@ -27,7 +27,7 @@ test('unscoped packages can be explicitly set as public', function (t) {
   }).put('/publish-access', true).reply(201, {ok: true})
 
   fs.writeFile(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify({
       name: 'publish-access',
       version: '1.2.5',

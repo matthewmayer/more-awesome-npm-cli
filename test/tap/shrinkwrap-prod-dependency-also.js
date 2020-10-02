@@ -53,7 +53,7 @@ test("shrinkwrap --also=development doesn't strip out prod dependencies", functi
 
   mr({port: common.port}, function (er, s) {
     t.parent.teardown(() => s.close())
-    fs.writeFileSync(path.join(pkg, 'package.json'), JSON.stringify(json, null, 2))
+    fs.writeFileSync(path.join(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2))
     common.npm(['install', '.'].concat(opts), {cwd: pkg}, function (err, code, stdout, stderr) {
       if (err) return t.fail(err)
       t.is(code, 0, 'install')

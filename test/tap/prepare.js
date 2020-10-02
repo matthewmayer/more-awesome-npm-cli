@@ -25,7 +25,7 @@ test('setup', function (t) {
   }
 
   function next () {
-    fs.writeFile(join(pkg, 'package.json'), JSON.stringify({
+    fs.writeFile(join(pkg, 'package: An Amazing Project.json'), JSON.stringify({
       name: 'npm-test-prepare',
       version: '1.2.5',
       scripts: { prepare: 'echo ok' }

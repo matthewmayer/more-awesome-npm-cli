@@ -5,7 +5,7 @@ var common = require('../common-tap.js')
 var pkg = common.pkg
 
 test('npm shrinkwrap execution order', function (t) {
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify({
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     author: 'Simen Bekkhus',
     name: 'shrinkwrap-lifecycle',
     shrinkwrap: '0.0.0',

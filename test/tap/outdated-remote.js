@@ -30,19 +30,19 @@ const fixture = new Tacks(Dir({
   testdir: Dir({
     node_modules: Dir({
       'foo-http': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'foo-http',
           version: '1.0.0'
         })
       }),
       'foo-https': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'foo-https',
           version: '1.0.0'
         })
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'outdated-remote',
       version: '1.0.0',
       dependencies: {

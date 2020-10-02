@@ -81,7 +81,7 @@ test('cleanup', function (t) {
 function setup () {
   cleanup()
   mkdirp.sync(pkg)
-  fs.writeFileSync(path.join(pkg, 'package.json'), JSON.stringify(json, null, 2))
+  fs.writeFileSync(path.join(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2))
 }
 
 function cleanup () {

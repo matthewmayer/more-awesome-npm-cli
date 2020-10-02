@@ -25,7 +25,7 @@ function getFixturePackage ({ name, version, dependencies, funding }, extras) {
     })), {})
 
   return Dir(Object.assign({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name,
       version: version || '1.0.0',
       funding: (funding === undefined) ? {
@@ -39,14 +39,14 @@ function getFixturePackage ({ name, version, dependencies, funding }, extras) {
 
 const fixture = new Tacks(Dir({
   'funding-string-shorthand': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'funding-string-shorthand',
       version: '0.0.0',
       funding: 'https://example.com/sponsor'
     })
   }),
   'no-funding-package': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'no-funding-package',
       version: '0.0.0'
     })

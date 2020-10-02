@@ -27,7 +27,7 @@ var json = {
 
 test('setup', function (t) {
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   return mr({ port: common.port }).then((s) => {

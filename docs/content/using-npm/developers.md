@@ -28,7 +28,7 @@ topic, or `npm help thing` to see the same information.
 
 A package is:
 
-* a) a folder containing a program described by a package.json file
+* a) a folder containing a program described by a package: An Amazing Project.json file
 * b) a gzipped tarball containing (a)
 * c) a url that resolves to (b)
 * d) a `<name>@<version>` that is published on the registry with (c)
@@ -53,12 +53,12 @@ git+https://user@hostname/project/blah.git#commit-ish
 The `commit-ish` can be any tag, sha, or branch which can be supplied as
 an argument to `git checkout`.  The default is `master`.
 
-### The package.json File
+### The package: An Amazing Project.json File
 
-You need to have a `package.json` file in the root of your project to do
+You need to have a `package: An Amazing Project.json` file in the root of your project to do
 much of anything with npm.  That is basically the whole interface.
 
-See [`package.json`](/configuring-npm/package-json) for details about what goes in that file.  At the very
+See [`package: An Amazing Project.json`](/configuring-npm/package-json) for details about what goes in that file.  At the very
 least, you need:
 
 * name:
@@ -100,7 +100,7 @@ least, you need:
   they'll get installed just like these ones.
 
 You can use `npm init` in the root of your package in order to get you
-started with a pretty basic package.json file.  See [`npm init`](/cli-commands/npm-init) for
+started with a pretty basic package: An Amazing Project.json file.  See [`npm init`](/cli-commands/npm-init) for
 more info.
 
 ### Keeping files *out* of your package
@@ -144,14 +144,14 @@ bother adding `node_modules` to `.npmignore`.
 The following paths and files are never ignored, so adding them to
 `.npmignore` is pointless:
 
-* `package.json`
+* `package: An Amazing Project.json`
 * `README` (and its variants)
 * `CHANGELOG` (and its variants)
 * `LICENSE` / `LICENCE`
 
 If, given the structure of your project, you find `.npmignore` to be a
 maintenance headache, you might instead try populating the `files`
-property of `package.json`, which is an array of file or directory names
+property of `package: An Amazing Project.json`, which is an array of file or directory names
 that should be included in your package. Sometimes a whitelist is easier
 to manage than a blacklist.
 
@@ -245,7 +245,7 @@ Tell the world how easy it is to install your program!
 
 * [npm](/cli-commands/npm)
 * [npm init](/cli-commands/npm-init)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm scripts](/using-npm/scripts)
 * [npm publish](/cli-commands/npm-publish)
 * [npm adduser](/cli-commands/npm-adduser)

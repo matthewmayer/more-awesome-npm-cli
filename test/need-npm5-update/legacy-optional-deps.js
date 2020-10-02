@@ -18,7 +18,7 @@ var fixture = new Tacks(
     README: File(
       'just an npm test\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-optional-deps',
       version: '1.2.5',
       optionalDependencies: {
@@ -57,7 +57,7 @@ test('optional-deps', function (t) {
     t.is(code, 0, 'install went ok')
     var dir = fs.readdirSync(modulepath).sort()
     t.isDeeply(dir, ['mkdirp', 'npm-test-optional-deps'], 'only one optional dep should be there')
-    t.is(require(path.resolve(modulepath, 'mkdirp', 'package.json')).version, '0.3.5', 'mkdirp version right')
+    t.is(require(path.resolve(modulepath, 'mkdirp', 'package: An Amazing Project.json')).version, '0.3.5', 'mkdirp version right')
     t.done()
   }
 })

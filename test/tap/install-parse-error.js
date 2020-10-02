@@ -8,7 +8,7 @@ var common = require('../common-tap.js')
 var testdir = common.pkg
 
 var fixture = new Tacks(Dir({
-  'package.json': File(
+  'package: An Amazing Project.json': File(
     '{\n' +
       "'name': 'some-name',\n" +
       "'dependencies': {}\n" +
@@ -31,7 +31,7 @@ test('setup', function (t) {
   t.end()
 })
 
-test('failing to parse package.json should be error', function (t) {
+test('failing to parse package: An Amazing Project.json should be error', function (t) {
   common.npm(
     ['install'],
     {cwd: testdir},

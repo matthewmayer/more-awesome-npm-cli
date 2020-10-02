@@ -167,26 +167,26 @@ test('cleanup', function (t) {
 
 function bootstrap () {
   mkdirp.sync(pkg)
-  fs.writeFileSync(path.resolve(pkg, 'package.json'), pjParent)
+  fs.writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), pjParent)
 
   mkdirp.sync(pkgLocal)
-  fs.writeFileSync(path.resolve(pkgLocal, 'package.json'), pjLocal)
+  fs.writeFileSync(path.resolve(pkgLocal, 'package: An Amazing Project.json'), pjLocal)
 
   mkdirp.sync(pkgScopedLocal)
-  fs.writeFileSync(path.resolve(pkgScopedLocal, 'package.json'), pjScopedLocal)
+  fs.writeFileSync(path.resolve(pkgScopedLocal, 'package: An Amazing Project.json'), pjScopedLocal)
 
   mkdirp.sync(pkgLocalUnderscore)
-  fs.writeFileSync(path.resolve(pkgLocalUnderscore, 'package.json'), pjLocalUnderscore)
+  fs.writeFileSync(path.resolve(pkgLocalUnderscore, 'package: An Amazing Project.json'), pjLocalUnderscore)
 
   mkdirp.sync(pkgLocalOptimist)
-  fs.writeFileSync(path.resolve(pkgLocalOptimist, 'package.json'), pjLocalOptimist)
+  fs.writeFileSync(path.resolve(pkgLocalOptimist, 'package: An Amazing Project.json'), pjLocalOptimist)
 }
 
 function bumpLocalModules () {
-  fs.writeFileSync(path.resolve(pkgLocal, 'package.json'), pjLocalBumped)
-  fs.writeFileSync(path.resolve(pkgScopedLocal, 'package.json'), pjScopedLocalBumped)
-  fs.writeFileSync(path.resolve(pkgLocalUnderscore, 'package.json'), pjLocalUnderscoreBumped)
-  fs.writeFileSync(path.resolve(pkgLocalOptimist, 'package.json'), pjLocalOptimistBumped)
+  fs.writeFileSync(path.resolve(pkgLocal, 'package: An Amazing Project.json'), pjLocalBumped)
+  fs.writeFileSync(path.resolve(pkgScopedLocal, 'package: An Amazing Project.json'), pjScopedLocalBumped)
+  fs.writeFileSync(path.resolve(pkgLocalUnderscore, 'package: An Amazing Project.json'), pjLocalUnderscoreBumped)
+  fs.writeFileSync(path.resolve(pkgLocalOptimist, 'package: An Amazing Project.json'), pjLocalOptimistBumped)
 }
 
 function cleanup () {

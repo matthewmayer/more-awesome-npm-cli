@@ -12,7 +12,7 @@ const pkg = common.pkg
 const cache = common.cache
 const gitDir = path.resolve(pkg, '.git')
 
-test('npm version does not alter the line endings in package.json (LF)', function (t) {
+test('npm version does not alter the line endings in package: An Amazing Project.json (LF)', function (t) {
   setup('\n')
 
   npm.load({cache: cache, registry: common.registry}, function () {
@@ -27,7 +27,7 @@ test('npm version does not alter the line endings in package.json (LF)', functio
     version(['patch'], function (err) {
       if (!t.error(err)) return t.end()
 
-      const pkgPath = path.resolve(pkg, 'package.json')
+      const pkgPath = path.resolve(pkg, 'package: An Amazing Project.json')
       const pkgStr = fs.readFileSync(pkgPath, 'utf8')
 
       t.match(pkgStr, '\n')
@@ -38,7 +38,7 @@ test('npm version does not alter the line endings in package.json (LF)', functio
   })
 })
 
-test('npm version does not alter the line endings in package.json (CRLF)', function (t) {
+test('npm version does not alter the line endings in package: An Amazing Project.json (CRLF)', function (t) {
   setup('\r\n')
 
   npm.load({cache: cache, registry: common.registry}, function () {
@@ -53,7 +53,7 @@ test('npm version does not alter the line endings in package.json (CRLF)', funct
     version(['patch'], function (err) {
       if (!t.error(err)) return t.end()
 
-      const pkgPath = path.resolve(pkg, 'package.json')
+      const pkgPath = path.resolve(pkg, 'package: An Amazing Project.json')
       const pkgStr = fs.readFileSync(pkgPath, 'utf8')
 
       t.match(pkgStr, '\r\n')
@@ -67,7 +67,7 @@ test('npm version does not alter the line endings in package.json (CRLF)', funct
 function setup (lineEnding) {
   mkdirp.sync(gitDir)
   fs.writeFileSync(
-    path.resolve(pkg, 'package.json'),
+    path.resolve(pkg, 'package: An Amazing Project.json'),
     JSON.stringify({
       author: 'Terin Stock',
       name: 'version-no-git-test',

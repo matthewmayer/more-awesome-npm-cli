@@ -14,7 +14,7 @@ var modB2dir = path.resolve(testdir, 'modB@2')
 var modCdir = path.resolve(testdir, 'modC')
 
 var fixture = new Tacks(Dir({
-  'package.json': File({
+  'package: An Amazing Project.json': File({
     dependencies: {
       modA: 'file://' + modAdir
     },
@@ -38,7 +38,7 @@ var fixture = new Tacks(Dir({
     }
   }),
   'modA': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modA',
       version: '1.0.0',
       dependencies: {
@@ -47,21 +47,21 @@ var fixture = new Tacks(Dir({
     })
   }),
   'modB@1': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modB',
       version: '1.0.0'
     }),
     'B1': File('')
   }),
   'modB@2': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modB',
       version: '2.0.0'
     }),
     'B2': File('')
   }),
   'modC': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'modC',
       version: '1.0.0',
       dependencies: {
@@ -86,7 +86,7 @@ test('setup', function (t) {
 })
 
 // Shrinkwraps need to let you override dependency versions specified in
-// package.json files.  Indeed, this was already supported, but it was a bit
+// package: An Amazing Project.json files.  Indeed, this was already supported, but it was a bit
 // to keen on this.  Previously, if you had a dep in your shrinkwrap then
 // anything that required that dependency would count as a match, regardless
 // of version.

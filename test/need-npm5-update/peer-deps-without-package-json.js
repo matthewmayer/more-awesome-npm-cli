@@ -19,7 +19,7 @@ var fileJS = function () {
 * { "name": "npm-test-peer-deps-file"
 * , "main": "index.js"
 * , "version": "1.2.3"
-* , "description":"No package.json in sight!"
+* , "description":"No package: An Amazing Project.json in sight!"
 * , "peerDependencies": { "underscore": "1.3.1" }
 * , "dependencies": { "mkdirp": "0.3.5" }
 * }
@@ -39,7 +39,7 @@ test('setup', function (t) {
   t.end()
 })
 
-test('installing a peerDeps-using package without package.json', function (t) {
+test('installing a peerDeps-using package without package: An Amazing Project.json', function (t) {
   var customMocks = {
     'get': {
       '/ok.js': [200, path.join(pkg, 'file-js.js')]

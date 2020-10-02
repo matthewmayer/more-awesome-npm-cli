@@ -16,7 +16,7 @@ var Dir = Tacks.Dir
 test('basic bundling', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         bundledDependencies: [
@@ -43,7 +43,7 @@ test('basic bundling', function (t) {
 test('scoped dep bundling', function (t) {
   var fixture = new Tacks(
     Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'npm-test-files',
         version: '1.2.5',
         bundledDependencies: [

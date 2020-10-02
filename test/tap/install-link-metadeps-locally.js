@@ -11,7 +11,7 @@ const rimraf = require('rimraf')
 t.test('setup', t => {
   mkdirp.sync(resolve(pkg, 'node_modules'))
   mkdirp.sync(resolve(pkg, 'foo'))
-  writeFileSync(resolve(pkg, 'foo', 'package.json'), JSON.stringify({
+  writeFileSync(resolve(pkg, 'foo', 'package: An Amazing Project.json'), JSON.stringify({
     name: 'foo',
     version: '1.2.3',
     dependencies: {
@@ -19,7 +19,7 @@ t.test('setup', t => {
     }
   }))
 
-  writeFileSync(resolve(pkg, 'package.json'), JSON.stringify({
+  writeFileSync(resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify({
     name: 'root',
     version: '1.2.3',
     dependencies: {

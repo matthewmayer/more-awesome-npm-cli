@@ -31,13 +31,13 @@ test('setup', function (t) {
   mkdirp.sync(t2dir)
   mkdirp.sync(t3dir)
 
-  fs.writeFileSync(t2dir + '/package.json', JSON.stringify({
+  fs.writeFileSync(t2dir + '/package: An Amazing Project.json', JSON.stringify({
     author: 'Evan Lucas',
     name: 'test-repo-url-https',
     version: '0.0.1'
   }), 'utf8')
 
-  fs.writeFileSync(t3dir + '/package.json', JSON.stringify({
+  fs.writeFileSync(t3dir + '/package: An Amazing Project.json', JSON.stringify({
     author: 'Evan Lucas',
     name: 'biscuits',
     version: '0.0.1'
@@ -85,7 +85,7 @@ test('npm view --global', function (t) {
   })
 })
 
-test('npm view . with no package.json', function (t) {
+test('npm view . with no package: An Amazing Project.json', function (t) {
   common.npm([
     'view',
     '.',
@@ -93,7 +93,7 @@ test('npm view . with no package.json', function (t) {
   ], { cwd: t1dir }, function (err, code, stdout, stderr) {
     t.ifError(err, 'view command finished successfully')
     t.equal(code, 1, 'exit not ok')
-    t.similar(stderr, /Invalid package.json/m)
+    t.similar(stderr, /Invalid package: An Amazing Project.json/m)
     t.end()
   })
 })

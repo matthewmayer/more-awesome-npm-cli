@@ -3,13 +3,13 @@ var test = require('tap').test
 
 var pkg = common.pkg
 
-test('npm version in a prefix with no package.json', function (t) {
+test('npm version in a prefix with no package: An Amazing Project.json', function (t) {
   process.chdir(pkg)
   common.npm(
     ['version', '--json', '--prefix', pkg],
     { cwd: pkg, nodeExecPath: process.execPath },
     function (er, code, stdout, stderr) {
-      t.ifError(er, "npm version doesn't care that there's no package.json")
+      t.ifError(er, "npm version doesn't care that there's no package: An Amazing Project.json")
       t.notOk(code, 'npm version ran without barfing')
       t.ok(stdout, 'got version output')
       t.notOk(stderr, 'no error output')

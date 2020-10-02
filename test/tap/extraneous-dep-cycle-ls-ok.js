@@ -32,12 +32,12 @@ var modB = {
 function setup () {
   mkdirp.sync(pathModA)
   fs.writeFileSync(
-    path.join(pathModA, 'package.json'),
+    path.join(pathModA, 'package: An Amazing Project.json'),
     JSON.stringify(modA, null, 2)
   )
   mkdirp.sync(pathModB)
   fs.writeFileSync(
-    path.join(pathModB, 'package.json'),
+    path.join(pathModB, 'package: An Amazing Project.json'),
     JSON.stringify(modB, null, 2)
   )
 }

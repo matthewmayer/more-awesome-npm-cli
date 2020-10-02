@@ -44,12 +44,12 @@ t.teardown(() => {
 t.test('setup', function (t) {
   mkdirp.sync(target)
   fs.writeFileSync(
-    path.join(target, 'package.json'),
+    path.join(target, 'package: An Amazing Project.json'),
     JSON.stringify(localDependencyJson, null, 2)
   )
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(dependentJson, null, 2)
   )
   mr({ port: common.port }, (er, s) => {
@@ -65,7 +65,7 @@ t.test('\'npm install\' should install local pkg from sub path', function (t) {
   common.npm(['install', '--loglevel=silent'], EXEC_OPTS, function (err, code) {
     if (err) throw err
     t.equal(code, 0, 'npm install exited with code')
-    t.ok(fs.statSync(path.resolve(pkg, 'node_modules/local-dependency/package.json')).isFile(), 'local dependency package.json exists')
+    t.ok(fs.statSync(path.resolve(pkg, 'node_modules/local-dependency/package: An Amazing Project.json')).isFile(), 'local dependency package: An Amazing Project.json exists')
     t.ok(fs.statSync(path.resolve(pkg, 'node_modules/local-dependency/node_modules/test-package')).isDirectory(), 'transitive dependency installed')
     t.end()
   })
@@ -75,7 +75,7 @@ t.test('\'npm ci\' should work', function (t) {
   common.npm(['ci', '--loglevel=silent'], EXEC_OPTS, function (err, code) {
     if (err) throw err
     t.equal(code, 0, 'npm install exited with code')
-    t.ok(fs.statSync(path.resolve(pkg, 'node_modules/local-dependency/package.json')).isFile(), 'local dependency package.json exists')
+    t.ok(fs.statSync(path.resolve(pkg, 'node_modules/local-dependency/package: An Amazing Project.json')).isFile(), 'local dependency package: An Amazing Project.json exists')
     t.ok(fs.statSync(path.resolve(pkg, 'node_modules/local-dependency/node_modules/test-package')).isDirectory(), 'transitive dependency installed')
     t.end()
   })

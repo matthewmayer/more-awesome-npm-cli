@@ -41,19 +41,19 @@ var devDependency = {
 test('setup', function (t) {
   mkdirp.sync(path.join(pkg, 'dependency'))
   fs.writeFileSync(
-    path.join(pkg, 'dependency', 'package.json'),
+    path.join(pkg, 'dependency', 'package: An Amazing Project.json'),
     JSON.stringify(dependency, null, 2)
   )
 
   mkdirp.sync(path.join(pkg, 'dev-dependency'))
   fs.writeFileSync(
-    path.join(pkg, 'dev-dependency', 'package.json'),
+    path.join(pkg, 'dev-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(devDependency, null, 2)
   )
 
   mkdirp.sync(path.join(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
 
@@ -68,12 +68,12 @@ test('\'npm install --only=production\' should only install dependencies', funct
     t.equal(code, 0, 'npm install did not raise error code')
     t.ok(
       JSON.parse(fs.readFileSync(
-        path.resolve(pkg, 'node_modules/dependency/package.json'), 'utf8')
+        path.resolve(pkg, 'node_modules/dependency/package: An Amazing Project.json'), 'utf8')
       ),
       'dependency was installed'
     )
     t.notOk(
-      existsSync(path.resolve(pkg, 'node_modules/dev-dependency/package.json')),
+      existsSync(path.resolve(pkg, 'node_modules/dev-dependency/package: An Amazing Project.json')),
       'devDependency was NOT installed'
     )
     t.end()

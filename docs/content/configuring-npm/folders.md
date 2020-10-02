@@ -95,7 +95,7 @@ to the sensible root of your package, even if you happen to have `cd`ed
 into some other folder.
 
 Starting at the $PWD, npm will walk up the folder tree checking for a
-folder that contains either a `package.json` file, or a `node_modules`
+folder that contains either a `package: An Amazing Project.json` file, or a `node_modules`
 folder.  If such a thing is found, then that is treated as the effective
 "current directory" for the purpose of running npm commands.  (This
 behavior is inspired by and similar to git's .git-folder seeking
@@ -209,11 +209,11 @@ not be included in the package tarball.
 
 This allows a package maintainer to install all of their dependencies
 (and dev dependencies) locally, but only re-publish those items that
-cannot be found elsewhere.  See [`package.json`](/configuring-npm/package.json) for more information.
+cannot be found elsewhere.  See [`package: An Amazing Project.json`](/configuring-npm/package: An Amazing Project.json) for more information.
 
 ### See also
 
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm install](/cli-commands/npm-install)
 * [npm pack](/cli-commands/npm-pack)
 * [npm cache](/cli-commands/npm-cache)

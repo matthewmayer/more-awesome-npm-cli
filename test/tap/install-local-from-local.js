@@ -12,13 +12,13 @@ var cwd = path.join(testdir, '3')
 
 /**
  * NOTE: Tarball Fixtures
- * They contain package.json files with dependencies like the following:
- * 1-1.0.0.tgz: package/package.json
+ * They contain package: An Amazing Project.json files with dependencies like the following:
+ * 1-1.0.0.tgz: package/package: An Amazing Project.json
  * {
  *   "name":"1",
  *   "version":"1.0.0"
  * }
- * 2-1.0.0.tgz: package/package.json
+ * 2-1.0.0.tgz: package/package: An Amazing Project.json
  * {
  *   "name":"2",
  *   "version":"1.0.0",
@@ -50,7 +50,7 @@ var fixture = new Tacks(Dir({
     ))
   }),
   '3': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: '3',
       version: '1.0.0',
       dependencies: {

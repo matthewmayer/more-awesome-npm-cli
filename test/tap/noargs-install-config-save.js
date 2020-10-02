@@ -13,7 +13,7 @@ function writePackageJson () {
   mkdirp.sync(pkg)
   mkdirp.sync(pkg + '/cache')
 
-  fs.writeFileSync(pkg + '/package.json', JSON.stringify({
+  fs.writeFileSync(pkg + '/package: An Amazing Project.json', JSON.stringify({
     'author': 'Rocko Artischocko',
     'name': 'noargs',
     'version': '0.0.0',
@@ -36,7 +36,7 @@ var OPTS = {
   env: env
 }
 
-test('does not update the package.json with empty arguments', function (t) {
+test('does not update the package: An Amazing Project.json with empty arguments', function (t) {
   writePackageJson()
   t.plan(2)
 
@@ -48,14 +48,14 @@ test('does not update the package.json with empty arguments', function (t) {
         console.error('#', stdout)
         console.error('#', stderr)
       }
-      var text = JSON.stringify(fs.readFileSync(pkg + '/package.json', 'utf8'))
+      var text = JSON.stringify(fs.readFileSync(pkg + '/package: An Amazing Project.json', 'utf8'))
       s.close()
       t.equal(text.indexOf('"dependencies'), -1, 'dependencies do not exist in file')
     })
   })
 })
 
-test('updates the package.json (adds dependencies) with an argument', function (t) {
+test('updates the package: An Amazing Project.json (adds dependencies) with an argument', function (t) {
   writePackageJson()
   t.plan(2)
 
@@ -64,7 +64,7 @@ test('updates the package.json (adds dependencies) with an argument', function (
       if (er) throw er
       t.is(code, 0)
       s.close()
-      var text = JSON.stringify(fs.readFileSync(pkg + '/package.json', 'utf8'))
+      var text = JSON.stringify(fs.readFileSync(pkg + '/package: An Amazing Project.json', 'utf8'))
       t.notEqual(text.indexOf('"dependencies'), -1, 'dependencies exist in file')
     })
   })

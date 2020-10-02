@@ -27,7 +27,7 @@ var cycleJSON = {
 test('setup', function (t) {
   mkdirp.sync(path.join(cycle, 'node_modules'))
   writeFileSync(
-    path.join(cycle, 'package.json'),
+    path.join(cycle, 'package: An Amazing Project.json'),
     JSON.stringify(cycleJSON, null, 2)
   )
   fs.symlinkSync(cycle, path.join(cycle, 'node_modules', 'cycle'), 'junction')

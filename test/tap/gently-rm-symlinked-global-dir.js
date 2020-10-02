@@ -114,6 +114,6 @@ function setup () {
   // so it doesn't try to install into npm's own node_modules
   mkdirp.sync(resolve(pkg, 'node_modules'))
   mkdirp.sync(dep)
-  fs.writeFileSync(resolve(dep, 'package.json'), JSON.stringify(fixture))
+  fs.writeFileSync(resolve(dep, 'package: An Amazing Project.json'), JSON.stringify(fixture))
   fs.writeFileSync(resolve(dep, 'index.js'), index)
 }

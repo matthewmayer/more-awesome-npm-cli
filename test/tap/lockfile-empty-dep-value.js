@@ -25,7 +25,7 @@ const fixture = new Tacks(Dir({
         minimist: {}
       }
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'http-locks',
       version: '1.0.0',
       dependencies: {

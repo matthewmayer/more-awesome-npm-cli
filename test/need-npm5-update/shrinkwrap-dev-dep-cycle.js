@@ -12,7 +12,7 @@ var fixture = new Tacks(
   Dir({
     node_modules: Dir({
       'a': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _requested: {
             rawSpec: 'file:///mods/a'
           },
@@ -24,7 +24,7 @@ var fixture = new Tacks(
         })
       }),
       'b': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           _requested: {
             rawSpec: 'file:///mods/b'
           },
@@ -36,7 +36,7 @@ var fixture = new Tacks(
         })
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'test',
       version: '1.0.0',
       devDependencies: {

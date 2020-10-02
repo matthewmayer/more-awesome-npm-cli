@@ -20,7 +20,7 @@ var json = {
 test('setup', function (t) {
   mkdirp.sync(path.resolve(pkg, 'node_modules'))
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   mr({ port: common.port }, function (er, s) {
@@ -30,7 +30,7 @@ test('setup', function (t) {
   })
 })
 
-test('uninstall --save removes rm-ed package from package.json', function (t) {
+test('uninstall --save removes rm-ed package from package: An Amazing Project.json', function (t) {
   var config = [
     '--registry', common.registry,
     '--save-prefix', '^',
@@ -40,11 +40,11 @@ test('uninstall --save removes rm-ed package from package.json', function (t) {
   return common.npm(config.concat(['install', 'underscore@latest']), EXEC_OPTS).spread((code) => {
     t.notOk(code, 'npm install exited with code 0')
 
-    var p = path.join(pkg, 'node_modules', 'underscore', 'package.json')
+    var p = path.join(pkg, 'node_modules', 'underscore', 'package: An Amazing Project.json')
     t.ok(JSON.parse(fs.readFileSync(p)))
 
     var pkgJson = JSON.parse(fs.readFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       'utf8'
     ))
     t.deepEqual(
@@ -59,7 +59,7 @@ test('uninstall --save removes rm-ed package from package.json', function (t) {
     return common.npm(config.concat(['uninstall', 'underscore']), EXEC_OPTS)
   }).spread((code) => {
     var pkgJson = JSON.parse(fs.readFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       'utf8'
     ))
 

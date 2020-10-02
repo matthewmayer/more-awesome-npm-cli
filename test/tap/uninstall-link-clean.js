@@ -41,14 +41,14 @@ test('setup', function (t) {
   cleanup()
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2)
   )
   fs.writeFileSync(path.join(pkg, 'world.js'), world)
 
   mkdirp.sync(dep)
   fs.writeFileSync(
-    path.join(dep, 'package.json'),
+    path.join(dep, 'package: An Amazing Project.json'),
     JSON.stringify(pjDep, null, 2)
   )
   fs.writeFileSync(path.join(dep, 'world.js'), world)
@@ -70,7 +70,7 @@ test('installing package with links', function (t) {
       t.notOk(code, 'npm install exited with code 0')
 
       t.ok(
-        existsSync(path.join(modules, 'package', 'package.json')),
+        existsSync(path.join(modules, 'package', 'package: An Amazing Project.json')),
         'package installed'
       )
       t.ok(existsSync(path.join(modules, '.bin')), 'binary link directory exists')

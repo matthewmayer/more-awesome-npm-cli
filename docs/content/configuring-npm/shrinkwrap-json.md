@@ -30,5 +30,5 @@ to the manual page for [package-lock.json](/configuring-npm/package-lock-json).
 
 * [npm shrinkwrap](/cli-commands/npm-shrinkwrap)
 * [package-lock.json](/configuring-npm/package-lock-json)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)
 * [npm install](/cli-commands/npm-install)

@@ -14,7 +14,7 @@ const cachedir = common.cache
 const globaldir = path.join(basedir, 'global')
 const tmpdir = path.join(basedir, 'tmp')
 
-const pkgPath = path.join(testdir, 'package.json')
+const pkgPath = path.join(testdir, 'package: An Amazing Project.json')
 const pkgLockPath = path.join(testdir, 'package-lock.json')
 const shrinkwrapPath = path.join(testdir, 'npm-shrinkwrap.json')
 const CRLFreg = /\r\n|\r|\n/
@@ -34,7 +34,7 @@ var fixture = new Tacks(Dir({
   global: Dir(),
   tmp: Dir(),
   testdir: Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'install-package-lock-only',
       version: '1.0.0',
       dependencies: {
@@ -61,7 +61,7 @@ test('setup', function (t) {
   })
 })
 
-test('package-lock.json unformatted, package.json formatted when config has `format-package-lock: false`', function (t) {
+test('package-lock.json unformatted, package: An Amazing Project.json formatted when config has `format-package-lock: false`', function (t) {
   setup()
   common.npm(['install'], {cwd: testdir, env}).spread((code, stdout, stderr) => {
     t.is(code, 0, 'ok')
@@ -69,7 +69,7 @@ test('package-lock.json unformatted, package.json formatted when config has `for
     const pkgLockUtf8 = fs.readFileSync(pkgLockPath, 'utf-8')
     t.equal(pkgLockUtf8.split(CRLFreg).length, 2, 'package-lock.json is unformatted')
     const pkgUtf8 = fs.readFileSync(pkgPath, 'utf-8')
-    t.notEqual(pkgUtf8.split(CRLFreg).length, 2, 'package.json is formatted')
+    t.notEqual(pkgUtf8.split(CRLFreg).length, 2, 'package: An Amazing Project.json is formatted')
     t.done()
   })
 })
@@ -85,7 +85,7 @@ test('npm-shrinkwrap.json unformatted when config has `format-package-lock: fals
   })
 })
 
-test('package-lock.json and package.json formatted when config has `format-package-lock: true`', function (t) {
+test('package-lock.json and package: An Amazing Project.json formatted when config has `format-package-lock: true`', function (t) {
   setup()
   common.npm(['install'], {cwd: testdir}).spread((code, stdout, stderr) => {
     t.is(code, 0, 'ok')
@@ -93,7 +93,7 @@ test('package-lock.json and package.json formatted when config has `format-packa
     const pkgLockUtf8 = fs.readFileSync(pkgLockPath, 'utf-8')
     t.notEqual(pkgLockUtf8.split(CRLFreg).length, 2, 'package-lock.json is formatted')
     const pkgUtf8 = fs.readFileSync(pkgPath, 'utf-8')
-    t.notEqual(pkgUtf8.split(CRLFreg).length, 2, 'package.json is formatted')
+    t.notEqual(pkgUtf8.split(CRLFreg).length, 2, 'package: An Amazing Project.json is formatted')
     t.done()
   })
 })

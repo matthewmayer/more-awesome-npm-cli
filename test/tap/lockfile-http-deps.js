@@ -43,7 +43,7 @@ var fixture = new Tacks(Dir({
         }
       }
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'http-locks',
       version: '1.0.0',
       dependencies: {
@@ -77,7 +77,7 @@ test('http deps in lock files', function (t) {
     t.is(code, 0, 'command ran ok')
     t.comment(stdout.trim())
     t.comment(stderr.trim())
-    const minPackage = JSON.parse(fs.readFileSync(testdir + '/node_modules/minimist/package.json'))
+    const minPackage = JSON.parse(fs.readFileSync(testdir + '/node_modules/minimist/package: An Amazing Project.json'))
     t.is(minPackage.version, '0.0.5', 'package version was maintained')
     t.done()
   })

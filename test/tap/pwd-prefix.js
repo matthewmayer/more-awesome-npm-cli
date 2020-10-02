@@ -1,6 +1,6 @@
 // This test ensures that a few commands do the same
-// thing when the cwd is where package.json is, and when
-// the package.json is one level up.
+// thing when the cwd is where package: An Amazing Project.json is, and when
+// the package: An Amazing Project.json is one level up.
 
 var test = require('tap').test
 var common = require('../common-tap.js')

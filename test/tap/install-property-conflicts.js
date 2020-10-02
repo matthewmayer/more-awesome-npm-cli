@@ -23,7 +23,7 @@ test('setup', function (t) {
   // make sure it installs locally
   mkdirp.sync(resolve(target, 'node_modules'))
   fs.writeFileSync(
-    resolve(pkg, 'package.json'),
+    resolve(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(json, null, 2) + '\n'
   )
   t.end()
@@ -45,7 +45,7 @@ test('install package with a `type` property', function (t) {
         target,
         'node_modules',
         'install-property-conflicts',
-        'package.json')
+        'package: An Amazing Project.json')
       t.ok(fs.statSync(installedPkg), 'package installed successfully')
       t.end()
     }

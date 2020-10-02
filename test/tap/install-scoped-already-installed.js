@@ -37,19 +37,19 @@ var scopedDependency = {
 test('setup', function (t) {
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(scopedPaths, null, 2)
   )
 
   mkdirp.sync(path.join(root, 'package-local-dependency'))
   fs.writeFileSync(
-    path.join(root, 'package-local-dependency', 'package.json'),
+    path.join(root, 'package-local-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(localDependency, null, 2)
   )
 
   mkdirp.sync(path.join(root, 'package-scoped-dependency'))
   fs.writeFileSync(
-    path.join(root, 'package-scoped-dependency', 'package.json'),
+    path.join(root, 'package-scoped-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(scopedDependency, null, 2)
   )
 
@@ -69,7 +69,7 @@ test('installing already installed local scoped package', function (t) {
       t.ifError(err, 'install ran to completion without error')
       t.notOk(code, 'npm install exited with code 0')
       t.ok(
-        existsSync(path.join(modules, '@scoped', 'package-scoped-dependency', 'package.json')),
+        existsSync(path.join(modules, '@scoped', 'package-scoped-dependency', 'package: An Amazing Project.json')),
         'package installed'
       )
       t.ok(
@@ -95,7 +95,7 @@ test('installing already installed local scoped package', function (t) {
           installed = parseNpmInstallOutput(stdout)
 
           t.ok(
-            existsSync(path.join(modules, '@scoped', 'package-scoped-dependency', 'package.json')),
+            existsSync(path.join(modules, '@scoped', 'package-scoped-dependency', 'package: An Amazing Project.json')),
             'package installed'
           )
 

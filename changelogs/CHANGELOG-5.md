@@ -107,7 +107,7 @@ as `https://` URLs instead of versions.
 
 * [`36f998411`](https://github.com/npm/npm/commit/36f9984113e39d7b190010a2d0694ee025924dcb)
   When saving the lock-file compute how the dependency is being required instead of using
-  `_resolved` in the `package.json`.  This fixes the bug that was converting
+  `_resolved` in the `package: An Amazing Project.json`.  This fixes the bug that was converting
   registry dependencies into `https://` dependencies.
   ([@iarna](https://github.com/iarna))
 * [`113e1a3af`](https://github.com/npm/npm/commit/113e1a3af2f487c753b8871d51924682283c89fc)
@@ -151,11 +151,11 @@ as `https://` URLs instead of versions.
   [#20390](https://github.com/npm/npm/pull/20390)
   Fix a scenario where a git dependency had a comittish associated with it
   that was not a complete commitid.  `npm` would never consider that entry
-  in the `package.json` as matching the entry in the `package-lock.json` and
+  in the `package: An Amazing Project.json` as matching the entry in the `package-lock.json` and
   this resulted in inappropriate pruning or reinstallation of git
   dependencies.  This has been addressed in two ways, first, the addition of the
   `from` field as described in [#20384](https://github.com/npm/npm/pull/20384) means
-  we can exactly match the `package.json`. Second, when that's missing (when working with
+  we can exactly match the `package: An Amazing Project.json`. Second, when that's missing (when working with
   older `package-lock.json` files), we assume that the match is ok.  (If
   it's not, we'll fix it up when a real installation is done.)
   ([@iarna](https://github.com/iarna))
@@ -446,7 +446,7 @@ for this year. Keep an eye out for exciting news. 👀
 * [`2f513fe1c`](https://github.com/npm/npm/commit/2f513fe1ce6db055b04a63fe4360212a83f77b34)
   [#19904](https://github.com/npm/npm/pull/19904)
   Make a best-attempt at preserving line ending style when saving
-  `package.json`/`package-lock.json`/`npm-shrinkwrap.json`. This goes
+  `package: An Amazing Project.json`/`package-lock.json`/`npm-shrinkwrap.json`. This goes
   hand-in-hand with a previous patch to preserve detected indentation style.
   ([@tuananh](https://github.com/tuananh))
 * [`d3cfd41a2`](https://github.com/npm/npm/commit/d3cfd41a28253db5a18260f68642513cbbc93e3b)
@@ -579,7 +579,7 @@ This `libcipm` release includes a number of improvements:
   ([@VladRassokhin](https://github.com/VladRassokhin))
 * [`ffa84cd0f`](https://github.com/npm/npm/commit/ffa84cd0f43c07858506764b4151ba6af11ea120)
   [#19475](https://github.com/npm/npm/pull/19475)
-  Added example for `homepage` field from `package.json`.
+  Added example for `homepage` field from `package: An Amazing Project.json`.
   ([@cg-cnu](https://github.com/cg-cnu))
 * [`de72d9a18`](https://github.com/npm/npm/commit/de72d9a18ae650ebaee0fdd6694fc89b1cbe8e95)
   [#19307](https://github.com/npm/npm/pull/19307)
@@ -607,20 +607,20 @@ This `libcipm` release includes a number of improvements:
   ([@masonpawsey](https://github.com/masonpawsey))
 * [`7a8705113`](https://github.com/npm/npm/commit/7a870511327d31e8921d6afa845ec8065c60064b)
   [#18407](https://github.com/npm/npm/pull/18407)
-  Clarify the mechanics of the `file` field in `package.json` a bit.
+  Clarify the mechanics of the `file` field in `package: An Amazing Project.json` a bit.
   ([@bmacnaughton](https://github.com/bmacnaughton))
 * [`b2a1cf084`](https://github.com/npm/npm/commit/b2a1cf0844ceaeb51ed04f3ae81678527ec9ae68)
   [#18382](https://github.com/npm/npm/pull/18382)
   Document the [`browser`
   field](https://github.com/defunctzombie/package-browser-field-spec) in
-  `package.json`.
+  `package: An Amazing Project.json`.
   ([@mxstbr](https://github.com/mxstbr))
 
 ### MISC
 
 * [`b8a48a959`](https://github.com/npm/npm/commit/b8a48a9595b379cfc2a2c576f61062120ea0caf7)
   [#19907](https://github.com/npm/npm/pull/19907)
-  Consolidate code for stringifying `package.json` and package locks. Also adds
+  Consolidate code for stringifying `package: An Amazing Project.json` and package locks. Also adds
   tests have been added to test that `package[-lock].json` files are written to
   disk with their original line endings.
   ([@nwoltman](https://github.com/nwoltman))
@@ -717,7 +717,7 @@ entirely eliminate package-lock merge conflicts.
 ### NPM CI
 
 The new `npm ci` command installs from your lock-file ONLY.  If your
-`package.json` and your lock-file are out of sync then it will report an error.
+`package: An Amazing Project.json` and your lock-file are out of sync then it will report an error.
 
 It works by throwing away your `node_modules` and recreating it from scratch.
 
@@ -1067,7 +1067,7 @@ managers and associated tools can reuse all that code!
   ([@devmount](https://github.com/devmount))
 * [`a8a45668f`](https://github.com/npm/npm/commit/a8a45668fb9b8eb84234fe89234bdcdf644ead58)
   [#18568](https://github.com/npm/npm/pull/18568)
-  Improve wording for the docs for the "engines" section of package.json files.
+  Improve wording for the docs for the "engines" section of package: An Amazing Project.json files.
   ([@apitman](https://github.com/apitman))
 * [`dbc7e5b60`](https://github.com/npm/npm/commit/dbc7e5b602870330a8cdaf63bd303cd9050f792f)
   [#19118](https://github.com/npm/npm/pull/19118)
@@ -1236,7 +1236,7 @@ This is a small bug fix release wrapping up most of the issues introduced with 5
   ([@iarna](https://github.com/iarna))
 * [`cd8687e12`](https://github.com/npm/npm/commit/cd8687e1257f59a253436d69e8d79a29c85d00c8)
   Fix a bug where if npm decided it needed to move a module during an upgrade it would strip
-  out much of the `package.json`. This would result in broken trees after package updates.
+  out much of the `package: An Amazing Project.json`. This would result in broken trees after package updates.
 * [`5bd0244ee`](https://github.com/npm/npm/commit/5bd0244eec347ce435e88ff12148c35da7c69efe)
   [#18385](https://github.com/npm/npm/pull/18385)
   Fix `npm outdated` when run on non-registry dependencies.
@@ -1370,7 +1370,7 @@ find out.
   ([@zkat](https://github.com/zkat))
 * [`23540af7b`](https://github.com/npm/npm/commit/23540af7b0ec5f12bbdc1558745c8c4f0861042b)
   [#18117](https://github.com/npm/npm/pull/18117)
-  Some package managers would write spaces to the \_from field in package.json's in the
+  Some package managers would write spaces to the \_from field in package: An Amazing Project.json's in the
   form of `name @spec`. This was causing npm to fail to interpret them. We now handle that
   correctly and doubly make sure we don't do that ourselves.
   ([@IgorNadj](https://github.com/IgorNadj))
@@ -1422,7 +1422,7 @@ find out.
   ([@lgp1985](https://github.com/lgp1985))
 * [`0cea6f974`](https://github.com/npm/npm/commit/0cea6f9741243b1937abfa300c2a111d9ed79143)
   [#18022](https://github.com/npm/npm/pull/18022)
-  Clarify usage for the `files` field in `package.json`.
+  Clarify usage for the `files` field in `package: An Amazing Project.json`.
   ([@xcambar](https://github.com/xcambar))
 * [`a0fdd1571`](https://github.com/npm/npm/commit/a0fdd15710971234cbc57086cd1a4dc037a39471)
   [#15234](https://github.com/npm/npm/pull/15234)
@@ -1430,7 +1430,7 @@ find out.
   ([@jbcpollak](https://github.com/jbcpollak))
 * [`cecd6aa5d`](https://github.com/npm/npm/commit/cecd6aa5d4dd04af765b26b749c1cd032f7eb913)
   [#18137](https://github.com/npm/npm/pull/18137)
-  Clarify interaction between npmignore and files in package.json.
+  Clarify interaction between npmignore and files in package: An Amazing Project.json.
   ([@supertong](https://github.com/supertong))
 * [`6b8972039`](https://github.com/npm/npm/commit/6b89720396767961001e727fc985671ce88b901b)
   [#18044](https://github.com/npm/npm/pull/18044)
@@ -1438,7 +1438,7 @@ find out.
   ([@vikramnr](https://github.com/vikramnr))
 * [`6e012924f`](https://github.com/npm/npm/commit/6e012924f99c475bc3637c86ab6a113875405fc7)
   [#17667](https://github.com/npm/npm/pull/17667)
-  Fix description of package.json in npm-scripts docs.
+  Fix description of package: An Amazing Project.json in npm-scripts docs.
   ([@tripu](https://github.com/tripu))
 
 ### POSSIBLY INTERESTING DEPENDENCY UPDATES
@@ -1576,11 +1576,11 @@ to npm!
 
 * [`fb42d55a9`](https://github.com/npm/npm/commit/fb42d55a9a97afa5ab7db38b3b99088cf68684ea)
   [#17728](https://github.com/npm/npm/pull/17728)
-  Document semver git urls in package.json docs.
+  Document semver git urls in package: An Amazing Project.json docs.
   ([@sankethkatta](https://github.com/sankethkatta))
 * [`f398c700f`](https://github.com/npm/npm/commit/f398c700fb0f2f3665ebf45995a910ad16cd8d05)
   [#17684](https://github.com/npm/npm/pull/17684)
-  Tweak heading hierarchy in package.json docs.
+  Tweak heading hierarchy in package: An Amazing Project.json docs.
   ([@sonicdoe](https://github.com/sonicdoe))
 * [`d5ad65e50`](https://github.com/npm/npm/commit/d5ad65e50a573cdf9df4155225e869cd6c88ca5e)
   [#17691](https://github.com/npm/npm/pull/17691)
@@ -1621,7 +1621,7 @@ that I highly recommend you give a read
   ([@iarna](https://github.com/iarna))
 * [`c0a289b1b`](https://github.com/npm/npm/commit/c0a289b1ba6b99652c43a955b23acbf1de0b56ae)
   [#17606](https://github.com/npm/npm/pull/17606)
-  Make sure that when write package.json and package-lock.json we always use unix path separators.
+  Make sure that when write package: An Amazing Project.json and package-lock.json we always use unix path separators.
   ([@Standard8](https://github.com/Standard8))
 * [`1658b79ca`](https://github.com/npm/npm/commit/1658b79cad89ccece5ae5ce3c2f691d44b933116)
   [#17654](https://github.com/npm/npm/pull/17654)
@@ -1717,8 +1717,8 @@ right? Here's what's bumping that number for us this time:
   ([@iarna](https://github.com/iarna))
 * [`f0075e7ca`](https://github.com/npm/npm/commit/f0075e7caa3e151424a254d7809ae4489ed8df90)
   [#17508](https://github.com/npm/npm/pull/17508)
-  Take `package.json` changes into account when running installs -- if you
-  remove or add a dependency to `package.json` manually, npm will now pick that
+  Take `package: An Amazing Project.json` changes into account when running installs -- if you
+  remove or add a dependency to `package: An Amazing Project.json` manually, npm will now pick that
   up and update your tree and package lock accordingly.
   ([@iarna](https://github.com/iarna))
 * [`83a5455aa`](https://github.com/npm/npm/commit/83a5455aac3c5cc2511ab504923b652b13bd66a0)
@@ -1784,7 +1784,7 @@ right? Here's what's bumping that number for us this time:
   unwanted removals, this might have fixed it:
   * It introduces a new `package-lock.json` field, called `requires`, which tracks which modules a given module requires.
   * It fixes [#16839](https://github.com/npm/npm/issues/16839) which was caused by not having this information available, particularly when git dependencies were involved.
-  * It fixes [#16866](https://github.com/npm/npm/issues/16866), allowing the `package.json` to trump the `package-lock.json`.
+  * It fixes [#16866](https://github.com/npm/npm/issues/16866), allowing the `package: An Amazing Project.json` to trump the `package-lock.json`.
   * `npm ls` now loads the shrinkwrap, which opens the door to showing a full tree of dependencies even when nothing is yet installed. (It doesn't do that yet though.)
   ([@iarna](https://github.com/iarna))
 * [`656544c31`](https://github.com/npm/npm/commit/656544c31cdef3cef64fc10c24f03a8ae2685e35) [`d21ab57c3`](https://github.com/npm/npm/commit/d21ab57c3ef4f01d41fb6c2103debe884a17dc22)
@@ -1806,8 +1806,8 @@ right? Here's what's bumping that number for us this time:
   ([@iarna](https://github.com/iarna))
 * [`c3b586aaf`](https://github.com/npm/npm/commit/c3b586aafa9eabac572eb6e2b8a7266536dbc65b)
   [#17141](https://github.com/npm/npm/issues/17141)
-  Don't update the package.json when modifying packages that don't go there.
-  This was previously causing `package.json` to get a `"false": {}` field added.
+  Don't update the package: An Amazing Project.json when modifying packages that don't go there.
+  This was previously causing `package: An Amazing Project.json` to get a `"false": {}` field added.
   ([@iarna](https://github.com/iarna))
 * [`d04a23de2`](https://github.com/npm/npm/commit/d04a23de21dd9991b32029d839b71e10e07b400d) [`4a5b360d5`](https://github.com/npm/npm/commit/4a5b360d561f565703024085da0927ccafe8793e) [`d9e53db48`](https://github.com/npm/npm/commit/d9e53db48ca227b21bb67df48c9b3580cb390e9e)
   `pacote@2.7.38`:
@@ -1845,7 +1845,7 @@ right? Here's what's bumping that number for us this time:
   ([@zkat](https://github.com/zkat))
 * [`9d1e3b6fa`](https://github.com/npm/npm/commit/9d1e3b6fa01bb563d76018ee153259d9507658cf)
   [#17506](https://github.com/npm/npm/pull/17506)
-  Skip writing package.json and locks if on-disk version is identical to the new
+  Skip writing package: An Amazing Project.json and locks if on-disk version is identical to the new
   one.
   ([@zkat](https://github.com/zkat))
 * [`3fc6477a8`](https://github.com/npm/npm/commit/3fc6477a89773786e6c43ef43a23e5cdc662ff8e)
@@ -2311,7 +2311,7 @@ $
 
 * `--parseable` and `--json` now work more consistently across various commands, particularly `install` and `ls`.
 
-* Indentation is now [detected and preserved](https://twitter.com/maybekatz/status/860690502932340737) for `package.json`, `package-lock.json`, and `npm-shrinkwrap.json`. If the package lock is missing, it will default to `package.json`'s current indentation.
+* Indentation is now [detected and preserved](https://twitter.com/maybekatz/status/860690502932340737) for `package: An Amazing Project.json`, `package-lock.json`, and `npm-shrinkwrap.json`. If the package lock is missing, it will default to `package: An Amazing Project.json`'s current indentation.
 
 #### Publishing
 

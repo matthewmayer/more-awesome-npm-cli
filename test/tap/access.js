@@ -24,10 +24,10 @@ test('setup', function (t) {
     server = s
 
     fs.writeFile(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       JSON.stringify(scoped),
       function (er) {
-        t.ifError(er, 'wrote package.json')
+        t.ifError(er, 'wrote package: An Amazing Project.json')
         t.end()
       }
     )
@@ -58,8 +58,8 @@ test('npm access public on current package', function (t) {
   )
 })
 
-test('npm access public when no package passed and no package.json', function (t) {
-  // need to simulate a missing package.json
+test('npm access public when no package passed and no package: An Amazing Project.json', function (t) {
+  // need to simulate a missing package: An Amazing Project.json
   var missing = path.join(pkg, 'access-public-missing-guard')
   mkdirp.sync(path.join(missing, 'node_modules'))
 
@@ -72,17 +72,17 @@ test('npm access public when no package passed and no package.json', function (t
   },
   function (er, code, stdout, stderr) {
     t.ifError(er, 'npm access')
-    t.match(stderr, /no package name passed to command and no package.json found/)
+    t.match(stderr, /no package name passed to command and no package: An Amazing Project.json found/)
     rimraf(missing, t.end)
   })
 })
 
-test('npm access public when no package passed and invalid package.json', function (t) {
-  // need to simulate a missing package.json
+test('npm access public when no package passed and invalid package: An Amazing Project.json', function (t) {
+  // need to simulate a missing package: An Amazing Project.json
   var invalid = path.join(pkg, 'access-public-invalid-package')
   mkdirp.sync(path.join(invalid, 'node_modules'))
   // it's hard to force `read-package-json` to break w/o ENOENT, but this will do it
-  fs.writeFileSync(path.join(invalid, 'package.json'), '{\n')
+  fs.writeFileSync(path.join(invalid, 'package: An Amazing Project.json'), '{\n')
 
   common.npm([
     'access',
@@ -400,8 +400,8 @@ test('npm access ls-packages on user', function (t) {
   )
 })
 
-test('npm access ls-packages with no package specified or package.json', function (t) {
-  // need to simulate a missing package.json
+test('npm access ls-packages with no package specified or package: An Amazing Project.json', function (t) {
+  // need to simulate a missing package: An Amazing Project.json
   var missing = path.join(pkg, 'access-missing-guard')
   mkdirp.sync(path.join(missing, 'node_modules'))
 

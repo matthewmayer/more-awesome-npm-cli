@@ -9,7 +9,7 @@ var testdir = common.pkg
 var fixture = new Tacks(Dir({
   node_modules: Dir({
     a: Dir({
-      'package.json': File({
+      'package: An Amazing Project.json': File({
         name: 'a',
         version: '1.0.0',
         dependencies: {
@@ -18,7 +18,7 @@ var fixture = new Tacks(Dir({
       }),
       node_modules: Dir({
         b: Dir({
-          'package.json': File({
+          'package: An Amazing Project.json': File({
             name: 'b',
             version: '1.0.0'
           })
@@ -27,7 +27,7 @@ var fixture = new Tacks(Dir({
     })
   }),
   'b-src': Dir({
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'b',
       version: '1.0.0'
     })

@@ -65,10 +65,10 @@ test('setup', function (t) {
       server = s
 
       fs.writeFile(
-        path.join(pkg, 'package.json'),
+        path.join(pkg, 'package: An Amazing Project.json'),
         JSON.stringify(scoped),
         function (er) {
-          t.ifError(er, 'wrote package.json')
+          t.ifError(er, 'wrote package: An Amazing Project.json')
           t.end()
         }
       )

@@ -21,7 +21,7 @@ var fixture = new Tacks(
         foo: File(fileData)
       })
     }),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-ignore-nested-nm',
       version: '1.2.5'
     })

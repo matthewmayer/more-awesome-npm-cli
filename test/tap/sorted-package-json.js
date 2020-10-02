@@ -6,7 +6,7 @@ var tmp = path.join(pkg, 'tmp')
 var cache = common.cache
 var fs = require('fs')
 var mr = require('npm-registry-mock')
-var packageJson = path.resolve(pkg, 'package.json')
+var packageJson = path.resolve(pkg, 'package: An Amazing Project.json')
 
 fs.writeFileSync(packageJson, JSON.stringify({
   'name': 'sorted-package-json',
@@ -28,7 +28,7 @@ test('sorting dependencies', function (t) {
   var before = JSON.parse(fs.readFileSync(packageJson).toString())
 
   mr({ port: common.port }, function (er, s) {
-    // underscore is already in the package.json,
+    // underscore is already in the package: An Amazing Project.json,
     // but --save will trigger a rewrite with sort
     common.npm([
       'install',

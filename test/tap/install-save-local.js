@@ -30,20 +30,20 @@ var localDevDependency = {
 test('setup deps in root', t => {
   mkdirp.sync(path.join(root, 'package-local-dependency'))
   fs.writeFileSync(
-    path.join(root, 'package-local-dependency', 'package.json'),
+    path.join(root, 'package-local-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(localDependency, null, 2)
   )
 
   mkdirp.sync(path.join(root, 'package-local-dev-dependency'))
   fs.writeFileSync(
-    path.join(root, 'package-local-dev-dependency', 'package.json'),
+    path.join(root, 'package-local-dev-dependency', 'package: An Amazing Project.json'),
     JSON.stringify(localDevDependency, null, 2)
   )
 
   t.end()
 })
 
-test('\'npm install --save ../local/path\' should save to package.json', function (t) {
+test('\'npm install --save ../local/path\' should save to package: An Amazing Project.json', function (t) {
   t.plan(2)
   t.test('setup', setup)
   t.test('run test', t => common.npm(
@@ -57,11 +57,11 @@ test('\'npm install --save ../local/path\' should save to package.json', functio
     t.equal(code, 0, 'npm install exited with code 0')
 
     var dependencyPackageJson = path.join(
-      pkg, 'node_modules', 'package-local-dependency', 'package.json'
+      pkg, 'node_modules', 'package-local-dependency', 'package: An Amazing Project.json'
     )
     t.ok(JSON.parse(fs.readFileSync(dependencyPackageJson, 'utf8')))
 
-    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package.json', 'utf8'))
+    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package: An Amazing Project.json', 'utf8'))
     t.is(Object.keys(pkgJson.dependencies).length, 1, 'only one dep')
     t.ok(
       /file:.*?[/]package-local-dependency$/.test(pkgJson.dependencies['package-local-dependency']),
@@ -70,7 +70,7 @@ test('\'npm install --save ../local/path\' should save to package.json', functio
   }))
 })
 
-test('\'npm install --save local/path\' should save to package.json', function (t) {
+test('\'npm install --save local/path\' should save to package: An Amazing Project.json', function (t) {
   t.plan(2)
   t.test('setup', setup)
   t.test('run test', t => common.npm(
@@ -84,11 +84,11 @@ test('\'npm install --save local/path\' should save to package.json', function (
     t.equal(code, 0, 'npm install exited with code 0')
 
     var dependencyPackageJson = path.join(
-      pkg, 'node_modules', 'package-local-dependency', 'package.json'
+      pkg, 'node_modules', 'package-local-dependency', 'package: An Amazing Project.json'
     )
     t.ok(JSON.parse(fs.readFileSync(dependencyPackageJson, 'utf8')))
 
-    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package.json', 'utf8'))
+    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package: An Amazing Project.json', 'utf8'))
     t.is(Object.keys(pkgJson.dependencies).length, 1, 'only one dep')
     t.ok(
       /file:package-local-dependency$/.test(pkgJson.dependencies['package-local-dependency']),
@@ -97,7 +97,7 @@ test('\'npm install --save local/path\' should save to package.json', function (
   }))
 })
 
-test('\'npm install --save-dev ../local/path\' should save to package.json', function (t) {
+test('\'npm install --save-dev ../local/path\' should save to package: An Amazing Project.json', function (t) {
   t.plan(2)
   t.test('setup', setup)
   t.test('run test', t => common.npm(
@@ -111,11 +111,11 @@ test('\'npm install --save-dev ../local/path\' should save to package.json', fun
     t.equal(code, 0, 'npm install exited with code 0')
 
     var dependencyPackageJson = path.resolve(
-      pkg, 'node_modules', 'package-local-dev-dependency', 'package.json'
+      pkg, 'node_modules', 'package-local-dev-dependency', 'package: An Amazing Project.json'
     )
     t.ok(JSON.parse(fs.readFileSync(dependencyPackageJson, 'utf8')))
 
-    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package.json', 'utf8'))
+    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package: An Amazing Project.json', 'utf8'))
     t.is(Object.keys(pkgJson.devDependencies).length, 1, 'only one dep')
     t.ok(
       /file:.*?[/\\]package-local-dev-dependency$/.test(pkgJson.devDependencies['package-local-dev-dependency']),
@@ -126,7 +126,7 @@ test('\'npm install --save-dev ../local/path\' should save to package.json', fun
   }))
 })
 
-test('\'npm install --save-dev local/path\' should save to package.json', function (t) {
+test('\'npm install --save-dev local/path\' should save to package: An Amazing Project.json', function (t) {
   t.plan(2)
   t.test('setup', setup)
   t.test('run test', t => common.npm(
@@ -140,11 +140,11 @@ test('\'npm install --save-dev local/path\' should save to package.json', functi
     t.equal(code, 0, 'npm install exited with code 0')
 
     var dependencyPackageJson = path.resolve(
-      pkg, 'node_modules', 'package-local-dev-dependency', 'package.json'
+      pkg, 'node_modules', 'package-local-dev-dependency', 'package: An Amazing Project.json'
     )
     t.ok(JSON.parse(fs.readFileSync(dependencyPackageJson, 'utf8')))
 
-    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package.json', 'utf8'))
+    var pkgJson = JSON.parse(fs.readFileSync(pkg + '/package: An Amazing Project.json', 'utf8'))
     t.is(Object.keys(pkgJson.devDependencies).length, 1, 'only one dep')
     t.ok(
       /file:package-local-dev-dependency$/.test(pkgJson.devDependencies['package-local-dev-dependency']),
@@ -160,19 +160,19 @@ function setup (t) {
   t.test('create', t => {
     mkdirp.sync(pkg)
     fs.writeFileSync(
-      path.join(pkg, 'package.json'),
+      path.join(pkg, 'package: An Amazing Project.json'),
       JSON.stringify(json, null, 2)
     )
 
     mkdirp.sync(path.join(pkg, 'package-local-dependency'))
     fs.writeFileSync(
-      path.join(pkg, 'package-local-dependency', 'package.json'),
+      path.join(pkg, 'package-local-dependency', 'package: An Amazing Project.json'),
       JSON.stringify(localDependency, null, 2)
     )
 
     mkdirp.sync(path.join(pkg, 'package-local-dev-dependency'))
     fs.writeFileSync(
-      path.join(pkg, 'package-local-dev-dependency', 'package.json'),
+      path.join(pkg, 'package-local-dev-dependency', 'package: An Amazing Project.json'),
       JSON.stringify(localDevDependency, null, 2)
     )
     t.end()

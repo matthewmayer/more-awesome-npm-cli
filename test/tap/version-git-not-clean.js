@@ -16,10 +16,10 @@ test('npm version <semver> with working directory not clean', function (t) {
 
       function addPackageJSON (_cb) {
         var data = JSON.stringify({ name: 'blah', version: '0.1.2' })
-        fs.writeFile('package.json', data, function () {
-          var child = spawn(git, ['add', 'package.json'])
+        fs.writeFile('package: An Amazing Project.json', data, function () {
+          var child = spawn(git, ['add', 'package: An Amazing Project.json'])
           child.on('exit', function () {
-            var child2 = spawn(git, ['commit', 'package.json', '-m', 'init'])
+            var child2 = spawn(git, ['commit', 'package: An Amazing Project.json', '-m', 'init'])
             var out = ''
             child2.stdout.on('data', function (d) {
               out += d.toString()
@@ -34,13 +34,13 @@ test('npm version <semver> with working directory not clean', function (t) {
       common.makeGitRepo({path: pkg}, function () {
         addPackageJSON(function () {
           var data = JSON.stringify({ name: 'blah', version: '0.1.3' })
-          fs.writeFile('package.json', data, function () {
+          fs.writeFile('package: An Amazing Project.json', data, function () {
             npm.commands.version(['patch'], function (err) {
               if (!err) {
                 t.fail('should fail on non-clean working directory')
               } else {
                 t.ok(err.message.match(/Git working directory not clean./))
-                t.ok(err.message.match(/M package.json/))
+                t.ok(err.message.match(/M package: An Amazing Project.json/))
               }
               t.end()
             })

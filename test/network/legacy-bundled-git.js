@@ -46,7 +46,7 @@ var fixture = new Tacks(
     README: File(
       'just an npm test\n'
     ),
-    'package.json': File({
+    'package: An Amazing Project.json': File({
       name: 'npm-test-bundled-git',
       scripts: {
         test: 'node test.js'
@@ -71,7 +71,7 @@ test('bundled-git', function (t) {
     if (err) throw err
     t.is(code, 0, 'install went ok')
 
-    var actual = require(path.resolve(installedpath, 'node_modules/glob/node_modules/minimatch/package.json'))
+    var actual = require(path.resolve(installedpath, 'node_modules/glob/node_modules/minimatch/package: An Amazing Project.json'))
     Object.keys(minimatchExpected).forEach(function (key) {
       t.isDeeply(actual[key], minimatchExpected[key], key + ' set to the right value')
     })

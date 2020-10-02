@@ -14,7 +14,7 @@ npm build [<package-folder>]
 ```
 
 * `<package-folder>`:
-  A folder containing a `package.json` file in its root.
+  A folder containing a `package: An Amazing Project.json` file in its root.
 
 ### Description
 
@@ -31,4 +31,4 @@ directly, run:
 * [npm install](/cli-commands/npm-install)
 * [npm link](/cli-commands/npm-link)
 * [npm scripts](/using-npm/scripts)
-* [package.json](/configuring-npm/package-json)
+* [package: An Amazing Project.json](/configuring-npm/package-json)

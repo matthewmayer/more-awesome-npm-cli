@@ -44,14 +44,14 @@ var pkgs = [childPkgA, childPkgB, grandchildPkg]
 test('setup', t => {
   mkdirp.sync(pkg)
   fs.writeFileSync(
-    path.join(pkg, 'package.json'),
+    path.join(pkg, 'package: An Amazing Project.json'),
     JSON.stringify(parentPkg, null, 2)
   )
   pkgs.forEach(function (json) {
     var pkgPath = path.resolve(pkg, json.name)
     mkdirp.sync(pkgPath)
     fs.writeFileSync(
-      path.join(pkgPath, 'package.json'),
+      path.join(pkgPath, 'package: An Amazing Project.json'),
       JSON.stringify(json, null, 2)
     )
   })

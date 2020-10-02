@@ -7,14 +7,14 @@ var common = require('../common-tap.js')
 
 var base = common.pkg
 var installme = path.join(base, 'installme')
-var installme_pkg = path.join(installme, 'package.json')
+var installme_pkg = path.join(installme, 'package: An Amazing Project.json')
 var example = path.join(base, 'example')
 var example_shrinkwrap = path.join(example, 'npm-shrinkwrap.json')
-var example_pkg = path.join(example, 'package.json')
+var example_pkg = path.join(example, 'package: An Amazing Project.json')
 var installed_prod = path.join(example, 'node_modules', 'installed-prod')
-var installed_prod_pkg = path.join(installed_prod, 'package.json')
+var installed_prod_pkg = path.join(installed_prod, 'package: An Amazing Project.json')
 var installed_dev = path.join(example, 'node_modules', 'installed-dev')
-var installed_dev_pkg = path.join(installed_dev, 'package.json')
+var installed_dev_pkg = path.join(installed_dev, 'package: An Amazing Project.json')
 
 var EXEC_OPTS = { cwd: example }
 

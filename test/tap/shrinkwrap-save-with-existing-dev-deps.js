@@ -9,12 +9,12 @@ var common = require('../common-tap.js')
 
 var base = common.pkg
 var installme = path.join(base, 'installme')
-var installme_pkg = path.join(installme, 'package.json')
+var installme_pkg = path.join(installme, 'package: An Amazing Project.json')
 var example = path.join(base, 'example')
 var example_shrinkwrap = path.join(example, 'npm-shrinkwrap.json')
-var example_pkg = path.join(example, 'package.json')
+var example_pkg = path.join(example, 'package: An Amazing Project.json')
 var installed = path.join(example, 'node_modules', 'installed')
-var installed_pkg = path.join(installed, 'package.json')
+var installed_pkg = path.join(installed, 'package: An Amazing Project.json')
 
 // Ignore max listeners warnings until that gets fixed
 var env = Object.keys(process.env).reduce((set, key) => {

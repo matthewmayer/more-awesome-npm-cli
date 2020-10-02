@@ -71,7 +71,7 @@ server.on('request', (req, res) => {
 
 test('setup', function (t) {
   mkdirp.sync(modules)
-  writeFileSync(path.resolve(pkg, 'package.json'), JSON.stringify(json, null, 2) + '\n')
+  writeFileSync(path.resolve(pkg, 'package: An Amazing Project.json'), JSON.stringify(json, null, 2) + '\n')
   writeFileSync(outfile, contents)
   writeFileSync(
     path.resolve(pkg, 'npm-shrinkwrap.json'),

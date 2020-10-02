@@ -14,7 +14,7 @@ test('ls without arg', function (t) {
   var fixture = new Tacks(
     Dir({
       'npm-test-ls': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'npm-test-ls',
           version: '1.0.0',
           dependencies: {
@@ -23,7 +23,7 @@ test('ls without arg', function (t) {
         })
       }),
       'dep': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'dep',
           version: '1.0.0'
         })
@@ -50,7 +50,7 @@ test('ls with filter arg', function (t) {
   var fixture = new Tacks(
     Dir({
       'npm-test-ls': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'npm-test-ls',
           version: '1.0.0',
           dependencies: {
@@ -59,13 +59,13 @@ test('ls with filter arg', function (t) {
         })
       }),
       'dep': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'dep',
           version: '1.0.0'
         })
       }),
       'otherdep': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'otherdep',
           version: '1.0.0'
         })
@@ -94,7 +94,7 @@ test('ls with missing filtered arg', function (t) {
   var fixture = new Tacks(
     Dir({
       'npm-test-ls': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'npm-test-ls',
           version: '1.0.0',
           dependencies: {
@@ -103,7 +103,7 @@ test('ls with missing filtered arg', function (t) {
         })
       }),
       'dep': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'dep',
           version: '1.0.0'
         })
@@ -131,7 +131,7 @@ test('ls with prerelease pkg', function (t) {
   var fixture = new Tacks(
     Dir({
       'npm-test-ls': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'npm-test-ls',
           version: '1.0.0',
           dependencies: {
@@ -140,7 +140,7 @@ test('ls with prerelease pkg', function (t) {
         })
       }),
       'dep': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'dep',
           version: '1.0.0-pre'
         })
@@ -173,7 +173,7 @@ test('ls parseable long', function (t) {
   var fixture = new Tacks(
     Dir({
       'npm-test-ls': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'npm-test-ls',
           version: '1.0.0',
           dependencies: {
@@ -182,7 +182,7 @@ test('ls parseable long', function (t) {
         })
       }),
       'dep': Dir({
-        'package.json': File({
+        'package: An Amazing Project.json': File({
           name: 'dep',
           version: '1.0.0'
         })

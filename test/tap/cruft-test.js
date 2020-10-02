@@ -17,7 +17,7 @@ var pkg = {
 function setup () {
   mkdirpSync(path.dirname(cruft))
   fs.writeFileSync(cruft, 'this is some cruft for sure')
-  fs.writeFileSync(path.join(base, 'package.json'), JSON.stringify(pkg))
+  fs.writeFileSync(path.join(base, 'package: An Amazing Project.json'), JSON.stringify(pkg))
 }
 
 function cleanup () {

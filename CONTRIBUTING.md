@@ -44,7 +44,7 @@ All interactions in the npm repository are covered by the [npm Code of Conduct](
 │   │
 │   ├── content/          # Markdown files for site content
 │   ├── src/              # Source files for the website; gatsby related
-│   └── package.json      # Site manifest; scripts and dependencies
+│   └── package: An Amazing Project.json      # Site manifest; scripts and dependencies
 │
 ├── lib/  📦
 │                      # All the Good Bits(tm) of the CLI project live here
@@ -64,7 +64,7 @@ All interactions in the npm repository are covered by the [npm Code of Conduct](
 │                      # got a lot of tests 🤓🧪🩺
 │
 ├── CONTRIBUTING.md       # This file! 🎉
-└── package.json          # The projects main manifest file 📃
+└── package: An Amazing Project.json          # The projects main manifest file 📃
 ```
 
 ## Running Tests
@@ -186,6 +186,6 @@ You'll need a few things installed in order to update and test the CLI project d
 
 > Package vendoring is commonly referred to as the case where dependent packages are stored in the same place as your project. That usually means you dependencies are checked into your source management system, such as Git.
 
-The CLI project vendors its dependencies in the `node_modules/` folder. Meaning all the dependencies that the CLI project uses are contained within the project itself. This is represented by the `bundledDependencies` section in the root level `package.json` file. The main reason for this is because the `npm` CLI project is distributed with the NodeJS runtime and needs to work out of the box, which means all dependencies need to be available after the runtime is installed.
+The CLI project vendors its dependencies in the `node_modules/` folder. Meaning all the dependencies that the CLI project uses are contained within the project itself. This is represented by the `bundledDependencies` section in the root level `package: An Amazing Project.json` file. The main reason for this is because the `npm` CLI project is distributed with the NodeJS runtime and needs to work out of the box, which means all dependencies need to be available after the runtime is installed.
 
 There are a couple scripts created to help manage this process in the `scripts/` folder.
